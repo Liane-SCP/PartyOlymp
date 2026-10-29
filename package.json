@@ -13,8 +13,7 @@
                     "lint":  "eslint . --ignore-pattern dist --ignore-pattern .next",
                     "db:generate":  "drizzle-kit generate",
                     "typecheck":  "tsc --noEmit",
-                    "test":  "node scripts/test-engine.mjs \u0026\u0026 node scripts/test-journey.mjs \u0026\u0026 node scripts/test-party-flow.mjs \u0026\u0026 node scripts/test-vercel-proxy.mjs",
-                    "build:cloudflare":  "node scripts/run-framework.mjs build"
+                    "test":  "node scripts/test-engine.mjs \u0026\u0026 node scripts/test-journey.mjs \u0026\u0026 node scripts/test-party-flow.mjs \u0026\u0026 node scripts/test-vercel-proxy.mjs"
                 },
     "dependencies":  {
                          "@base-ui/react":  "^1.7.0",

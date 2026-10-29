@@ -1,0 +1,153 @@
+/* Six real CSS 3D faces: composited transforms without another WebGL context. */
+.boss-die {
+  --die-size: clamp(32px, 2.8vw, 46px);
+  --die-depth: calc(var(--die-size) / 2);
+  width: var(--die-size);
+  height: var(--die-size);
+  display: block;
+  position: relative;
+  perspective: 420px;
+  margin: 12px 4px 10px;
+}
+.boss-die-lift,
+.boss-die-solid {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+.boss-die-solid {
+  transform: rotateX(-38deg) rotateY(-22deg) rotateX(var(--die-x))
+    rotateY(var(--die-y));
+}
+.boss-die-side {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  padding: 17%;
+  gap: 10%;
+  border: 1px solid #fff0ce;
+  border-radius: 16%;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #fffdf3, #d2c6a9);
+  box-shadow:
+    inset 0 0 0 2px #fffae05c,
+    inset -3px -4px 6px #4a301331;
+  backface-visibility: hidden;
+}
+.boss-die-side i {
+  border-radius: 50%;
+}
+.boss-die-side .pip {
+  background: #261c18;
+  box-shadow:
+    inset 1px 1px 2px #000,
+    0 1px 0 #fff9;
+}
+.boss-die-side.side-1 {
+  transform: translateZ(var(--die-depth));
+}
+.boss-die-side.side-6 {
+  transform: rotateY(180deg) translateZ(var(--die-depth));
+}
+.boss-die-side.side-2 {
+  transform: rotateY(90deg) translateZ(var(--die-depth));
+  background-color: #b3a48b;
+}
+.boss-die-side.side-5 {
+  transform: rotateY(-90deg) translateZ(var(--die-depth));
+}
+.boss-die-side.side-3 {
+  transform: rotateX(90deg) translateZ(var(--die-depth));
+}
+.boss-die-side.side-4 {
+  transform: rotateX(-90deg) translateZ(var(--die-depth));
+}
+.boss-die-shadow {
+  position: absolute;
+  inset: 75% -10% -22%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, #0009, #0000 72%);
+  transform: scale(1.1);
+}
+.boss-die.is-held .boss-die-lift {
+  transform: translateY(-5px);
+}
+.boss-die.is-held .boss-die-side {
+  border-color: #ffdc83;
+  background: linear-gradient(135deg, #fff1bb, #cf9a38);
+}
+.boss-die.is-rolling .boss-die-solid {
+  animation: boss-die-spin 540ms linear infinite;
+  animation-delay: var(--die-offset);
+  will-change: transform;
+}
+.boss-die.is-rolling .boss-die-lift {
+  animation: boss-die-hop 360ms ease-in-out infinite alternate;
+}
+.boss-die.is-rolling .boss-die-shadow {
+  animation: boss-die-shadow 360ms ease-in-out infinite alternate;
+}
+.boss-die.is-landing .boss-die-solid {
+  animation: boss-die-land 440ms cubic-bezier(0.18, 0.7, 0.3, 1) both;
+}
+.boss-die.is-landing .boss-die-lift {
+  animation: boss-die-bounce 440ms ease-out both;
+}
+@keyframes boss-die-spin {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(12deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(720deg) rotateZ(12deg);
+  }
+}
+@keyframes boss-die-hop {
+  to {
+    transform: translateY(-16px) translateX(3px);
+  }
+}
+@keyframes boss-die-shadow {
+  to {
+    transform: scale(0.7);
+    opacity: 0.4;
+  }
+}
+@keyframes boss-die-land {
+  from {
+    transform: rotateX(-38deg) rotateY(-22deg)
+      rotateX(calc(var(--die-x) + 180deg)) rotateY(calc(var(--die-y) + 180deg));
+  }
+  to {
+    transform: rotateX(-38deg) rotateY(-22deg) rotateX(var(--die-x))
+      rotateY(var(--die-y));
+  }
+}
+@keyframes boss-die-bounce {
+  0% {
+    transform: translateY(-15px);
+  }
+  45% {
+    transform: translateY(2px);
+  }
+  68% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.boss-dice-tray button {
+  touch-action: manipulation;
+}
+.boss-command button:active:not(:disabled) {
+  translate: 0 1px;
+}
+html[data-motion="reduced"] .boss-die * {
+  animation: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .boss-die * {
+    animation: none !important;
+  }
+}

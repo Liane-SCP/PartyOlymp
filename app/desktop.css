@@ -1,0 +1,806 @@
+.desktop-crew-toggle {
+  display: none;
+}
+.play-surface {
+  min-width: 0;
+}
+@media (min-width: 1100px) {
+  .game-board .guide-copy {
+    margin-top: 0;
+  }
+  .game-board .live-player-state {
+    margin-top: 2px;
+    gap: 1px;
+  }
+  .game-board .live-dice {
+    margin-top: 5px;
+    gap: 3px;
+  }
+  .game-board .live-dice .dice-cube.mini {
+    width: 19px;
+    height: 19px;
+  }
+  .game-board .live-hand {
+    margin-top: 4px;
+  }
+  .game-board .live-hand > span {
+    min-width: 18px;
+    height: 24px;
+    padding: 2px;
+  }
+}
+/* Desktop uses the viewport width and separates activity from the playing surface.
+   Content may still scroll on short windows or when optional details are opened. */
+@media (min-width: 1100px) {
+  .platform.in-room {
+    max-width: none;
+  }
+  .in-room .site-header {
+    height: 64px;
+    margin: 0 24px;
+  }
+  .in-room .brand {
+    font-size: 21px;
+  }
+  .in-room .brand > svg {
+    width: 30px;
+  }
+  .in-room .brand small {
+    font-size: 7px;
+  }
+  .room-stage .room-shell {
+    padding: 12px 24px 16px;
+    scrollbar-gutter: stable;
+  }
+  .room-top {
+    margin-bottom: 12px;
+    gap: 12px;
+  }
+  .room-top h1 {
+    font-size: 26px;
+  }
+  .room-top .eyebrow {
+    font-size: 8px;
+  }
+  .room-code {
+    margin-left: auto;
+    padding: 7px 12px;
+    gap: 2px 14px;
+  }
+  .room-code > strong {
+    font-size: 16px;
+  }
+  .room-layout {
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 16px;
+  }
+  .stage-panel {
+    padding: 18px 20px;
+  }
+  .crew-panel {
+    padding: 12px 8px;
+  }
+  .crew-panel .player-tile {
+    padding: 5px;
+    gap: 7px;
+  }
+  .crew-panel .avatar-art {
+    width: 30px;
+    height: 30px;
+  }
+  .crew-panel .panel-label {
+    padding: 0 5px 8px;
+  }
+  .crew-panel .player-info strong {
+    font-size: 12px;
+  }
+  .crew-panel .player-info > span {
+    font-size: 9px;
+  }
+  .phase-playing .room-layout {
+    display: block;
+  }
+  .phase-playing .desktop-crew-toggle {
+    display: block;
+    margin-left: auto;
+    font-size: 12px;
+    padding: 9px 14px;
+  }
+  .phase-playing .room-code {
+    margin-left: 0;
+  }
+  .phase-playing .crew-panel {
+    display: none;
+  }
+  .phase-playing.crew-expanded .crew-panel {
+    display: block;
+    position: fixed;
+    right: 24px;
+    top: 126px;
+    width: 270px;
+    max-height: calc(100dvh - 200px);
+    overflow-y: auto;
+    z-index: 45;
+    box-shadow: 0 14px 70px #0009;
+  }
+  .game-topline {
+    margin-bottom: 12px;
+    padding-bottom: 9px;
+  }
+  .game-board {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 270px;
+    grid-template-rows: max-content auto;
+    column-gap: 20px;
+    row-gap: 12px;
+    align-items: start;
+    min-height: 0;
+  }
+  .game-board > .play-guide {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+  }
+  .game-board > .play-surface {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .game-board > .live-crew {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    position: sticky;
+    top: 0;
+    margin: 0;
+  }
+  .live-crew-track {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    overflow: visible;
+    padding: 0;
+  }
+  .live-player {
+    max-width: none;
+    padding: 8px 10px;
+  }
+  .live-player > header {
+    margin-bottom: 3px;
+  }
+  .live-player .avatar-art {
+    width: 25px;
+    height: 25px;
+  }
+  .live-player-state {
+    font-size: 11px;
+  }
+  .live-player > small {
+    font-size: 10px;
+  }
+  .live-crew:has(.live-player:nth-child(7)) .live-player {
+    padding: 5px 8px;
+  }
+  .play-guide {
+    padding: 10px 14px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 5px 18px;
+  }
+  .guide-steps {
+    grid-column: 1;
+    margin: 0;
+  }
+  .guide-copy {
+    grid-column: 1;
+  }
+  .guide-copy > strong {
+    font-size: 14px;
+  }
+  .guide-copy p {
+    margin: 2px 0 0;
+    font-size: 11px;
+  }
+  .guide-rules {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: start;
+    margin: 0;
+    max-width: 360px;
+  }
+  .guide-rules[open] {
+    max-width: 440px;
+  }
+  .room-stage .emote-dock {
+    margin: 5px auto;
+    padding: 5px 12px;
+    gap: 8px;
+  }
+  .emote-dock .quick-emotes .avatar-art {
+    width: 32px;
+    height: 32px;
+  }
+  .emote-dock .quick-emotes button {
+    padding: 3px;
+  }
+  .room-stage .live-reactions:empty {
+    display: none;
+  }
+  .commit-seal {
+    margin: 0 0 8px;
+    padding: 8px 12px;
+  }
+  /* Recognize and answer without moving away from the photograph. */
+  .board-picture .play-surface {
+    display: grid;
+    grid-template-columns: minmax(280px, 1.25fr) minmax(230px, 1fr);
+    gap: 12px 24px;
+    align-items: center;
+  }
+  .board-picture .pixel-photo-stage {
+    grid-column: 1;
+    grid-row: 1 / 7;
+    margin: 0 auto;
+    max-width: min(100%, calc((100dvh - 470px) * 1.09));
+  }
+  .board-picture .play-surface > :not(.pixel-photo-stage) {
+    grid-column: 2;
+    margin: 0;
+  }
+  .board-picture .answer-form {
+    width: 100%;
+    max-width: none;
+    flex-wrap: wrap;
+  }
+  .board-picture .answer-form input {
+    min-width: 150px;
+  }
+  .board-picture .pixel-canvas {
+    margin: 0;
+  }
+  /* Shopping: complete catalogue and checkout stay together. */
+  .board-budget .product-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .board-budget .product-grid button {
+    padding: 9px;
+  }
+  .board-budget .product-photo {
+    height: clamp(72px, 12dvh, 145px);
+  }
+  .board-budget .budget-title {
+    margin: 0 0 10px;
+  }
+  .board-budget .basket-checkout {
+    margin-top: 12px;
+    padding: 12px;
+    position: static;
+  }
+  /* Simultaneous dice: rolling and sheet sit side by side. */
+  .board-dice .play-surface {
+    display: grid;
+    grid-template-columns: minmax(260px, 1fr) minmax(320px, 1fr);
+    gap: 10px 22px;
+    align-items: start;
+  }
+  .board-dice .play-surface > * {
+    grid-column: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .board-dice .score-sheet {
+    grid-column: 2;
+    grid-row: 1 / 7;
+    gap: 5px;
+  }
+  .board-dice .score-sheet button {
+    padding: 9px 10px;
+    min-height: 38px;
+  }
+  .board-dice .dice-tray {
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+  .board-dice .dice-table-details {
+    grid-column: 1 / -1;
+  }
+  .board-dice .dice-bonus {
+    padding: 10px;
+  }
+  /* Colour and size keep the estimate visible next to its controls. */
+  .board-color .play-surface,
+  .board-size .play-surface {
+    display: grid;
+    grid-template-columns: minmax(280px, 1.2fr) minmax(250px, 0.8fr);
+    gap: 14px 24px;
+    align-items: center;
+  }
+  .board-color .color-preview {
+    grid-column: 1;
+    grid-row: 1 / 5;
+    margin: 0;
+    height: clamp(210px, 36dvh, 420px);
+  }
+  .board-color .color-controls,
+  .board-color .play-surface > button,
+  .board-color .commit-seal {
+    grid-column: 2;
+    margin: 0;
+  }
+  .board-size .size-task {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+  .board-size .size-task h2 {
+    font-size: 23px;
+    margin: 0;
+  }
+  .board-size .size-task p {
+    margin: 3px 0;
+  }
+  .board-size .size-stage {
+    grid-column: 1;
+    grid-row: 2 / 7;
+    height: clamp(240px, 36dvh, 440px);
+    margin: 0;
+  }
+  .board-size .play-surface > :not(.size-task):not(.size-stage) {
+    grid-column: 2;
+    margin: 0;
+  }
+  /* Dealer and own hand are visible at the same time. */
+  .club21 {
+    display: grid;
+    grid-template-columns: minmax(400px, 1fr) minmax(220px, 0.45fr);
+    gap: 14px;
+    align-items: start;
+  }
+  .club21 .club-metrics {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+  .club-metrics > div {
+    padding: 9px 14px;
+  }
+  .club-metrics strong {
+    font-size: 23px;
+  }
+  .club21 .felt-table {
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    align-items: center;
+    padding: 22px 14px;
+    min-height: 240px;
+  }
+  .club21 .felt-divider {
+    display: none;
+  }
+  .club21 .your-zone {
+    border-left: 1px solid #ffffff20;
+    padding-left: 14px;
+  }
+  .club21 .felt-table .card-hand {
+    margin: 12px 0;
+  }
+  .club21 .bet-panel,
+  .club21 .club-actions,
+  .club21 .game-help {
+    grid-column: 2;
+    margin: 0;
+  }
+  .club21 .club-actions {
+    display: grid;
+  }
+  /* UNO: table left, action replay right, hand directly underneath. */
+  .board-cards {
+    grid-template-columns: 1fr;
+  }
+  .color-card-game {
+    display: grid;
+    grid-template-columns: minmax(320px, 1fr) minmax(330px, 1fr);
+    gap: 10px 24px;
+    align-items: start;
+  }
+  .color-card-game > .turn-banner {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 9px 14px;
+  }
+  .color-card-game > .card-action-theatre {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+  }
+  .color-card-game > .color-table {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+    padding: 18px;
+  }
+  .color-card-game > .turn-order-heading {
+    grid-column: 2;
+    grid-row: 3;
+    margin: 0;
+  }
+  .color-card-game > .turn-order {
+    grid-column: 2;
+    grid-row: 4 / 6;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+    overflow: visible;
+    gap: 7px;
+    padding: 0;
+  }
+  .card-opponents.turn-order > div {
+    min-height: 0;
+    padding: 7px;
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 3px 7px;
+    text-align: left;
+  }
+  .turn-order .turn-position {
+    grid-column: 1 / -1;
+    font-size: 8px;
+  }
+  .card-opponents.turn-order .avatar-art {
+    width: 24px;
+    height: 24px;
+  }
+  .turn-order .hand-count {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+  .turn-order .hand-count b {
+    font-size: 21px;
+  }
+  .turn-order .last-card-alert {
+    grid-column: 1 / -1;
+    font-size: 7px;
+  }
+  .color-card-game > .hand-instruction {
+    grid-column: 1;
+    grid-row: 3;
+    margin: 0;
+  }
+  .color-card-game > .own-hand {
+    grid-column: 1;
+    grid-row: 4;
+    margin: 0;
+    gap: 7px;
+  }
+  .color-card-game > .game-help {
+    grid-column: 1;
+    grid-row: 5;
+    margin: 0;
+  }
+  .color-card-game .playing-card {
+    width: 70px;
+    height: 100px;
+  }
+  .color-card-game .card-back {
+    width: 70px;
+    height: 100px;
+  }
+  .card-action-scene {
+    min-height: 75px;
+  }
+  .card-action-history[open] ol {
+    max-height: 180px;
+    overflow: auto;
+  }
+  /* Wikipedia deliberately scrolls inside the article, with race status fixed beside it. */
+  .wiki-reader .wiki-route {
+    position: static;
+    margin: 0 0 8px;
+    padding: 10px 14px;
+  }
+  .wiki-progress {
+    margin: 6px 0;
+  }
+  .wiki-reader .wiki-scroll {
+    max-height: calc(100dvh - 490px);
+    min-height: 220px;
+  }
+  .wiki-browser-bar {
+    padding: 9px 14px;
+  }
+  /* Fleet map and firing/placement controls share one row. */
+  .fleet-board {
+    display: grid;
+    grid-template-columns: minmax(310px, 1fr) minmax(260px, 0.8fr);
+    gap: 10px 22px;
+    align-items: start;
+  }
+  .fleet-board > * {
+    grid-column: 2;
+    margin: 0;
+  }
+  .fleet-board > .fleet-heading {
+    grid-column: 1 / -1;
+  }
+  .fleet-heading h2 {
+    margin: 4px 0;
+    font-size: 21px;
+  }
+  .fleet-heading p {
+    margin: 4px 0;
+  }
+  .fleet-board > .ocean-map {
+    grid-column: 1;
+    grid-row: 2 / 10;
+    width: 100%;
+    max-width: min(100%, calc(100dvh - 500px));
+    margin: 0 auto;
+  }
+  .fleet-board .ship-dock {
+    margin: 0;
+    gap: 7px;
+  }
+  .fleet-board .ship-dock > div {
+    padding: 9px 5px;
+  }
+  .fleet-board .salvo-ledger {
+    max-height: 250px;
+    overflow: auto;
+  }
+  .fleet-board .fleet-crew {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+  .round-player-results {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .round-player-result {
+    padding: 12px;
+  }
+  .round-cinema > h2 {
+    margin: 8px 0;
+    font-size: 28px;
+  }
+  .revealed-photo img {
+    max-height: 28dvh;
+  }
+  .rules-stage,
+  .countdown-stage {
+    padding: 12px 0;
+  }
+}
+@media (min-width: 1700px) {
+  .room-stage .room-shell {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .game-board {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 18px 26px;
+  }
+  .board-cards {
+    grid-template-columns: 1fr;
+  }
+  .live-crew-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .live-crew-heading {
+    gap: 8px;
+  }
+  .live-player {
+    min-width: 0;
+  }
+  .board-picture .pixel-photo-stage {
+    max-width: min(100%, calc((100dvh - 470px) * 1.09));
+  }
+  .board-budget .product-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .round-player-results {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) and (max-height: 900px) {
+  .in-room .site-header {
+    height: 50px;
+  }
+  .room-stage .room-shell {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .room-top {
+    margin-bottom: 8px;
+  }
+  .room-top h1 {
+    font-size: 23px;
+  }
+  .room-top .eyebrow {
+    display: none;
+  }
+  .stage-panel {
+    padding: 12px 16px;
+  }
+  .game-topline {
+    margin-bottom: 9px;
+    padding-bottom: 7px;
+  }
+  .play-guide {
+    padding: 8px 12px;
+    gap: 3px 12px;
+  }
+  .guide-copy > strong {
+    font-size: 13px;
+  }
+  .guide-copy p {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+  .guide-steps b {
+    width: 16px;
+    height: 16px;
+  }
+  .game-board .live-player {
+    padding: 5px 7px;
+  }
+  .game-board .live-player > header {
+    gap: 5px;
+  }
+  .game-board .live-player .avatar-art {
+    width: 21px;
+    height: 21px;
+  }
+  .game-board .live-player-state > span {
+    font-size: 10px;
+  }
+  .game-board .live-player-state > small {
+    font-size: 9px;
+  }
+  .game-board .live-crew-track {
+    gap: 5px;
+  }
+  .board-dice .score-sheet button {
+    padding: 6px 9px;
+    min-height: 34px;
+  }
+  .board-budget .budget-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px 12px;
+  }
+  .board-budget .budget-title strong {
+    font-size: 28px;
+  }
+  .board-budget .budget-title small {
+    flex-basis: 100%;
+    font-size: 9px;
+  }
+  .board-budget .product-photo {
+    height: 70px;
+  }
+  .board-budget .product-grid {
+    gap: 7px;
+    margin-bottom: 8px;
+  }
+  .board-budget .product-grid button {
+    padding: 7px;
+    gap: 5px;
+    min-height: 0;
+  }
+  .board-budget .product-grid button > span:not(.product-photo) {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 11px;
+    min-height: 30px;
+  }
+  .board-budget .product-grid button small {
+    font-size: 8px;
+  }
+  .board-budget .basket-checkout {
+    padding: 9px 12px;
+    margin-top: 6px;
+  }
+  .board-budget .basket-checkout strong {
+    font-size: 21px;
+  }
+  .color-card-game {
+    gap: 7px 18px;
+  }
+  .color-card-game > .color-table {
+    padding: 12px;
+  }
+  .color-card-game .playing-card,
+  .color-card-game .card-back {
+    width: 64px;
+    height: 90px;
+  }
+  .card-opponents.turn-order > div {
+    padding: 5px;
+    gap: 2px 5px;
+  }
+  .card-opponents.turn-order .avatar-art {
+    width: 20px;
+    height: 20px;
+  }
+  .color-card-game > .game-help {
+    font-size: 9px;
+    gap: 5px;
+  }
+  .card-action-theatre {
+    padding: 10px;
+  }
+  .card-action-scene {
+    min-height: 65px;
+  }
+  .card-flight-lane {
+    height: 70px;
+  }
+  .game-board .wiki-scroll {
+    max-height: calc(100dvh - 380px);
+    min-height: 180px;
+  }
+  .wiki-reader .wiki-route strong {
+    font-size: 16px;
+  }
+  .wiki-reader .wiki-progress {
+    padding: 5px 10px;
+  }
+  .club21 .felt-table {
+    padding: 14px 10px;
+  }
+  .club21 .playing-card,
+  .club21 .card-back {
+    width: 65px;
+    height: 95px;
+  }
+  .club21 .club-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  .wiki-reader {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 14px;
+    align-items: center;
+  }
+  .wiki-reader .wiki-route {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+  }
+  .wiki-reader .wiki-progress {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    max-height: 65px;
+    overflow: auto;
+  }
+  .wiki-reader .wiki-browser,
+  .wiki-reader .wiki-finish {
+    grid-column: 1 / -1;
+  }
+  .game-board .wiki-reader .wiki-scroll {
+    max-height: calc(100dvh - 500px);
+    min-height: 200px;
+  }
+  .board-budget .product-grid {
+    margin-bottom: 8px;
+  }
+}
+@media (min-width: 1100px) and (max-height: 900px) {
+  .game-board .wiki-reader .wiki-scroll {
+    max-height: calc(100dvh - 430px);
+    min-height: 180px;
+  }
+  .fleet-board > .ocean-map {
+    max-width: min(100%, calc(100dvh - 460px));
+  }
+}

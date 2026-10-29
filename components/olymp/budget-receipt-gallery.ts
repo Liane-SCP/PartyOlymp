@@ -1,0 +1,32 @@
+import * as T from 'three';
+import type {locationKit} from './location-kit';
+import {budgetReceiptFrame,receiptMoney,type BudgetReceiptOptions} from '@/lib/budget-receipts';
+import {shoppingPickLayer} from './shopping-displays';
+import {batchStaticMeshes} from './static-batches';
+
+/** Three reusable paper slots; one atlas and one paper draw even with twelve receipts. */
+export function createBudgetReceiptGallery(k:ReturnType<typeof locationKit>){
+ const root=new T.Group();root.name='budget-receipt-gallery';root.userData.dynamic=true;root.visible=false;k.root.add(root);const stand=new T.Group();root.add(stand);
+ k.block('receipt-board-rail','#a98257',[0,7.72,6.46],[10.2,.14,.18],stand);k.block('receipt-board-base','#a98257',[0,.4,6.35],[10.5,.6,.85],stand);for(const x of[-4.9,4.9])k.block('receipt-board-upright','#a98257',[x,4,6.46],[.14,7.3,.18],stand);
+ const label=k.sign('EURE KASSENBONS',[0,8.15,6.5],9,.5,'#eedeae','#385b58');root.add(label);
+ const width=512,height=1024,canvas=typeof document==='undefined'?null:document.createElement('canvas');if(canvas){canvas.width=width*3;canvas.height=height;}const c=canvas?.getContext('2d'),texture=canvas?new T.CanvasTexture(canvas):null;if(texture){texture.colorSpace=T.SRGBColorSpace;texture.generateMipmaps=false;texture.minFilter=T.LinearFilter;k.textures.add(texture);}
+ const material=new T.MeshBasicMaterial({map:texture,color:texture?'#ffffff':'#f7efd8',toneMapped:false,side:T.DoubleSide}),geometry=new T.BufferGeometry(),positions=new Float32Array(36),uv=new Float32Array(24),indices:number[]=[];
+ for(let i=0;i<3;i++){const n=i*4;indices.push(n,n+1,n+2,n,n+2,n+3);uv.set([i/3,0,(i+1)/3,0,(i+1)/3,1,i/3,1],i*8);}geometry.setAttribute('position',new T.BufferAttribute(positions,3));geometry.setAttribute('uv',new T.BufferAttribute(uv,2));geometry.setIndex(indices);k.geometries.add(geometry);const paper=new T.Mesh(geometry,material);paper.name='public-budget-receipt-papers';root.add(paper);
+ const backdropGeometry=new T.PlaneGeometry(26,18);k.geometries.add(backdropGeometry);const backdrop=new T.Mesh(backdropGeometry,new T.MeshBasicMaterial({color:'#28464b',transparent:true,opacity:.93,depthWrite:false}));backdrop.name='receipt-reading-backdrop';root.add(backdrop);
+ const hitGeometry=new T.PlaneGeometry(2.7,5.4);k.geometries.add(hitGeometry);const hitMaterial=new T.MeshBasicMaterial({visible:false,side:T.DoubleSide}),pickables=Array.from({length:3},()=>{const hit=new T.Mesh(hitGeometry,hitMaterial);hit.layers.set(shoppingPickLayer);root.add(hit);return hit;});
+ const keys:string[]=[],lastPositions:number[]=[];let disposed=false;const release=batchStaticMeshes(stand,{mergeUnique:true});
+ function draw(slot:number,row:ReturnType<typeof budgetReceiptFrame>['rows'][number]){
+  if(!c||!texture)return;c.save();c.translate(slot*width,0);c.fillStyle='#faf0d5';c.fillRect(0,0,width,height);c.fillStyle='#34534e';c.textAlign='center';c.font='700 25px sans-serif';c.fillText('OLYMP · SPIELBON',256,49);c.font='700 37px sans-serif';c.fillText(row.name,256,103,470);c.font='600 26px sans-serif';c.fillText(`${row.rank===null?'':`PLATZ ${row.rank} · `}${row.count} ARTIKEL`,256,145,470);
+  c.strokeStyle='#b9aa83';c.setLineDash([6,6]);c.beginPath();c.moveTo(22,166);c.lineTo(490,166);c.stroke();c.setLineDash([]);
+  function lines(text:string){const words=text.split(/\s+/),out:string[]=[];let line='';for(const word of words){if(c!.measureText((line+' '+word).trim()).width>325&&line){out.push(line);line=word;}else line=(line+' '+word).trim();}if(line)out.push(line);return out.length>2?[out[0],out[1].slice(0,-1)+'…']:out;}
+  if(!row.items.length){c.font='600 29px sans-serif';c.fillText('DEIN KORB WAR LEER',256,287,470);}row.items.forEach((item,i)=>{const y=205+i*59;c.font='500 28px sans-serif';c.textAlign='left';const words=lines(item.name);words.forEach((line,j)=>c!.fillText(line,24,y+j*29,325));c.textAlign='right';c.font='700 28px sans-serif';c.fillText(receiptMoney(item.price),488,y,140);});
+  c.strokeStyle='#b9aa83';c.beginPath();c.moveTo(22,819);c.lineTo(490,819);c.stroke();c.textAlign='left';c.font='700 31px sans-serif';c.fillText('SUMME',24,866);c.textAlign='right';c.font='700 38px sans-serif';c.fillText(receiptMoney(row.sum),488,866,300);c.font='500 25px sans-serif';c.textAlign='left';c.fillText('Budget',24,909);c.textAlign='right';c.fillText(receiptMoney(row.budget),488,909);c.fillStyle=row.outcome==='over'?'#a14d43':'#34534e';c.textAlign='center';c.font='700 27px sans-serif';c.fillText(row.outcome==='empty'?'LEERER KORB':row.remaining===null?'SUMME AUSSTEHEND':`${receiptMoney(Math.abs(row.remaining))} ${row.remaining<0?'DARÜBER':'ÜBRIG'}`,256,955,470);c.fillStyle='#877b60';c.font='500 19px sans-serif';c.fillText('SPIELWERTUNG · REFERENZPREISE',256,995);c.restore();texture.needsUpdate=true;
+ }
+ return {root,pickables,update(game:any,crew:{id?:string;name?:string}[],me:string,now:number,options:BudgetReceiptOptions={}){
+  const frame=budgetReceiptFrame(game,crew,me,now,options);root.visible=frame.public&&frame.mode!=='checkout';label.visible=frame.mode==='gallery';backdrop.visible=frame.mode==='receipt';backdrop.position.set(frame.cards.find(c=>c.id===frame.selected?.id)?.position[0]??0,4.8,6.5);if(!frame.public){if(keys.length&&c&&texture){c.clearRect(0,0,width*3,height);texture.needsUpdate=true;}keys.length=0;}
+  for(let slot=0;slot<3;slot++){const card=frame.cards[slot],shown=root.visible&&!!card&&(frame.mode!=='receipt'||card.id===frame.selected?.id),hit=pickables[slot];hit.visible=shown;hit.userData.pickDisabled=!shown;hit.userData.pick=card?`budgetReceipt:${card.id}`:'';hit.userData.playerId=card?.id??null;const p=card?.position??[0,4.8,6.65];hit.position.set(...p);
+   const points=shown?[p[0]-1.35,p[1]-2.7,p[2],p[0]+1.35,p[1]-2.7,p[2],p[0]+1.35,p[1]+2.7,p[2],p[0]-1.35,p[1]+2.7,p[2]]:Array(12).fill(0);if(points.some((n,i)=>lastPositions[slot*12+i]!==n)){positions.set(points,slot*12);lastPositions.splice(slot*12,12,...points);geometry.getAttribute('position').needsUpdate=true;geometry.computeBoundingSphere();}
+   if(card&&root.visible){const key=JSON.stringify(card);if(keys[slot]!==key){keys[slot]=key;draw(slot,card);}}
+  }root.userData.frame=frame;return frame;
+ },dispose(){if(disposed)return;disposed=true;release();const owned=new Set<T.Material>();root.traverse(o=>{if(o instanceof T.Mesh&&o.material instanceof T.MeshBasicMaterial)owned.add(o.material);});owned.forEach(m=>m.dispose());root.removeFromParent();}};
+}

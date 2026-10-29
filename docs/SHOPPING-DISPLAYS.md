@@ -1,0 +1,31 @@
+# Kaufhaus: gemeinsame Warenflächen
+
+## Darstellung und Besitz
+
+Die bis zu zwölf Warenstände verwenden zwei instanzierte Bauteile für Sockel und Holzplatte. Produktfotos und räumliche Etiketten besitzen je eine gemeinsame Flächengeometrie. Diese übernimmt exakt die Transformationen der ursprünglichen individuellen Angebotsflächen, einschließlich der verkleinerten Auswahl und ausgeblendeter Angebote. Ein unveränderter Zustand lädt die Geometrie nicht erneut hoch.
+
+Die einzelnen Foto-Meshes bleiben mit ihrem Namen, Angebotsindex und Elternplatz erhalten. Sie befinden sich auf einer ausschließlich für die Raycaster-Auswahl freigeschalteten Ebene, die Kamera und Schattenkamera nicht darstellen. Somit bleibt die Auswahl an dieselbe tatsächliche Weltfläche gebunden; es werden keine unsichtbaren Ersatzpositionen geschätzt. Warenkorbfotos verwenden weiterhin dieselbe Geometrie und dasselbe Material wie ihr jeweiliges Produktfoto und behalten dessen Atlas-Koordinaten.
+
+Eine szeneneigene Canvas-Textur von 1.608 × 978 Pixeln enthält zwölf Fotofelder von unverändert 400 × 260 Pixeln und zwölf Etikettenfelder. Die Fotos werden mit erhaltenem Seitenverhältnis auf Weiß eingepasst. Ein Rand um jedes Feld und lineare Filterung ohne Mipmaps vermeiden das Vermischen benachbarter Felder. Foto- und Schriftmaterial bleiben getrennt: neutrale Produktfarben ohne Tonemapping und transparente Schriftflächen mit den bisherigen räumlichen Eigenschaften. Die Karte wird vor der Shader-Vorbereitung angelegt; geladene Bilder ändern den Inhalt, statt für jedes Produkt einen neuen Shader mit Textur zu erzeugen.
+
+Lange Produktnamen erhalten kurze zweizeilige, dunkle Etiketten. Die vollständigen Namen und präzise Bedienung bleiben in der zugänglichen Produktliste erhalten. Veröffentlichte kurze Preise werden groß in einer Zeile dargestellt. Vor der Auflösung bleiben Preise weiterhin verborgen.
+
+Geänderte oder fehlende Bilder und weggefallene Angebote löschen ihre vorherigen Fotofelder. Verspätete Bildantworten können ein inzwischen gewechseltes Angebot nicht überschreiben. Der Atlas, seine Materialien, Proxy-/Batchgeometrien und Instanzpuffer haben einen gemeinsamen Besitzer mit wiederholbar sicherer Freigabe. Die vom Schauplatz übergebenen Holz-/Sockelmaterialien bleiben im bisherigen Besitzer.
+
+Der private Korb besitzt einen eigenen starren Unterbaum. Seine Streben werden innerhalb dieses Baums instanziert und behalten dadurch Bewegung und Sichtbarkeit des privaten Korbs. Sie gelangen nicht in das öffentliche Kaufhaus-Batching.
+
+## Nachweise und Grenzen
+
+Erster vollständig geladener Low-Quality-Lauf mit zwölf Avataren und zehn Produktbildern: 86 statt zuvor 143 Zeichenaufrufen, weiterhin 4.226 Dreiecke, 32 statt 51 Renderer-Texturen und 43 statt 61 Renderer-Geometrien. Salon und Rennen bleiben bei 97 beziehungsweise 91 Zeichenaufrufen. Der neue Stand ersetzt die historische Kaufhauszahl aus `SCENE-BATCHING.md`; die Geometrie wurde dafür nicht entfernt.
+
+`test-shopping-displays.mjs` prüft transformierte Foto-/Schriftflächen gegen die einzelnen Auswahlflächen, einschließlich nicht gleichmäßig skaliertem Elternbaum, Auswahlverkleinerung und Lücken in den sichtbaren Angeboten. Weitere Aussagen: unveränderte Zustände erzeugen keinen Positions-Upload, die Kamera zeichnet keine Auswahl-Proxies, der Raycaster trifft den richtigen Angebotsindex, Materialien fremder Besitzer bleiben erhalten, Atlasfelder überlappen nicht und lange Namen/Preise werden sinnvoll aufgeteilt.
+
+`check-shopping-displays.mjs` verwendet zwölf Spieler auf Desktop und Touch. Es vergleicht die tatsächlichen zehn geladenen Fotofelder Pixel für Pixel mit der ursprünglichen Einpassung, prüft dunkle Schrift in jedem aktiven Etikett, wählt ein Produkt unmittelbar in 3D und legt es über dieselbe verkleinerte Fläche zurück. Es prüft außerdem einen vollen privaten Korb, hohe/niedrige Grafikqualität und das Entfernen alter Bilder beim Sortimentswechsel. Die Prüfung erfasst tatsächliche Renderbudgets, ersetzt aber keinen FPS-Test auf echten Geräten.
+
+Der endgültige Warenflächenlauf besteht auf beiden Breiten: 86 Zeichenaufrufe in der niedrigen Übersicht, 96 mit allen zehn Artikeln im privaten Korb und 134 mit vollem Korb in hoher Qualität. Alle zehn Fotofelder sind in beiden Fällen pixelgleich mit der originalen Einpassung. Direkte Auswahl/Entfernung, zweizeilige dunkle Etiketten, kleinere Folgerundensortimente und das Löschen eines fehlenden Bildes bestehen. Bericht und tatsächlich kontrollierte Bilder: `outputs/qa/shopping-displays.json` und `shopping-displays-*`. TypeScript, Produktionsbuild, drei neue Geometrie-/Atlas-/Schriftprüfungen, drei bestehende Batching-Prüfungen sowie die 17 Adventure- und drei Kassen-Node-Prüfungen bestehen.
+
+Die endgültigen sechs Kassenfälle mit 2/8/12 Teilnehmern bei 1440/390 Pixeln bestehen ebenfalls. Vor der Messung sind alle Figuren und Produktbilder geladen. Bei zehn eingepackten Artikeln melden beide koordinierten Ansichten je Fall 67 bis 70 Zeichenaufrufe; der Test fordert maximal 100. Gemeinsame Waren-/Kundenpositionen, Überschreitung, knapper Einkauf, Wiederbeitritt, Zusammenfassung und Folgerundenreset bleiben korrekt. Bericht: `outputs/qa/checkout-layout-atlas-all.json`. Die zwei bestehenden Einkaufs-/Navigations-/Warenkorbprüfungen bestehen ebenfalls.
+
+Der abschließende Lauf über 30 Szenenwechsel fordert jetzt ausdrücklich die vollständigen Low-Quality-Budgets von höchstens 100 Zeichenaufrufen und 100.000 Dreiecken. Alle zehn Besuche je Schauplatz haben identische Zähler: Salon 97/7.196/38/38, Kaufhaus 86/4.226/32/43, Rennen 91/31.579/23/35 (Zeichenaufrufe/Dreiecke/Texturen/Geometrien). Es bleibt bei einem Canvas ohne gemeldete WebGL-Fehler. Nachweis: `outputs/qa/scene-lifecycle-atlas-30.json`. Der eigene Vorschauprozess wurde anschließend beendet.
+
+Die Browserprüfungen verwenden Chromium/SwiftShader und Engine-Fixtures. Die vollständige reale Netzwerk-Olympiade, Hardware-Bildzeiten, Eingabelatenz und Prozessspeicher sind weiterhin offen. Auch die vollständige individuelle Disziplin-, Sound-, Reise- und Gruppeninszenierung bleibt erforderlich. Der Kaufhaus-Renderaufwand allein beweist keine abgeschlossene Qualitätsabnahme. Der Stand bleibt lokal und unveröffentlicht.

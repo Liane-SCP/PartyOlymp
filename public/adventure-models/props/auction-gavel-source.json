@@ -1,0 +1,16 @@
+{
+  "title": "Gavel",
+  "author": "Poly by Google",
+  "source": "https://poly.pizza/m/6yKiq1_NH5K",
+  "download": "https://static.poly.pizza/4bf03f3f-7898-4973-a5ae-d7e2c29db2db.glb",
+  "license": "CC-BY-3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "verified": "2026-10-18",
+  "changes": "Original geometry and material palette retained; sound block separated from the hammer by connected topology, hammer pivot added at its grip, scale/orientation/roughness adapted for the auction lectern.",
+  "id": "props/auction-gavel",
+  "file": "/adventure-models/props/auction-gavel.glb",
+  "sha256": "1a2614009494fe1ac8d4913a0e146e4cf8df6b7dc1c8de7329a35820be78ad36",
+  "bytes": 20440,
+  "triangles": 1016,
+  "sourceSha256": "de53bcb150117e4951fbf12f3ddbf028018fd2654b327cef6976c679aeac3ad0"
+}

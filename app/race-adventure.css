@@ -1,0 +1,51 @@
+.adventure-race-dock:empty{display:none}
+.adventure-race-dock{position:absolute;z-index:6;left:14px;right:14px;bottom:51px}
+.adventure-race-dock .race-driving-console{padding:10px 12px;border:1px solid #9fc6ce66;border-radius:14px;background:#102b37f5;box-shadow:0 12px 30px #0004}
+.adventure-race-dock .type-copy{position:relative;max-height:66px;min-height:40px;overflow:auto;margin:0 0 7px;padding:7px 9px;font-size:15px;line-height:1.55;scrollbar-width:thin}
+.adventure-race-dock .type-copy::after{content:"";display:block;height:1.6em}
+.adventure-race-dock .type-entry{display:grid;gap:4px;font-size:10px;margin:0}
+.adventure-race-dock .type-entry textarea{width:100%;min-height:48px;height:48px;max-height:90px;resize:none;font:15px/1.4 ui-monospace,monospace;padding:8px 10px;background:#0c202c;color:#f8eddb;border:1px solid #aecbd077;border-radius:9px}
+.adventure-race-dock .type-entry textarea:focus{outline:2px solid #e7cd93;outline-offset:1px}
+.adventure-race-dock .type-stats{display:flex;flex-wrap:wrap;gap:5px 12px;align-items:center;margin:7px 0 0;font-size:10px}
+.adventure-race-dock .type-stats strong{font-size:12px}
+.adventure-mode-typer>.adventure-stage:has(.race-driving-console)>.adventure-canvas{position:absolute;top:0;bottom:243px;height:auto}
+.adventure-mode-typer>.adventure-stage:has(.race-driving-console) .adventure-shop-nav{bottom:251px}
+.adventure-race-exit{display:none}
+.adventure-mode-typer .adventure-shop-nav button{min-height:44px}
+@media(max-width:600px){
+ .adventure-mode-typer>.adventure-stage{height:calc(100dvh - 120px);min-height:560px}
+ .adventure-mode-typer>.adventure-stage:has(.race-driving-console)>.adventure-canvas{top:88px;bottom:236px}
+ .adventure-mode-typer .adventure-race-dock{left:8px;right:8px;bottom:43px}
+ .adventure-mode-typer .adventure-race-dock .race-driving-console{padding:8px}
+ .adventure-mode-typer .adventure-race-dock .type-copy{max-height:62px;font-size:14px}
+ .adventure-mode-typer .adventure-race-dock .type-entry textarea{font-size:16px}
+ .adventure-mode-typer .adventure-quality{bottom:auto;top:93px;right:12px}
+ .adventure-mode-typer>.adventure-stage:has(.race-driving-console) .adventure-shop-nav{bottom:244px}
+ .adventure-mode-typer>.adventure-stage.adventure-race-focused{position:fixed;top:var(--race-top,0px);left:0;right:0;width:100vw;height:var(--race-height,100dvh);min-height:0;margin:0;border-radius:0;z-index:1000}
+ body:has(.adventure-race-focused){overflow:hidden}
+ body:has(.adventure-race-focused) .site-header{visibility:hidden;pointer-events:none}
+ body:has(.adventure-race-focused) .emote-dock,body:has(.adventure-race-focused) .room-top,body:has(.adventure-race-focused) .game-topline{display:none}
+ .adventure-race-focused .adventure-heading{top:7px;left:12px;right:63px}
+ .adventure-race-focused .adventure-heading>span,.adventure-race-focused .adventure-heading p{display:none}
+ .adventure-race-focused .adventure-heading h2{font-size:20px;margin:7px 0}
+ .adventure-race-focused>.adventure-tools{top:52px;right:8px;display:flex;gap:5px}
+ .adventure-race-focused>.adventure-tools button{width:44px;height:44px}
+ .adventure-race-focused>.adventure-quality{display:none}
+ .adventure-race-focused>.adventure-canvas,.adventure-mode-typer>.adventure-race-focused:has(.race-driving-console)>.adventure-canvas{top:44px}
+ .adventure-race-focused .adventure-moment{top:93px;right:12px}
+ .adventure-race-focused .adventure-race-exit{display:block;position:absolute;top:3px;right:6px;width:44px;height:44px;z-index:10;border:1px solid #b7d0cd88;border-radius:10px;background:#173d47;color:#f4e5c4;font-size:24px;cursor:pointer}
+}
+/* A keyboard can shrink visualViewport without changing CSS viewport media queries. */
+@media(max-width:600px){
+ .adventure-mode-typer .adventure-race-focused.adventure-race-compact .adventure-race-dock{bottom:calc(4px + env(safe-area-inset-bottom,0px))}
+ .adventure-race-focused.adventure-race-compact .adventure-foot,.adventure-race-focused.adventure-race-compact .adventure-crew{display:none}
+ .adventure-race-focused.adventure-race-compact .adventure-race-dock .type-copy{max-height:43px;min-height:0;font-size:13px;padding:5px 7px}
+ .adventure-race-focused.adventure-race-compact .adventure-race-dock .type-entry textarea{height:42px;min-height:42px;padding:5px 8px;font-size:16px}
+ .adventure-race-focused.adventure-race-compact .adventure-race-dock .type-stats{margin-top:4px;font-size:9px}
+ .adventure-mode-typer>.adventure-race-focused.adventure-race-compact:has(.race-driving-console)>.adventure-canvas{bottom:calc(172px + env(safe-area-inset-bottom,0px))}
+ .adventure-mode-typer>.adventure-race-focused.adventure-race-compact:has(.race-driving-console) .adventure-shop-nav{bottom:auto;top:0;left:auto;right:51px}
+ .adventure-race-focused.adventure-race-compact .adventure-heading h2{font-size:16px}
+ .adventure-race-focused.adventure-race-compact>.adventure-tools{display:none}
+ .adventure-race-focused.adventure-race-compact .adventure-moment{top:47px;padding:5px 8px}
+ .adventure-race-focused.adventure-race-compact .adventure-moment span{display:none}
+}

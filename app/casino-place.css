@@ -1,0 +1,61 @@
+.adventure-stage[data-casino-view]{min-height:620px}
+.adventure-mode-blackjack:has(>.adventure-stage.adventure-ready[data-casino-view=hand]),.adventure-mode-blackjack:has(>.adventure-stage.adventure-ready[data-casino-view=dealer]){grid-template-columns:minmax(0,1fr)}
+.adventure-mode-blackjack:has(>.adventure-stage.adventure-ready[data-casino-view=hand])>.adventure-console,.adventure-mode-blackjack:has(>.adventure-stage.adventure-ready[data-casino-view=dealer])>.adventure-console{display:none}
+.adventure-stage[data-casino-view]>.adventure-canvas{position:absolute;left:0;right:0;top:104px;bottom:calc(var(--casino-dock-height,200px) + 74px);width:auto;height:auto}
+.adventure-stage[data-casino-view]>.adventure-vignette{top:104px;bottom:calc(var(--casino-dock-height,200px) + 74px);background:linear-gradient(transparent 85%,#173d4033);box-shadow:none}
+.adventure-stage[data-casino-view=hand]>.adventure-canvas,.adventure-stage[data-casino-view=hand]>.adventure-vignette,.adventure-stage[data-casino-view=dealer]>.adventure-canvas,.adventure-stage[data-casino-view=dealer]>.adventure-vignette{max-width:960px;margin-left:auto;margin-right:auto}
+.adventure-stage[data-casino-view]>.adventure-tools{display:none}
+.adventure-stage[data-casino-view]>.adventure-moment{display:none}
+.casino-place-dock{position:absolute;z-index:6;left:12px;right:12px;bottom:62px;max-width:760px;margin:auto;padding:9px;border:1px solid #cfba8577;border-radius:12px;background:#153e3df7;color:#f4e6c9;box-shadow:0 6px 24px #061c2940}
+.casino-camera-modes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.casino-place-dock button,.casino-place-dock select{min-height:44px;min-width:44px;padding:7px 8px;border:1px solid #c2c6a466;border-radius:8px;background:#284f4c;color:#fff0d0;font-size:12px;cursor:pointer}
+.casino-place-dock button[aria-pressed=true]{background:#6b7351;border-color:#efcf8a}
+.casino-place-dock button:disabled{opacity:.42;cursor:default}
+.casino-place-dock :focus-visible{outline:2px solid #f3dfa9;outline-offset:2px}
+.casino-place-navigation{display:flex;align-items:center;gap:6px;margin-top:6px;flex-wrap:wrap}
+.casino-place-navigation select{flex:1;min-width:60px}
+.casino-place-navigation button[data-casino-expand]{margin-left:auto}
+.casino-place-controls{border-top:1px solid #c4be9466;margin-top:7px;padding-top:7px}
+.casino-place-status{display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:14px}
+.casino-place-status>span{font-size:11px;color:#d4dac5;white-space:nowrap}
+.casino-place-controls p{font-size:11px;color:#d5dfcd;margin:5px 0 7px}
+.casino-place-bets{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px}
+.casino-place-bets .casino-place-confirm{grid-column:1/-1;background:#dfcc99;color:#1c3d38;font-weight:700}
+.casino-place-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.casino-place-actions>button:first-child{background:#bace9e;color:#244036;font-weight:700}
+.casino-place-controls p.casino-place-result{font-size:14px;color:#f4dba0}
+.casino-place-controls [role=alert]{color:#f0b7ad}
+.casino-accessible-cards{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.casino-accessible-cards.casino-visible-cards{position:static;display:block;width:auto;height:auto;overflow:visible;clip-path:none;white-space:normal;margin:5px 0;font-size:12px;line-height:1.5;color:#f4dfae}
+.adventure-mode-blackjack>.adventure-stage.adventure-casino-expanded{position:fixed;inset:0;width:100vw;height:100dvh!important;min-height:0;margin:0;border-radius:0;z-index:1000}
+body:has(.adventure-casino-expanded){overflow:hidden}
+body:has(.adventure-casino-expanded) .site-header{visibility:hidden;pointer-events:none}
+body:has(.adventure-casino-expanded) .room-top,body:has(.adventure-casino-expanded) .game-topline,body:has(.adventure-casino-expanded) .desktop-crew-toggle,body:has(.adventure-casino-expanded) .emote-dock{display:none}
+.adventure-casino-expanded>.adventure-heading{top:10px;left:14px;right:14px}
+.adventure-casino-expanded>.adventure-heading>span,.adventure-casino-expanded>.adventure-heading p,.adventure-casino-expanded>.adventure-quality,.adventure-casino-expanded>.adventure-foot{display:none}
+.adventure-casino-expanded>.adventure-heading h2{font-size:23px;margin:8px 0}
+.adventure-stage.adventure-casino-expanded>.adventure-canvas,.adventure-stage.adventure-casino-expanded>.adventure-vignette{top:58px}
+.adventure-casino-expanded>.casino-place-dock{bottom:calc(38px + env(safe-area-inset-bottom,0px))}
+.adventure-stage.adventure-casino-expanded>.adventure-canvas,.adventure-stage.adventure-casino-expanded>.adventure-vignette{bottom:calc(var(--casino-dock-height,200px) + 50px + env(safe-area-inset-bottom,0px))}
+.adventure-casino-expanded>.adventure-crew{bottom:calc(10px + env(safe-area-inset-bottom,0px))}
+@media(max-width:600px){
+ .adventure-stage[data-casino-view]{height:650px!important;min-height:650px}
+ .adventure-stage.adventure-casino-expanded{min-height:0}
+ .casino-place-dock{left:8px;right:8px;padding:7px}
+ .casino-place-dock button,.casino-place-dock select{font-size:11px;padding:6px}
+ .casino-place-status{font-size:12px;gap:6px}.casino-place-status>span{font-size:10px}
+ .casino-place-navigation{gap:4px}
+ .adventure-casino-expanded>.adventure-heading h2{font-size:21px}
+}
+@media(max-height:560px) and (min-width:601px){
+ .adventure-stage.adventure-casino-expanded>.adventure-canvas,.adventure-stage.adventure-casino-expanded>.adventure-vignette{top:58px;right:304px;bottom:36px;width:auto}
+ .adventure-casino-expanded>.casino-place-dock{left:auto;right:10px;top:58px;bottom:36px;width:282px;max-width:none;overflow:auto;margin:0}
+ .adventure-casino-expanded>.adventure-crew{right:304px;bottom:10px}
+ .casino-place-dock button,.casino-place-dock select{font-size:11px;padding:6px}
+ .casino-place-status{display:block}.casino-place-status>span{display:block;margin-top:3px}
+}
+@media(min-width:1100px) and (max-height:760px){
+ .immersive-play .stage-panel:has(.adventure-mode-blackjack){overflow:auto}
+ .immersive-play .adventure-mode-blackjack{height:auto;min-height:620px}
+ .immersive-play .adventure-mode-blackjack>.adventure-stage[data-casino-view]:not(.adventure-casino-expanded){height:650px!important}
+}

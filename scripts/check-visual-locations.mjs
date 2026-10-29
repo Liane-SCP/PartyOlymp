@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import * as T from 'three';
+import sharp from 'sharp';
+import {build} from 'esbuild';
+import {chromium} from '../../.tools/qa/node_modules/playwright/index.mjs';
+await build({entryPoints:['tests/adventure-browser-engine.ts'],outfile:'outputs/visual-locations.mjs',bundle:true,platform:'node',format:'esm'});const {fixture}=await import('../outputs/visual-locations.mjs');
+const browser=await chromium.launch({headless:true,args:['--use-angle=swiftshader','--enable-webgl','--ignore-gpu-blocklist','--enable-unsafe-swiftshader']});
+try{for(const width of[1440,390])for(const id of(process.env.GAMES?process.env.GAMES.split(','):['color','picture'])){
+ const m=fixture(id,12),p=await browser.newPage({viewport:{width,height:1100},hasTouch:width===390}),errors=[];
+ if(id==='color'){m.room.game.public.previewUntil=Date.now()+60000;m.room.game.secret.target=[80,130,210];}
+ p.on('pageerror',e=>errors.push(e.message));p.on('console',msg=>{if(msg.type()==='error')errors.push(msg.text());});await p.routeWebSocket('**/api/live',w=>w.close());
+ await p.addInitScript(pid=>{localStorage.setItem('olymp.session',JSON.stringify({code:'ADV234',playerId:pid,token:'fixture'}));localStorage.setItem('olymp.settings',JSON.stringify({muted:true,motion:true}));localStorage.setItem('olymp.graphics','low');},m.first);
+ await p.route('**/api/room',route=>{const b=route.request().postDataJSON();if(b.type==='action'){try{m.act(b.action);}catch(e){console.log('Action rejected',id,b.action.type,b.action.action?.type,b.action.phase,m.view().room.phaseKey,m.view().room.game.stage);throw e;}}return route.fulfill({json:m.view()});});await p.goto('http://127.0.0.1:5173');await p.locator('.adventure-ready').waitFor();await p.locator('.adventure-stage').scrollIntoViewIfNeeded();await p.waitForFunction(()=>Number(document.querySelector('.adventure-canvas canvas')?.dataset.readyAvatars)===12);
+ const canvas=p.locator('.adventure-canvas canvas');
+ if(width===390){const heading=await p.locator('.adventure-heading').boundingBox(),view=await canvas.boundingBox();assert.ok(heading.y+heading.height<=view.y,'Mobile heading must stay above the rendered play area');}
+ async function screen(x,y,z){const r=await canvas.boundingBox(),c=new T.PerspectiveCamera(42,r.width/r.height,.1,180);c.position.fromArray((await canvas.getAttribute('data-camera')).split(',').map(Number));c.lookAt(0,2.5,0);c.updateMatrixWorld();const q=new T.Vector3(x,y,z).project(c);return {x:r.x+(q.x+1)*r.width/2,y:r.y+(1-q.y)*r.height/2};}
+ async function pick(x,y,z){const q=await screen(x,y,z);if(width===390)await p.touchscreen.tap(q.x,q.y);else await p.mouse.click(q.x,q.y);}
+ async function colorPixel(x,y,z,expected){const q=await screen(x,y,z),r=await canvas.boundingBox(),pixel=await sharp(await canvas.screenshot()).extract({left:Math.round(q.x-r.x),top:Math.round(q.y-r.y),width:1,height:1}).removeAlpha().raw().toBuffer();for(let i=0;i<3;i++)assert.ok(Math.abs(pixel[i]-expected[i])<=2,`sRGB channel ${i}: ${pixel[i]} != ${expected[i]}`);}
+ if(id==='color'){
+  assert.equal(await canvas.getAttribute('data-color-target'),'true');await colorPixel(-4,5.1,-6.56,[80,130,210]);await p.locator('.adventure-stage').screenshot({path:`outputs/qa/color-memorize-${width}.png`});
+  m.room.game.public.previewUntil=Date.now()-1;await p.locator('.color-controls').waitFor();await p.waitForFunction(()=>document.querySelector('.adventure-canvas canvas').dataset.colorTarget==='false');assert.equal(m.view().room.game.target,null);
+  const start=await screen(0,2,2.6),end=await screen(4,2,2.6),camera=await canvas.getAttribute('data-camera');if(width===390)await p.touchscreen.tap(end.x,end.y);else{await p.mouse.move(start.x,start.y);await p.mouse.down();await p.mouse.move(end.x,end.y,{steps:8});await p.mouse.up();}
+  await p.waitForFunction(()=>document.querySelector('.color-controls input')?.value==='213');assert.equal(await canvas.getAttribute('data-camera'),camera);await p.waitForFunction(()=>JSON.parse(document.querySelector('.adventure-canvas canvas').dataset.colorRgb)[0]===213);await colorPixel(4,5.1,-6.56,[213,128,128]);
+  await pick(0,2.06,8.4);await p.getByRole('button',{name:'✓ Farbe abgegeben',exact:true}).waitFor();assert.deepEqual(m.view().room.game.mine.answer,[213,128,128]);
+  for(const other of m.room.players.slice(1))m.command(other.id,{type:'game',action:{type:'answer',value:[80,130,210]}});m.room.game.deadline=Date.now()-1;m.next();await p.locator('.round-reveal').waitFor();await p.locator('.adventure-stage').scrollIntoViewIfNeeded();await p.waitForFunction(()=>document.querySelector('.adventure-canvas canvas').dataset.colorPhase==='reveal');await colorPixel(-4,5.1,-6.56,[80,130,210]);await colorPixel(4,5.1,-6.56,[213,128,128]);
+ }else{
+  await p.waitForFunction(()=>document.querySelector('.adventure-canvas canvas').dataset.pictureMode==='puzzle');await pick(-9.6,2.08,-4);await p.getByRole('textbox',{name:'Deine Antwort',exact:true}).waitFor();assert.equal(m.view().room.game.buzzer,m.first);
+  await p.getByRole('textbox',{name:'Deine Antwort',exact:true}).fill(m.room.game.secret.item.answer);await p.getByRole('button',{name:'Antwort abschicken ↗',exact:true}).click();await p.locator('.round-reveal').waitFor();await p.locator('.adventure-stage').scrollIntoViewIfNeeded();await p.waitForFunction(()=>document.querySelector('.adventure-canvas canvas').dataset.pictureMode==='revealed');
+  await p.locator('.adventure-stage').screenshot({path:`outputs/qa/picture-reveal-${width}.png`});m.next();await p.waitForFunction(()=>document.querySelector('.adventure-canvas canvas').dataset.pictureMode==='puzzle');assert.equal(m.view().room.game.buzzer,null);await p.locator('.pixel-buzzer button').waitFor();await pick(-9.6,2.08,-4);await p.getByRole('textbox',{name:'Deine Antwort',exact:true}).waitFor();assert.equal(m.view().room.game.buzzer,m.first);
+ }
+ await p.locator('.adventure-stage').scrollIntoViewIfNeeded();assert.ok(Number(await canvas.getAttribute('data-draw-calls'))<280);assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);await p.locator('.adventure-stage').screenshot({path:`outputs/qa/visual-location-${id}-${width}.png`});assert.deepEqual(errors,[]);await p.close();console.log(`${id}/${width}: 12 players, 3D input, authoritative resolution${id==='color'?', neutral sRGB pixels and hidden sample':', actual image reveal and round reset'} passed`);
+}}finally{await browser.close();}

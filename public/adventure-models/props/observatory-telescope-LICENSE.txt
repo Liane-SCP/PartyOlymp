@@ -1,0 +1,7 @@
+Telescope by CreativeTrio
+Source: https://poly.pizza/m/RjyTCQvA8b
+Download: https://static.poly.pizza/2c0070d8-e239-4a8f-939f-be5b2007ce93.glb
+License: CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+Verified: 2026-10-18
+Changes: Original 734-triangle geometry and embedded palette retained. Placement, uniform scale, roughness and metalness normalized by the shared model loader. Fixed observational prop; no periodic animation or moving light.
+SHA-256: 01311b0f92d7a61795ecfc7693d9886461c9572fcab28fdcd533df540d2eb387

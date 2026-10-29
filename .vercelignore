@@ -1,0 +1,12 @@
+.git
+.github
+node_modules
+.next
+.vinext
+.wrangler
+.sites-runtime
+outputs
+assets/source-models
+*.tsbuildinfo
+.env.local
+.env.*.local

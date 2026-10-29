@@ -1,0 +1,4 @@
+Gavel by Poly by Google
+Source: https://poly.pizza/m/6yKiq1_NH5K
+License: Creative Commons Attribution 3.0 Unported (https://creativecommons.org/licenses/by/3.0/)
+Changes: Original geometry and material palette retained; sound block separated from the hammer by connected topology, hammer pivot added at its grip, scale/orientation/roughness adapted for the auction lectern.

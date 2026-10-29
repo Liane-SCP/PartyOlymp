@@ -1,0 +1,11 @@
+{
+  "id": "props/laboratory-flask",
+  "title": "Erlenmeyer flask",
+  "author": "Poly by Google",
+  "source": "https://poly.pizza/m/eqIGxcsBe1V",
+  "download": "https://static.poly.pizza/0ec46b5b-d7ee-48f5-a06d-4274db0dfb1e.glb",
+  "license": "CC-BY-3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "verified": "2026-10-18",
+  "changes": "Removed the floating turquoise bubble primitive; retained the flask and its graduation marks. Tinted opaque ceramic ivory and graphite, adjusted roughness, placed and scaled for the pigment laboratory. Original binary mesh data retained."
+}

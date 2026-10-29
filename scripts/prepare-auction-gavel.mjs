@@ -1,0 +1,27 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+
+/** Preserve the authored rest pose and palette; articulate the hammer independently of its sound block. */
+export async function prepareAuctionGavel(){
+ const source=JSON.parse(await readFile('assets/source-models/auction/gavel-source.json','utf8'));
+ if(source.license!=='CC-BY-3.0'||source.source!=='https://poly.pizza/m/6yKiq1_NH5K')throw Error('Unverified gavel attribution');
+ const original=await readFile('assets/source-models/auction/Gavel.glb'),jl=original.readUInt32LE(12),old=JSON.parse(original.subarray(20,20+jl)),binary=original.subarray(28+jl);
+ if(original.readUInt32LE(0)!==0x46546c67||old.images?.length||old.meshes.length!==1||old.meshes[0].primitives.length!==2)throw Error('Unexpected gavel source');
+ function read(ai){const a=old.accessors[ai],v=old.bufferViews[a.bufferView],size={SCALAR:1,VEC2:2,VEC3:3,VEC4:4}[a.type],step={5123:2,5125:4,5126:4}[a.componentType],method=a.componentType===5123?'readUInt16LE':a.componentType===5125?'readUInt32LE':'readFloatLE';if(!size||!step)throw Error('Unsupported gavel accessor');return Array.from({length:a.count},(_,i)=>Array.from({length:size},(_,k)=>binary[method]((v.byteOffset??0)+(a.byteOffset??0)+i*(v.byteStride??size*step)+k*step)));}
+ const brown=old.meshes[0].primitives[0],positions=read(brown.attributes.POSITION),indices=read(brown.indices).flat(),parents=positions.map((_,i)=>i),find=i=>parents[i]===i?i:parents[i]=find(parents[i]),join=(a,b)=>parents[find(a)]=find(b),weld=new Map();
+ positions.forEach((v,i)=>{const key=v.map(x=>Math.round(x*1e4)).join();if(weld.has(key))join(i,weld.get(key));else weld.set(key,i);});
+ for(let i=0;i<indices.length;i+=3){join(indices[i],indices[i+1]);join(indices[i],indices[i+2]);}
+ const components=new Map();positions.forEach((v,i)=>{const key=find(i),rows=components.get(key)??[];rows.push(v);components.set(key,rows);});
+ const base=[...components].find(([,p])=>Math.max(...p.map(v=>v[1]))<3&&Math.max(...p.map(v=>v[2]))>7)?.[0];
+ if(base===undefined||components.size!==3)throw Error('Sound-block topology changed');
+ const parts=[],views=[],accessors=[];let bytes=0;
+ function append(data,type,componentType,count,min,max){const padded=Buffer.alloc(Math.ceil(data.length/4)*4);data.copy(padded);views.push({buffer:0,byteOffset:bytes,byteLength:data.length});parts.push(padded);bytes+=padded.length;accessors.push({bufferView:views.length-1,componentType,count,type,...(min?{min,max}:{})});return accessors.length-1;}
+ const pivot=[17.4,.7,0];
+ function primitive(p,list,offset){const used=[...new Set(list)],map=new Map(used.map((v,i)=>[v,i])),attributes={};for(const [name,ai]of Object.entries(p.attributes)){const a=old.accessors[ai],all=read(ai),rows=used.map(i=>all[i].map((v,c)=>name==='POSITION'?v-offset[c]:v)),data=Buffer.alloc(rows.length*rows[0].length*4);rows.flat().forEach((v,i)=>data.writeFloatLE(v,i*4));attributes[name]=append(data,a.type,5126,rows.length,name==='POSITION'?[0,1,2].map(c=>Math.min(...rows.map(v=>v[c]))):undefined,name==='POSITION'?[0,1,2].map(c=>Math.max(...rows.map(v=>v[c]))):undefined);}const data=Buffer.alloc(list.length*2);list.forEach((v,i)=>data.writeUInt16LE(map.get(v),i*2));return {attributes,indices:append(data,'SCALAR',5123,list.length),material:p.material};}
+ const baseIndices=[],hammerIndices=[];for(let i=0;i<indices.length;i+=3)(find(indices[i])===base?baseIndices:hammerIndices).push(...indices.slice(i,i+3));
+ const gold=old.meshes[0].primitives[1],goldIndices=read(gold.indices).flat(),json={asset:{version:'2.0',generator:'Olymparty articulated auction gavel; source attribution retained'},scene:0,scenes:[{nodes:[0,1]}],nodes:[{name:'gavel-soundblock',mesh:0},{name:'gavel-hammer-pivot',translation:pivot,children:[2]},{name:'gavel-hammer',mesh:1}],meshes:[{primitives:[primitive(brown,baseIndices,[0,0,0])]},{primitives:[primitive(brown,hammerIndices,pivot),primitive(gold,goldIndices,pivot)]}],materials:old.materials,accessors,bufferViews:views,buffers:[{byteLength:0}]};json.buffers[0].byteLength=bytes;
+ const text=Buffer.from(JSON.stringify(json)),chunk=Buffer.alloc(Math.ceil(text.length/4)*4,0x20);text.copy(chunk);const bin=Buffer.concat(parts),result=Buffer.alloc(28+chunk.length+bin.length);result.writeUInt32LE(0x46546c67,0);result.writeUInt32LE(2,4);result.writeUInt32LE(result.length,8);result.writeUInt32LE(chunk.length,12);result.writeUInt32LE(0x4e4f534a,16);chunk.copy(result,20);const at=20+chunk.length;result.writeUInt32LE(bin.length,at);result.writeUInt32LE(0x004e4942,at+4);bin.copy(result,at+8);
+ const entry={...source,id:'props/auction-gavel',file:'/adventure-models/props/auction-gavel.glb',sha256:createHash('sha256').update(result).digest('hex'),bytes:result.length,triangles:(baseIndices.length+hammerIndices.length+goldIndices.length)/3,sourceSha256:createHash('sha256').update(original).digest('hex')};
+ if(entry.triangles!==old.meshes[0].primitives.reduce((n,p)=>n+old.accessors[p.indices].count/3,0))throw Error('Gavel geometry was lost');
+ await mkdir('public/adventure-models/props',{recursive:true});await writeFile('public/adventure-models/props/auction-gavel.glb',result);await writeFile('public/adventure-models/props/auction-gavel-source.json',JSON.stringify(entry,null,2)+'\n');await writeFile('public/adventure-models/props/auction-gavel-LICENSE.txt',`Gavel by ${source.author}\nSource: ${source.source}\nLicense: Creative Commons Attribution 3.0 Unported (${source.licenseUrl})\nChanges: ${source.changes}\n`);return entry;
+}

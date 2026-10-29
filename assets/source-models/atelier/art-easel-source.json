@@ -1,0 +1,11 @@
+{
+  "id": "props/atelier-easel",
+  "title": "Art Easel Set Up",
+  "author": "reyshapes",
+  "source": "https://poly.pizza/m/2ZP3o8hyPA",
+  "download": "https://static.poly.pizza/de6672ae-e7be-47eb-9836-f4894bbc82f2.glb",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "verified": "2026-10-18",
+  "changes": "Preserved positions, normals, authored node transforms and the vertex-painted palette. Combined ten material primitives into one opaque rough nonmetallic material; packed vertex colors as normalized unsigned bytes with at most 0.5/255 component error; removed unused UVs and FBX extras. Scaled and placed beside the idea-city workshop."
+}

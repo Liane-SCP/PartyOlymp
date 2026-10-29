@@ -1,0 +1,707 @@
+﻿/* The game occupies the viewport; only the controls float above it. */
+.game-camera {
+  display: contents;
+}
+.immersive-play .words-sheet > label {
+  border: 0;
+  box-shadow: none;
+}
+.immersive-play :is(.auction-topic, .trio-sidebar) {
+  border: 0;
+  box-shadow: none;
+  background: none;
+}
+.platform.immersive-play {
+  --arena-color: #8798ff;
+  --hud-shadow: 0 12px 30px #0006, 0 3px 8px #0005;
+  --hud-fill: #101724f2;
+  position: fixed;
+  inset: 0;
+  max-width: none;
+  width: 100%;
+  height: 100dvh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: radial-gradient(
+    ellipse at 42% 40%,
+    color-mix(in srgb, var(--arena-color) 13%, #101522),
+    #080c14 80%
+  );
+}
+.immersive-play[data-game="cards"],
+.immersive-play[data-game="blackjack"] {
+  --arena-color: #35b792;
+}
+.immersive-play[data-game="budget"],
+.immersive-play[data-game="auction"] {
+  --arena-color: #f1b74e;
+}
+.immersive-play[data-game="size"],
+.immersive-play[data-game="geo"] {
+  --arena-color: #53c8c1;
+}
+.immersive-play[data-game="bomb"] {
+  --arena-color: #ee735b;
+}
+.immersive-play[data-game="color"],
+.immersive-play[data-game="spectrum"] {
+  --arena-color: #c087f7;
+}
+.immersive-play::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 10% 100%,
+    color-mix(in srgb, var(--arena-color) 8%, transparent),
+    transparent 55%
+  );
+}
+.immersive-play .room-stage,
+.immersive-play .room-stage .room-shell,
+.immersive-play .room-layout {
+  display: contents;
+}
+.immersive-play .site-header {
+  position: fixed;
+  inset: max(12px, env(safe-area-inset-top)) 18px auto;
+  height: 46px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  z-index: 50;
+  pointer-events: none;
+}
+.immersive-play .brand {
+  font-size: 19px;
+  filter: drop-shadow(0 4px 6px #0009);
+  pointer-events: auto;
+}
+.immersive-play .brand small {
+  display: none;
+}
+.immersive-play .brand > svg {
+  width: 26px;
+  height: 26px;
+}
+.immersive-play .header-actions {
+  pointer-events: auto;
+  background: var(--hud-fill);
+  border-radius: 14px;
+  padding: 5px;
+  box-shadow: var(--hud-shadow);
+}
+.immersive-play .header-actions .icon-button {
+  width: 34px;
+  height: 34px;
+  border: 0;
+}
+.immersive-play .room-top {
+  display: contents;
+}
+.immersive-play .room-top > div {
+  position: fixed;
+  left: 245px;
+  right: 310px;
+  top: 14px;
+  z-index: 40;
+  text-align: center;
+  pointer-events: none;
+  text-shadow:
+    0 4px 14px #000,
+    0 2px 4px #000;
+}
+.immersive-play .room-top .eyebrow {
+  display: none;
+}
+.immersive-play .room-top h1 {
+  font-size: clamp(20px, 2vw, 30px);
+  margin: 5px 0;
+  line-height: 1.2;
+}
+.immersive-play .desktop-crew-toggle,
+.immersive-play .room-code {
+  position: fixed;
+  top: 72px;
+  right: 18px;
+  z-index: 40;
+  margin: 0;
+  border: 0;
+  background: var(--hud-fill);
+  box-shadow: var(--hud-shadow);
+  border-radius: 10px;
+  height: 32px;
+}
+.immersive-play .desktop-crew-toggle {
+  display: block;
+  right: 160px;
+  padding: 6px 12px;
+  font-size: 11px;
+}
+.immersive-play .room-code {
+  padding: 6px 10px;
+  gap: 8px;
+  display: flex;
+}
+.immersive-play .room-code > span {
+  display: none;
+}
+.immersive-play .room-code > strong {
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+.immersive-play .room-code > svg {
+  width: 13px;
+}
+.immersive-play .crew-panel {
+  display: none;
+}
+.immersive-play .crew-expanded .crew-panel {
+  display: block;
+  position: fixed;
+  top: 116px;
+  right: 18px;
+  width: 280px;
+  max-height: calc(100dvh - 215px);
+  overflow-y: auto;
+  z-index: 60;
+  border: 0;
+  border-radius: 16px;
+  background: var(--hud-fill);
+  box-shadow: var(--hud-shadow);
+  padding: 14px;
+}
+.immersive-play .stage-panel {
+  position: fixed;
+  inset: 116px 22px 94px;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  min-height: 0;
+  min-width: 0;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+.immersive-play .game-topline {
+  position: fixed;
+  top: 72px;
+  left: 22px;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 32px;
+  border: 0;
+  padding: 6px 12px;
+  margin: 0;
+  border-radius: 10px;
+  background: var(--hud-fill);
+  box-shadow: var(--hud-shadow);
+  font-size: 10px;
+}
+.immersive-play .game-topline .timer {
+  margin-left: 8px;
+  font-size: 12px;
+}
+.immersive-play .game-camera {
+  display: block;
+  height: 100%;
+  min-height: 0;
+}
+.immersive-play .game-board {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  grid-template-rows: max-content minmax(0, 1fr);
+  gap: 14px 22px;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+}
+.immersive-play .game-board > .play-guide {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+  border: 0;
+  padding: 8px 0;
+  background: none;
+  box-shadow: none;
+}
+.immersive-play .game-board > .play-surface {
+  grid-column: 1;
+  grid-row: 2;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  max-width: none;
+  padding: 8px 8px 16px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff28 transparent;
+}
+.immersive-play .game-board > .live-crew {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  position: static;
+  height: 100%;
+  overflow: auto;
+  scrollbar-width: thin;
+  padding: 6px;
+  margin: 0;
+  background: none;
+  border: 0;
+  box-shadow: none;
+}
+.immersive-play .live-crew-track {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 7px;
+  overflow: visible;
+}
+.immersive-play .live-player {
+  max-width: none;
+  border: 0;
+  border-radius: 12px;
+  background: #101724bd;
+  box-shadow: 0 5px 12px #0003;
+  padding: 8px 10px;
+}
+.immersive-play .live-player.is-me {
+  box-shadow:
+    inset 3px 0 var(--arena-color),
+    0 5px 12px #0003;
+}
+.immersive-play .live-player > header {
+  margin-bottom: 2px;
+}
+.immersive-play .live-player .avatar-art {
+  width: 22px;
+  height: 22px;
+}
+.immersive-play .live-player-state {
+  margin-top: 0;
+  font-size: 10px;
+  line-height: 1.2;
+}
+.immersive-play .live-player-state small {
+  font-size: 9px;
+}
+.immersive-play .board-cards,
+.immersive-play .board-code {
+  grid-template-columns: minmax(0, 1fr);
+}
+.immersive-play
+  :is(
+    .trio-arena,
+    .chain-arena,
+    .words-arena,
+    .code-arena,
+    .typer-arena,
+    .herd-arena,
+    .spectrum-arena,
+    .geo-arena,
+    .wiki-reader,
+    .felt-table,
+    .card-table,
+    .color-preview,
+    .size-stage
+  ) {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.immersive-play
+  :is(
+    .trio-arena,
+    .chain-arena,
+    .words-arena,
+    .code-arena,
+    .typer-arena,
+    .herd-arena,
+    .spectrum-arena,
+    .geo-arena
+  ) {
+  background: none;
+  padding: 8px 0;
+  max-width: none;
+}
+.immersive-play
+  :is(
+    .type-arena,
+    .color-table,
+    .code-workbench,
+    .code-legend,
+    .code-rival,
+    .code-editor,
+    .club-metrics > div,
+    .trio-focus,
+    .chain-focus,
+    .chain-history,
+    .card-action-theatre,
+    .turn-banner
+  ) {
+  border: 0;
+  box-shadow: none;
+}
+.immersive-play
+  :is(
+    .code-workbench,
+    .code-editor,
+    .trio-focus,
+    .chain-focus,
+    .chain-history,
+    .card-action-theatre
+  ) {
+  background: none;
+}
+.immersive-play .code-workbench > header {
+  border: 0;
+}
+.immersive-play :is(.felt-table, .color-table) {
+  background: radial-gradient(ellipse, #194c3d80, #194c3d00 72%);
+}
+.immersive-play .club21 {
+  min-width: 0;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+}
+.immersive-play .club21 > * {
+  min-width: 0;
+}
+.immersive-play .bet-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.immersive-play .bet-options button {
+  min-width: 0;
+  width: auto;
+}
+.immersive-play .game-camera > .round-reveal,
+.immersive-play .game-camera > .spectator {
+  height: 100%;
+  overflow: auto;
+  border: 0;
+  background: none;
+  padding: 18px;
+}
+.immersive-play .room-stage .emote-dock {
+  position: fixed;
+  bottom: max(12px, env(safe-area-inset-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 55;
+  width: max-content;
+  max-width: calc(100vw - 28px);
+  margin: 0;
+  padding: 7px 14px;
+  border: 0;
+  border-radius: 18px;
+  background: var(--hud-fill);
+  box-shadow: var(--hud-shadow);
+}
+.immersive-play .live-reactions {
+  position: fixed;
+  bottom: 86px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 56;
+  pointer-events: none;
+  margin: 0;
+  max-width: 80vw;
+}
+.immersive-play .error-banner {
+  position: fixed;
+  top: 112px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 90;
+  max-width: min(680px, 90vw);
+}
+.immersive-play .guide-rules {
+  position: relative;
+  z-index: 5;
+}
+.immersive-play .guide-rules[open] {
+  background: var(--hud-fill);
+  border: 0;
+  box-shadow: var(--hud-shadow);
+  padding: 12px;
+  border-radius: 12px;
+}
+.immersive-play .spectrum-arena form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 8px 16px;
+  width: 100%;
+  max-width: 850px;
+  text-align: left;
+}
+.immersive-play .spectrum-arena form > label {
+  min-width: 0;
+  grid-column: 1;
+  grid-row: 1;
+}
+.immersive-play .spectrum-arena form input {
+  width: 100%;
+  min-width: 0;
+}
+.immersive-play .spectrum-arena form > button {
+  grid-column: 2;
+  grid-row: 1;
+}
+.immersive-play .spectrum-arena form .spectrum-clue-help {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin: 0;
+}
+.immersive-play .size-stage {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+.immersive-play .size-slider {
+  min-width: 0;
+  width: 100%;
+}
+.immersive-play .size-slider input {
+  margin: 0;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+@media (min-width: 1100px) {
+  .immersive-play .board-picture .pixel-photo-stage {
+    max-width: min(100%, calc((100dvh - 330px) * 1.09));
+  }
+  .immersive-play .board-size .size-stage {
+    height: clamp(250px, 45dvh, 620px);
+  }
+  .immersive-play .board-color .color-preview {
+    height: clamp(250px, 45dvh, 580px);
+  }
+  .immersive-play .board-budget .play-surface {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .immersive-play .board-budget .budget-title {
+    flex: none;
+    margin: 0;
+  }
+  .immersive-play .board-budget .product-grid {
+    min-height: 0;
+    overflow: auto;
+    margin: 0;
+    flex: 1;
+    align-content: start;
+  }
+  .immersive-play .board-budget .product-photo {
+    height: clamp(72px, calc((100dvh - 590px) / 2), 190px);
+  }
+  .immersive-play .board-budget .basket-checkout {
+    flex: none;
+    margin: 0;
+    border: 0;
+    box-shadow: var(--hud-shadow);
+    padding: 8px 12px;
+  }
+  .immersive-play .geo-panorama {
+    height: clamp(250px, calc(100dvh - 340px), 650px);
+  }
+  .immersive-play .board-picture .play-surface,
+  .immersive-play .board-size .play-surface,
+  .immersive-play .board-color .play-surface {
+    align-content: center;
+  }
+  .immersive-play .board-dice .play-surface {
+    align-content: start;
+  }
+  .immersive-play .wiki-reader {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .immersive-play .wiki-browser {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    box-shadow: none;
+  }
+  .immersive-play .wiki-reader .wiki-scroll {
+    min-height: 0;
+    max-height: none;
+    flex: 1;
+  }
+}
+@media (min-width: 1700px) {
+  .immersive-play .game-board {
+    grid-template-columns: minmax(0, 1fr) 270px;
+    gap: 18px 30px;
+  }
+  .immersive-play .board-cards,
+  .immersive-play .board-code {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .immersive-play .live-crew-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 1099px) {
+  .immersive-play .stage-panel {
+    inset: 118px 14px 88px;
+    overflow: auto;
+  }
+  .immersive-play .game-camera {
+    height: auto;
+    min-height: 100%;
+  }
+  .immersive-play .game-board {
+    height: auto;
+    min-height: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr;
+    gap: 12px;
+  }
+  .immersive-play .game-board > .play-guide {
+    grid-row: 1;
+  }
+  .immersive-play .game-board > .live-crew {
+    grid-column: 1;
+    grid-row: 2;
+    height: auto;
+    padding: 0;
+    overflow: hidden;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .immersive-play .live-crew-track {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+  .immersive-play .live-player {
+    min-width: 145px;
+    max-width: 180px;
+    flex: 0 0 145px;
+  }
+  .immersive-play .game-board > .play-surface {
+    grid-row: 3;
+    height: auto;
+    overflow: visible;
+    padding: 8px 0 20px;
+  }
+  .immersive-play .room-top > div {
+    left: 210px;
+    right: 240px;
+  }
+  .immersive-play .connection {
+    font-size: 0;
+    gap: 0;
+  }
+}
+@media (max-width: 650px) {
+  .immersive-play .site-header {
+    inset: 8px 12px auto;
+    height: 40px;
+  }
+  .immersive-play .brand {
+    font-size: 14px;
+  }
+  .immersive-play .brand > svg {
+    width: 20px;
+  }
+  .immersive-play .header-actions {
+    gap: 2px;
+    padding: 3px;
+  }
+  .immersive-play .header-actions .icon-button {
+    width: 30px;
+    height: 30px;
+  }
+  .immersive-play .room-top > div {
+    left: 14px;
+    right: 150px;
+    top: 60px;
+    text-align: left;
+  }
+  .immersive-play .room-top h1 {
+    font-size: 19px;
+  }
+  .immersive-play .room-code {
+    top: 61px;
+    right: 12px;
+    height: 30px;
+  }
+  .immersive-play .desktop-crew-toggle {
+    top: 102px;
+    right: 12px;
+    height: 30px;
+    font-size: 10px;
+  }
+  .immersive-play .game-topline {
+    top: 102px;
+    left: 12px;
+    gap: 6px;
+    padding: 5px 7px;
+    font-size: 8px;
+  }
+  .immersive-play .game-topline .timer {
+    font-size: 10px;
+    margin-left: 0;
+  }
+  .immersive-play .stage-panel {
+    inset: 146px 12px 85px;
+  }
+  .immersive-play .crew-expanded .crew-panel {
+    top: 140px;
+    max-height: calc(100dvh - 235px);
+  }
+  .immersive-play .room-stage .emote-dock {
+    padding: 5px 8px;
+    gap: 6px;
+  }
+  .immersive-play .emote-toggle span {
+    display: none;
+  }
+  .immersive-play .emote-dock .quick-emotes {
+    gap: 3px;
+  }
+  .immersive-play .emote-dock .quick-emotes .avatar-art {
+    width: 30px;
+    height: 30px;
+  }
+  .immersive-play .spectrum-arena form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .immersive-play .spectrum-arena form > button {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+@media (max-height: 720px) and (min-width: 1100px) {
+  .immersive-play .stage-panel {
+    top: 108px;
+    bottom: 80px;
+  }
+  .immersive-play .play-guide .guide-copy p {
+    display: none;
+  }
+  .immersive-play .board-budget .product-photo {
+    height: 85px;
+  }
+}

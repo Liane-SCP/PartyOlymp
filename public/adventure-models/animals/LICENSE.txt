@@ -1,0 +1,4 @@
+"Giraffe" by Poly by Google
+Source: https://poly.pizza/m/80w8kwQU0QH
+License: Creative Commons Attribution 3.0 Unported (https://creativecommons.org/licenses/by/3.0/)
+Changes: Original GLB retained. Runtime scale, orientation, placement and material roughness adapted for the museum.

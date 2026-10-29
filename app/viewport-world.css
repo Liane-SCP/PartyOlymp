@@ -1,0 +1,255 @@
+/* Desktop is a world with a HUD. Long reference content stays in optional panels. */
+.desktop-world-panel, .desktop-catalog-toggle { display: none; }
+.finale-details { display: contents; }
+@media (min-width: 1100px) {
+  html:has(.desktop-world), body:has(.desktop-world) { height: 100%; overflow: hidden; }
+  .platform.desktop-world {
+    position: fixed; inset: 0; width: 100%; height: 100dvh; max-width: none;
+    padding: 0; margin: 0; overflow: hidden; isolation: isolate;
+    --world-panel: #102e3de8;
+    --hud-fill: var(--world-panel);
+  }
+  .desktop-world .site-header {
+    position: fixed; inset: 12px 20px auto; height: 44px; margin: 0;
+    padding: 0; border: 0; background: transparent; backdrop-filter: none;
+    z-index: 80; pointer-events: none;
+  }
+  .desktop-world .site-header > * { pointer-events: auto; }
+  .desktop-world .brand { font-size: 20px; filter: drop-shadow(0 2px 5px #000); }
+  .desktop-world .brand small { display: none; }
+  .desktop-world .header-actions { padding: 4px; border-radius: 12px; background: none; box-shadow: none; }
+  .desktop-world .room-stage, .desktop-world .room-shell, .desktop-world .room-layout { display: contents; }
+  .desktop-world .room-top {
+    position: fixed; top: 64px; left: 20px; right: 20px; height: 36px;
+    display: flex; gap: 12px; margin: 0; padding: 0; border: 0;
+    background: none; box-shadow: none; z-index: 70; pointer-events: none;
+  }
+  .desktop-world .room-top > * { pointer-events: auto; }
+  .desktop-world .room-top > div:first-child { display: none; }
+  .desktop-world .desktop-crew-toggle { display: block; margin-left: auto; padding: 7px 12px; background: var(--world-panel); }
+  .desktop-world .room-code { position: static; margin: 0; padding: 6px 12px; background: var(--world-panel); }
+  .desktop-world .room-code > span { display: none; }
+  .desktop-world .room-code > strong { font-size: 14px; }
+  .platform.desktop-world .room-code { position: fixed; top: 64px; right: 20px; left: auto; }
+  .platform.desktop-world .desktop-crew-toggle { position: fixed; top: 64px; right: 166px; margin: 0; height: 36px; }
+  .desktop-world .crew-panel { display: none; }
+  .desktop-world .crew-expanded .crew-panel {
+    display: block; position: fixed; top: 110px; bottom: 100px; right: 20px;
+    width: 290px; max-height: none; padding: 12px; overflow: auto;
+    z-index: 95; background: var(--world-panel); backdrop-filter: blur(16px);
+  }
+  .desktop-world .stage-panel,
+  .desktop-world.immersive-play .stage-panel:has(.adventure-session) {
+    display: block; position: fixed; inset: 0; padding: 0; margin: 0;
+    width: 100%; height: 100%; min-height: 0; overflow: visible;
+    border: 0; border-radius: 0; background: none; box-shadow: none;
+    pointer-events: none;
+  }
+  .desktop-world .stage-panel > * { pointer-events: auto; }
+  .desktop-world .emote-dock {
+    position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%);
+    width: max-content; max-width: calc(100vw - 40px); margin: 0; z-index: 75;
+    padding: 5px 10px; border: 0; border-radius: 0; background: none; box-shadow: none;
+  }
+  .desktop-world .live-reactions { position: fixed; bottom: 82px; z-index: 85; pointer-events: none; }
+  .desktop-world .desktop-world-panel {
+    display: block; position: fixed; top: 112px; right: 20px; z-index: 85;
+    padding: 10px 16px; background: var(--world-panel);
+  }
+  /* Landing and lobby share the full viewport scene. */
+  .desktop-world .landing { display: block; padding: 0; margin: 0; height: 100%; }
+  .desktop-world .hero-visual { position: fixed; inset: 0; min-height: 0; height: 100%; border: 0; border-radius: 0; }
+  .desktop-world .hero-copy {
+    position: fixed; left: 5vw; top: 50%; transform: translateY(-50%);
+    width: min(430px, 34vw); padding: 24px; border-radius: 20px;
+    z-index: 10; background: none; text-shadow: 0 2px 10px #051725;
+  }
+  .desktop-world .landing::before { content: ''; position: fixed; inset: 0; z-index: 5; pointer-events: none; background: linear-gradient(90deg, #061b30e8, #061b3080 28%, transparent 65%); }
+  .desktop-world .hero-copy h1 { font-size: clamp(34px, 3.5vw, 62px); }
+  .desktop-world .hero-copy > p { font-size: 13px; line-height: 1.5; }
+  .desktop-world .hero-copy .hero-facts { margin-top: 16px; }
+  .desktop-world .landing > :is(.game-catalog, .how-it-works, .landing-footer) { display: none; }
+  .desktop-world .desktop-catalog-toggle { display: inline-flex; margin-top: 12px; }
+  .desktop-world.desktop-panel-open .landing > .game-catalog {
+    display: block; position: fixed; inset: 100px 20px 30px; z-index: 90;
+    overflow: auto; margin: 0; padding: 70px 24px 24px;
+    border-radius: 18px; background: #102e3df5;
+  }
+  .desktop-world .hero-visual .adventure-heading { left: 44vw; top: 116px; }
+  .desktop-world .lobby-adventure { position: fixed; inset: 0; margin: 0; }
+  .desktop-world .lobby-adventure > .adventure-stage { height: 100%; min-height: 0; margin: 0; border: 0; border-radius: 0; }
+  .desktop-world .lobby-adventure .adventure-heading { top: 116px; }
+  .desktop-world .lobby-adventure .adventure-tools { top: 170px; }
+  .desktop-world .lobby-adventure :is(.adventure-foot, .adventure-crew) { bottom: 160px; }
+  .desktop-world .lobby-adventure .adventure-vignette { background: linear-gradient(transparent 40%, #071c2880 65%, #071c28e8 100%); }
+  .desktop-world .olympiad-planner { display: none; }
+  .desktop-world.desktop-panel-open .olympiad-planner {
+    display: flex; flex-direction: column; position: fixed;
+    inset: 162px 20px 162px; padding: 16px; margin: 0; z-index: 82;
+    min-height: 0; overflow: auto; border-radius: 16px;
+    background: #102e3df5; box-shadow: 0 15px 60px #0008;
+  }
+  .desktop-world .planner-columns { min-height: 0; flex: 1; }
+  .desktop-world .planner-library, .desktop-world .planner-plan { min-height: 0; overflow: auto; }
+  .desktop-world .planner-game-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .desktop-world .lobby-launch {
+    position: fixed; bottom: 76px; left: 20px; right: 20px; z-index: 84;
+    padding: 12px 18px; margin: 0; background: none; border: 0; border-radius: 0;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .desktop-world .planner-ready-summary { flex: 1; margin: 0; }
+  .desktop-world .lobby-participation {
+    position: fixed; left: 20px; bottom: 162px; width: 300px;
+    padding: 12px; margin: 0; z-index: 81; background: none; border: 0; box-shadow: none;
+    text-shadow: 0 2px 8px #061723;
+  }
+  .desktop-world.desktop-panel-open .lobby-participation { display: none; }
+  /* The atlas stays behind the phase interface instead of above it in a document. */
+  .desktop-world .stage-panel > .olympus-journey,
+  .desktop-world.immersive-play .stage-panel > .olympus-journey.is-open {
+    position: fixed; inset: 0; width: 100%; height: 100%; max-height: none;
+    border: 0; border-radius: 0; margin: 0; background: none; box-shadow: none;
+    overflow: visible; pointer-events: none; z-index: 1;
+  }
+  .desktop-world .journey-atlas { position: fixed; inset: 0; height: 100dvh; min-height: 0; border: 0; border-radius: 0; pointer-events: auto; }
+  .desktop-world .journey-heading { position: fixed; left: 20px; top: 112px; width: 350px; padding: 10px; border: 0; border-radius: 0; z-index: 12; background: none; text-shadow: 0 2px 8px #061723; pointer-events: auto; }
+  .desktop-world .journey-heading h2 { font-size: 13px; }
+  .desktop-world .journey-heading-icon { display: none; }
+  .desktop-world .journey-eyebrow { font-size: 7px; }
+  .desktop-world .journey-progress strong { font-size: 16px; }
+  .desktop-world .journey-progress > span { display: none; }
+  .desktop-world .journey-route { position: fixed; left: 20px; right: 20px; bottom: 78px; padding: 7px; border: 0; border-radius: 0; z-index: 10; background: none; pointer-events: auto; }
+  .desktop-world .journey-route button { flex-basis: 130px; min-height: 52px; padding: 7px; }
+  .desktop-world .journey-crew, .desktop-world .journey-equipped { display: none; }
+  .desktop-world .journey-atlas .atlas-title { top: 185px; left: 24px; }
+  .desktop-world .journey-atlas .atlas-badge { top: 255px; left: 24px; right: auto; }
+  .desktop-world .journey-atlas .atlas-tools { top: 335px; right: auto; left: 24px; display: flex; align-items: center; }
+  .desktop-world .journey-atlas .atlas-tools i { width: 1px; height: 20px; margin: 0 3px; }
+  .desktop-world .journey-atlas .atlas-social { top: auto; left: 24px; bottom: 180px; right: auto; }
+  .desktop-world .journey-atlas .journey-location { bottom: 215px; max-width: 35vw; }
+  .desktop-world .journey-atlas .atlas-hint { bottom: 155px; }
+  .desktop-world .journey-atlas .journey-map-controls { bottom: 155px; }
+  .desktop-world .journey-atlas .atlas-pan { bottom: 198px; }
+  .desktop-world .journey-inventory { display: none; }
+  .desktop-world .inventory-open .journey-inventory {
+    display: block; position: fixed; top: 180px; left: 20px; bottom: 155px; width: min(680px, 50vw);
+    overflow: auto; z-index: 90; border-radius: 14px; padding: 16px;
+    background: #102e3df5; pointer-events: auto; box-shadow: 0 15px 60px #0008;
+  }
+  /* Phase actions float at the right edge; the map remains usable. */
+  .desktop-world .stage-panel > :is(.discipline-intro, .standings-stage, .score-show, .wheel-show) {
+    position: fixed; top: 112px; right: 20px; bottom: 155px;
+    width: clamp(380px, 35vw, 620px); min-height: 0; margin: 0;
+    padding: 20px; border: 0; border-radius: 0; background: none; box-shadow: none;
+    overflow: auto; z-index: 30; text-shadow: 0 2px 7px #051725;
+  }
+  .desktop-world .stage-panel:has(> :is(.discipline-intro, .standings-stage, .score-show, .wheel-show))::after {
+    content: ''; position: fixed; inset: 0; z-index: 2; pointer-events: none;
+    background: linear-gradient(90deg, transparent 35%, #071b2b66 60%, #071b2be8 100%);
+  }
+  .desktop-world .discipline-intro h2, .desktop-world .standings-stage h2 { font-size: 26px; margin: 8px 0; }
+  .desktop-world .rules-cards { gap: 8px; margin: 12px 0; }
+  .desktop-world .discipline-intro .rules-cards > * { padding: 10px 0; background: none; border: 0; box-shadow: none; }
+  .desktop-world .discipline-intro > p { font-size: 12px; margin: 8px 0; }
+  .desktop-world .discipline-intro > .game-art,
+  .desktop-world .discipline-intro > .game-icon { width: 42px; height: 42px; position: absolute; top: 16px; right: 16px; margin: 0; }
+  .desktop-world .discipline-intro .rules-cards p { font-size: 11px; line-height: 1.4; margin: 5px 0 0; }
+  .desktop-world .discipline-intro .notice { padding: 8px; line-height: 1.4; background: none; border: 0; border-left: 2px solid #dfc48b88; border-radius: 0; }
+  .desktop-world .discipline-intro .discipline-preview { font-size: 11px; margin: 8px 0; text-align: left; }
+  .desktop-world .discipline-intro .discipline-preview[open] { position: absolute; inset: 60px 12px 80px; z-index: 4; overflow: auto; padding: 12px; background: #102e3dfc; border-radius: 12px; }
+  .desktop-world .discipline-intro > .primary { width: 100%; margin: 8px 0 0; }
+  .desktop-world .standings-stage > .scoreboard { max-height: 32dvh; overflow: auto; }
+  .desktop-world .standings-stage > .action-row { position: sticky; bottom: 0; padding: 8px 0; background: #102e3df5; }
+  .desktop-world .wheel-show h2 { font-size: 24px; margin: 8px 0; }
+  .desktop-world .wheel-show .wheel-stage { width: min(260px, 30dvh); margin: 14px auto; }
+  .desktop-world .wheel-show .wheel-result { min-height: 0; padding: 10px; }
+  .desktop-world .wheel-show .wheel-result strong { font-size: 22px; }
+  .desktop-world .countdown-stage { position: fixed; inset: 0; height: 100%; min-height: 0; margin: 0; border: 0; border-radius: 0; z-index: 25; }
+  /* Every normal game uses one viewport-size scene with an overlaid control panel. */
+  .desktop-world.immersive-play .game-camera { position: fixed; inset: 0; height: 100%; pointer-events: none; }
+  .desktop-world.immersive-play .adventure-session,
+  .desktop-world.immersive-play .adventure-session:has(.adventure-large),
+  .desktop-world.immersive-play .adventure-session.adventure-mode-size {
+    display: block; position: absolute; inset: 0; height: 100%; min-height: 0; pointer-events: none;
+  }
+  .desktop-world.immersive-play .adventure-session > .adventure-stage,
+  .desktop-world.immersive-play .adventure-session > .adventure-stage.adventure-large {
+    position: absolute; inset: 0; width: 100%; height: 100%; min-height: 0;
+    margin: 0; border: 0; border-radius: 0; pointer-events: auto;
+  }
+  .desktop-world.immersive-play .adventure-console {
+    position: absolute; top: 116px; right: 20px; bottom: 80px;
+    width: clamp(340px, 30vw, 500px); height: auto; min-height: 0;
+    max-height: none; padding: 14px; overflow: auto; border-radius: 16px;
+    background: none; border: 0; box-shadow: none;
+    text-shadow: 0 2px 7px #051725;
+    pointer-events: auto; z-index: 12;
+  }
+  .desktop-world.immersive-play .adventure-session:has(.adventure-large) .adventure-console { height: auto; overflow: auto; }
+  .desktop-world.immersive-play .adventure-session:has(> .adventure-console) > .adventure-stage > .adventure-vignette {
+    background: linear-gradient(90deg, transparent 40%, #061c2a55 65%, #061c2ac9 100%), linear-gradient(#061c2a55, transparent 30%, transparent 65%, #061c2aaa);
+  }
+  .desktop-world.immersive-play .adventure-console-label { border: 0; padding-bottom: 6px; margin-bottom: 8px; }
+  .desktop-world.immersive-play .adventure-console .play-guide { padding: 6px 0; margin-bottom: 8px; }
+  .desktop-world.immersive-play .adventure-console .guide-steps { display: none; }
+  .desktop-world.immersive-play .adventure-console .guide-copy p { font-size: 10px; }
+  .desktop-world.immersive-play .adventure-console :is(.color-card-game, .club21, .fleet-board) {
+    display: flex; flex-direction: column; gap: 10px; min-width: 0;
+  }
+  .desktop-world.immersive-play .adventure-console :is(.color-card-game, .club21, .fleet-board) > * { min-width: 0; max-width: 100%; margin: 0; }
+  .desktop-world.immersive-play .adventure-console .color-table { width: 100%; padding: 12px; }
+  .desktop-world.immersive-play .adventure-console .color-card-game .own-hand { display: flex; flex-wrap: wrap; gap: 4px; }
+  .desktop-world.immersive-play .adventure-console .color-card-game :is(.playing-card, .card-back) { width: 50px; height: 74px; }
+  .desktop-world.immersive-play .adventure-console .turn-order { display: flex; overflow-x: auto; width: 100%; }
+  .desktop-world.immersive-play .adventure-console .turn-order > div { flex: 0 0 110px; }
+  .desktop-world.immersive-play .adventure-console .felt-table { min-height: 0; width: 100%; padding: 12px; }
+  .desktop-world.immersive-play .adventure-console .play-surface { display: block; width: 100%; background: none; border: 0; box-shadow: none; }
+  .desktop-world.immersive-play .adventure-console :is(.turn-banner, .color-table) { background: none; border: 0; box-shadow: none; }
+  .desktop-world.immersive-play .adventure-mode-dice:has(.dice-table-controls) > .adventure-console { display: none; }
+  .desktop-world.immersive-play .adventure-stage > .adventure-canvas,
+  .desktop-world.immersive-play .adventure-stage > .adventure-vignette {
+    position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; margin: 0;
+  }
+  .desktop-world.immersive-play .adventure-session .adventure-stage > .adventure-canvas {
+    inset: 0; width: 100%; height: 100%; max-width: none; margin: 0;
+  }
+  .desktop-world.immersive-play .adventure-stage > :is(.adventure-dice-dock, .adventure-bomb-dock, .adventure-chain-dock, .shopping-tour, .size-gallery-dock, .adventure-color-dock, .adventure-picture-dock, .adventure-spectrum-dock, .adventure-herd-dock, .atelier-writing-dock) {
+    left: 20px; right: calc(clamp(340px, 30vw, 500px) + 40px); bottom: 82px;
+    max-width: 760px; max-height: calc(100dvh - 300px); overflow: auto;
+  }
+  .desktop-world.immersive-play .adventure-heading { top: 120px; right: 37vw; }
+  .desktop-world.immersive-play .adventure-heading h2 { font-size: 25px; }
+  .desktop-world.immersive-play .adventure-tools { top: 190px; right: auto; left: 20px; }
+  .platform.desktop-world.immersive-play .adventure-stage > .adventure-quality { top: auto; bottom: 20px; right: 20px; }
+  .desktop-world.immersive-play .adventure-stage > .adventure-foot { bottom: 78px; }
+  .desktop-world.immersive-play .adventure-stage > .adventure-crew { bottom: 100px; right: 35vw; }
+  .desktop-world.immersive-play .game-topline { top: 65px; left: 20px; z-index: 72; background: none; box-shadow: none; text-shadow: 0 2px 7px #051725; }
+  .desktop-world.immersive-play .stage-panel > .olympus-journey { z-index: 40; }
+  .desktop-world:is(.immersive-play, .immersive-boss) .journey-heading { top: auto; bottom: 14px; left: 20px; width: auto; max-width: 270px; }
+  .desktop-world:is(.immersive-play, .immersive-boss) .stage-panel > .olympus-journey .journey-heading { position: fixed; top: auto; bottom: 14px; left: 20px; width: auto; max-width: 270px; background: none; }
+  .desktop-world:is(.immersive-play, .immersive-boss) .journey-heading h2,
+  .desktop-world:is(.immersive-play, .immersive-boss) .journey-heading .journey-progress { display: none; }
+  .desktop-world:is(.immersive-play, .immersive-boss) .olympus-journey:not(.map-expanded) > :not(.journey-heading) { display: none; }
+  .desktop-world:is(.immersive-play, .immersive-boss) .map-expanded { z-index: 90 !important; }
+  .desktop-world:is(.immersive-play, .immersive-boss) .map-expanded .journey-heading { z-index: 25; }
+  /* Ceremony has its own world; optional results appear in a side window. */
+  .desktop-world .finale { position: fixed; inset: 0; margin: 0; padding: 0; pointer-events: none; }
+  .desktop-world .finale > .victory-ceremony { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0; margin: 0; pointer-events: auto; }
+  .desktop-world .finale > :not(.victory-ceremony) { display: none; }
+  .desktop-world.desktop-panel-open .finale > .finale-details {
+    position: fixed; inset: 165px 20px 85px auto; width: min(540px, 40vw); overflow: auto;
+    padding: 16px; border-radius: 16px; background: var(--world-panel); pointer-events: auto;
+    z-index: 10;
+  }
+  .desktop-world.desktop-panel-open .finale > :not(.victory-ceremony):not(.olympus-journey) { display: block; pointer-events: auto; }
+  .desktop-world .finale-details > .olympus-journey { display: none; }
+  .desktop-world .adventure-card-camera { bottom: 82px; }
+  .desktop-world .ceremony-title { top: 112px; }
+  .desktop-world .ceremony-footer { bottom: 78px; }
+  .desktop-world .ceremony-participant { bottom: 85px; right: 240px; }
+  .desktop-world .ceremony-participant label { max-width: 300px; }
+  .desktop-world .ceremony-places { bottom: 135px; }
+  .desktop-world .stage-panel > .dice-results-archive { position: fixed; top: 112px; left: 390px; z-index: 82; max-height: calc(100dvh - 270px); overflow: auto; background: var(--world-panel); }
+  .desktop-world .modal-backdrop { z-index: 200; }
+  .desktop-world .error-banner, .desktop-world .toast { z-index: 220; }
+}

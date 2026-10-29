@@ -1,0 +1,12 @@
+import fs from 'node:fs/promises';import {createHash} from 'node:crypto';import {Color} from 'three';
+const folder='assets/source-models/workshop',source=JSON.parse(await fs.readFile(`${folder}/source.json`,'utf8'));
+if(source.source!=='https://poly.pizza/m/TvT0yqLRln'||source.license!=='CC0-1.0')throw Error('Unverified workshop source');
+const original=await fs.readFile(`${folder}/wrench.glb`),length=original.readUInt32LE(12),j=JSON.parse(original.subarray(20,20+length));
+if(original.readUInt32LE(0)!==0x46546c67||original.readUInt32LE(8)!==original.length||j.buffers.some(b=>b.uri)||j.images?.length||j.animations?.length||j.materials.length!==1)throw Error('Unexpected tool layout');
+const scene=j.scenes[j.scene??0],old=scene.nodes;scene.nodes=[j.nodes.length];j.nodes.push({name:'Workshop tool upright',rotation:[-Math.SQRT1_2,0,0,Math.SQRT1_2],children:old});
+const m=j.materials[0];m.pbrMetallicRoughness.baseColorFactor=[...new Color('#9aa9a8').toArray(),1];m.pbrMetallicRoughness.roughnessFactor=.65;m.pbrMetallicRoughness.metallicFactor=.15;
+const json=Buffer.from(JSON.stringify(j)),chunk=Buffer.alloc(Math.ceil(json.length/4)*4,0x20);json.copy(chunk);const rest=original.subarray(20+length),data=Buffer.alloc(20+chunk.length+rest.length);original.copy(data,0,0,20);data.writeUInt32LE(data.length,8);data.writeUInt32LE(chunk.length,12);chunk.copy(data,20);rest.copy(data,20+chunk.length);
+const triangles=j.meshes.reduce((n,m)=>n+m.primitives.reduce((n,p)=>n+j.accessors[p.indices].count/3,0),0),entry={...source,file:`/adventure-models/${source.id}.glb`,bytes:data.length,triangles,sourceSha256:createHash('sha256').update(original).digest('hex'),sha256:createHash('sha256').update(data).digest('hex')};
+await fs.writeFile(`public${entry.file}`,data);const path='public/adventure-models/manifest.json',manifest=JSON.parse(await fs.readFile(path,'utf8'));manifest.assets=manifest.assets.filter(a=>a.id!==source.id);manifest.assets.push(entry);await fs.writeFile(path,JSON.stringify(manifest,null,2)+'\n');
+const text=`${source.title} by ${source.author}\nSource: ${source.source}\nDownload: ${source.download}\nLicense: ${source.license} - ${source.licenseUrl}\nVerified: ${source.verified}\nChanges: ${source.changes}\nSource SHA-256: ${entry.sourceSha256}\nPrepared SHA-256: ${entry.sha256}\n`;
+await fs.writeFile(`${folder}/LICENSE.txt`,text);await fs.writeFile('public/adventure-models/props/workshop-wrench-LICENSE.txt',text);console.log(JSON.stringify({id:entry.id,bytes:entry.bytes,triangles}));

@@ -1,0 +1,8 @@
+Compass by Quaternius
+Source: https://poly.pizza/m/LlnxQPETHh
+Download: https://static.poly.pizza/db18fada-a70e-44da-961c-0cc31dffdaa6.glb
+License: CC0-1.0 - https://creativecommons.org/publicdomain/zero/1.0/
+Verified: 2026-10-18
+Changes: Preserved all compass geometry, indices and authored transforms. Adapted opaque brass, dark face, red and cream material colors and roughness. Placed as static navigation equipment on the side workbench, independent of the hidden destination or panorama heading.
+Original SHA-256: 02b285836b276a907019df65f51674c3975364316b58fe859863921838867c7d
+Prepared SHA-256: 2e73913c61c4138b88c867b9283b7873d7d737e9907357469fe1d706ab0b61de

@@ -1,0 +1,4 @@
+German word data: igerman98 by Björn Jacke; distributed by wooorm/dictionaries.
+Source: https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/de/index.dic
+License: GPL-2.0 OR GPL-3.0 (see LICENSE.txt).
+Derived by scripts/prepare-bomb-words.mjs: dictionary headwords, lowercase, ß→ss, 3–24 letters. No affix expansion.

@@ -1,0 +1,8 @@
+Movie / film camera on tripod by Franziska Haaf
+Source: https://poly.pizza/m/3-paG1j-iYS
+Download: https://static.poly.pizza/f629aff6-d013-42e4-b3ce-ca98129550df.glb
+License: CC-BY-3.0 — https://creativecommons.org/licenses/by/3.0/
+Verified: 2026-10-18
+Changes: Original geometry, node transforms, normals and binary retained. The original white body and lens/tripod materials are recolored slate blue and charcoal, with matte roughness. Scale and orientation normalized at placement. Attribution and changes are also visible in the studio's Models & Artists disclosure.
+Source SHA-256: 7f05fbd2efd1028d588cc2b2abcbe168c2eefaefaf6e625100d8b81aad4591b7
+Prepared SHA-256: 490a1e05bb44ab25532bcae910fd5c381bf982b42e8724c373f66f30dd79a385

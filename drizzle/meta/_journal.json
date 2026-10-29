@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1791630279880,
+      "tag": "0000_pink_stick",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1791635605238,
+      "tag": "0001_simple_greymalkin",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1791637170425,
+      "tag": "0002_hard_puff_adder",
+      "breakpoints": true
+    }
+  ]
+}

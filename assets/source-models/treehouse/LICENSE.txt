@@ -1,0 +1,8 @@
+Low Poly Tree House by Gilang Romadhan
+Source: https://poly.pizza/m/0wSdvRTUV3A
+Download: https://static.poly.pizza/c9f41c0d-5fd4-4714-8435-6d2ef6e732c5.glb
+License: CC-BY-3.0 - https://creativecommons.org/licenses/by/3.0/
+Verified: 2026-10-18
+Changes: Removed the earth base, grass and stone path for placement on a timber terrace. Retained the trunk house, door, porch, balcony and fixtures. Recolored cedar wood, cream trim and muted metal; retained active geometry, normals, UVs and node transform. Repacked only referenced accessors and buffer views, scaled and placed on the rear treehouse terrace.
+Source SHA-256: f0f54ba23d2ba2fa07389ff8793127e4775b06e14cc42d44935d0e7ae56c5de1
+Prepared SHA-256: 7c0d5dc3545867552017fb68c0ebb2c9e330387403725b9f626bd445e1c90f47

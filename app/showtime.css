@@ -1,0 +1,670 @@
+.dice-crew {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  margin-bottom: 22px;
+}
+.dice-turn-heading {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 2px;
+}
+.dice-turn-heading span {
+  font-size: 12px;
+  color: #a6b0c6;
+}
+.crew-dice-card {
+  background: #172035;
+  border: 1px solid #2c3852;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.crew-dice-card.self {
+  border-color: #bcff5c55;
+}
+.crew-dice-card summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  cursor: pointer;
+  list-style: none;
+}
+.crew-dice-card summary > svg {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+.crew-dice-card summary > span {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  flex: 1;
+}
+.crew-dice-card small {
+  font-size: 10px;
+  color: #a6b0c6;
+}
+.mini-dice {
+  display: flex;
+  gap: 4px;
+}
+.crew-sheet {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid #2c3852;
+}
+.crew-sheet > span {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #a6b0c6;
+}
+.dice-cube {
+  display: inline-block;
+  width: 62px;
+  height: 62px;
+  perspective: 400px;
+  filter: drop-shadow(0 7px 5px #0007);
+  transform-style: preserve-3d;
+}
+.dice-face {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+  padding: 10px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #fff, #d8e2ee);
+  border: 1px solid #fff;
+  box-shadow:
+    inset -4px -5px 0 #a2b0c740,
+    2px 4px 0 #899ab4;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+.dice-face i {
+  border-radius: 50%;
+  background: transparent;
+}
+.dice-face i.pip {
+  background: #182035;
+  box-shadow: inset 1px 2px 1px #0006;
+}
+.dice-cube.rolling {
+  animation: dice-tumble 0.72s cubic-bezier(0.18, 0.8, 0.28, 1) both;
+}
+.dice-cube.mini {
+  width: 23px;
+  height: 23px;
+  filter: none;
+}
+.mini .dice-face {
+  padding: 4px;
+  gap: 1px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 0 #899ab4;
+}
+.die.held .dice-face {
+  background: linear-gradient(135deg, #e1ffb2, #bcff5c);
+}
+.die {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.die small {
+  font-size: 10px;
+}
+.product-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 14px;
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.product-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.product-grid button {
+  min-width: 0;
+  text-align: left;
+  position: relative;
+  transition:
+    transform 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+.product-grid button:hover {
+  transform: translateY(-4px);
+}
+.product-grid button.selected {
+  box-shadow:
+    0 0 0 2px #bcff5c,
+    0 8px 30px #bcff5c12;
+}
+.product-grid button > span:not(.product-photo) {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.size-object {
+  position: relative;
+  touch-action: none;
+  flex-shrink: 0;
+}
+.size-object.draggable {
+  cursor: grab;
+}
+.size-object.draggable:active {
+  cursor: grabbing;
+}
+.size-handle {
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #bcff5c;
+  color: #172035;
+  border: 2px solid #172035;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  touch-action: none;
+  cursor: nesw-resize;
+}
+.size-stage.calibrated {
+  overflow: hidden;
+  min-height: 270px;
+  touch-action: none;
+  background: linear-gradient(#111b2b, #1b2740);
+}
+.fleet-status {
+  margin: 18px 0;
+  display: grid;
+  gap: 9px;
+}
+.fleet-status > span {
+  color: #a6b0c6;
+  font-size: 12px;
+}
+.fleet-status > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.fleet-status > div > span {
+  background: #19253b;
+  border: 1px solid #2c3852;
+  padding: 8px;
+  border-radius: 9px;
+  font-size: 11px;
+}
+.sea-grid .hit {
+  animation: sea-hit 0.5s ease-out;
+  background: #ffb85c22;
+}
+.wiki-full {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.75;
+}
+.wiki-full a[data-wiki-title] {
+  color: #bcff5c;
+  text-decoration: underline;
+  text-decoration-color: #bcff5c55;
+  cursor: pointer;
+}
+.wiki-full img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.wiki-full table {
+  max-width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+  font-size: 12px;
+}
+.wiki-full th,
+.wiki-full td {
+  padding: 8px;
+  border: 1px solid #34415a;
+}
+.wiki-full h2,
+.wiki-full h3 {
+  font-family: inherit;
+  margin-top: 24px;
+}
+.wiki-full p {
+  margin: 12px 0;
+}
+.wiki-links {
+  max-height: 240px;
+  overflow-y: auto;
+}
+.score-show,
+.round-reveal,
+.finale {
+  position: relative;
+  isolation: isolate;
+}
+.score-show > h2 {
+  font-size: clamp(28px, 4vw, 46px);
+  letter-spacing: -1.5px;
+  margin: 14px 0;
+}
+.score-explainer {
+  max-width: 570px;
+  line-height: 1.7;
+  color: #a6b0c6;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+.score-show-rows {
+  display: grid;
+  gap: 12px;
+}
+.show-result {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid #2c3852;
+  border-radius: 18px;
+  background: #172135;
+  overflow: hidden;
+  animation: result-arrive 0.65s both;
+  animation-delay: calc(var(--row) * 0.14s);
+}
+.show-result.self {
+  border-color: #bcff5c88;
+  background: #1e2b31;
+}
+.show-place {
+  font-size: 24px;
+  font-weight: 900;
+  color: #a6b0c6;
+  min-width: 30px;
+}
+.show-result > svg {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+}
+.show-player {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  gap: 6px;
+}
+.show-player small {
+  font-size: 11px;
+  color: #a6b0c6;
+  line-height: 1.5;
+}
+.show-award {
+  text-align: right;
+  display: grid;
+  gap: 4px;
+  min-width: 105px;
+}
+.show-award strong {
+  font-size: 27px;
+  color: #bcff5c;
+  font-variant-numeric: tabular-nums;
+}
+.show-award small {
+  font-size: 9px;
+  color: #a6b0c6;
+}
+.show-suspense {
+  letter-spacing: 5px;
+  color: #9b8aff;
+  animation: suspense 1s infinite;
+}
+.show-meter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #ffffff08;
+}
+.show-meter i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #9b8aff, #bcff5c);
+  transition: width 2.1s ease-out;
+}
+.score-rule-strip {
+  display: grid;
+  gap: 8px;
+  margin-top: 24px;
+  border-top: 1px solid #34415a;
+  padding-top: 20px;
+}
+.score-rule-strip strong {
+  font-size: 13px;
+}
+.score-rule-strip span {
+  font-size: 12px;
+  color: #bcff5c;
+  font-variant-numeric: tabular-nums;
+}
+.score-rule-strip small {
+  font-size: 11px;
+  color: #a6b0c6;
+  line-height: 1.7;
+}
+.price-reveal img {
+  width: 50px;
+  height: 50px;
+  background: white;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.price-reveal > div {
+  animation: price-flip 0.5s both;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.price-reveal > div > span {
+  flex: 1;
+  font-size: 12px;
+}
+.show-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+.show-particles i {
+  position: absolute;
+  left: var(--x);
+  top: 75%;
+  width: 5px;
+  height: 5px;
+  background: var(--color);
+  border-radius: 2px;
+  opacity: 0;
+  animation: particle-burst 1.8s var(--delay) ease-out both;
+  box-shadow: 0 0 12px var(--color);
+}
+.show-particles.burst i {
+  width: 6px;
+  height: 10px;
+  top: 55%;
+  animation-duration: 2.7s;
+}
+.finale .show-particles i {
+  animation-iteration-count: 3;
+}
+.playing-card {
+  animation: card-deal 0.45s both;
+}
+.color-preview {
+  animation: result-arrive 0.5s;
+}
+.primary:active {
+  transform: scale(0.97);
+}
+@keyframes dice-tumble {
+  0% {
+    transform: translateY(-20px) rotateX(160deg) rotateZ(-35deg);
+    filter: blur(2px);
+  }
+  25% {
+    transform: translateY(-33px) rotateX(320deg) rotateZ(55deg);
+  }
+  55% {
+    transform: translateY(0) rotateX(540deg) rotateZ(-20deg);
+    filter: blur(0);
+  }
+  72% {
+    transform: translateY(-9px) rotateX(700deg) rotateZ(8deg);
+  }
+  100% {
+    transform: translateY(0) rotateX(720deg) rotateZ(0);
+  }
+}
+@keyframes particle-burst {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0);
+  }
+  12% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--dx), var(--dy)) rotate(var(--spin));
+  }
+}
+@keyframes result-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes price-flip {
+  from {
+    opacity: 0;
+    transform: perspective(600px) rotateX(-45deg) translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes sea-hit {
+  0% {
+    box-shadow: 0 0 0 0 #ffb85c88;
+    transform: scale(0.8);
+  }
+  70% {
+    box-shadow: 0 0 0 8px #ffb85c00;
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes card-deal {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) rotate(-8deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes suspense {
+  50% {
+    opacity: 0.3;
+  }
+}
+@media (max-width: 700px) {
+  .dice-crew {
+    grid-template-columns: 1fr;
+  }
+  .dice-turn-heading {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .product-photo {
+    height: 110px;
+  }
+  .show-result {
+    gap: 8px;
+    padding: 14px 10px;
+  }
+  .show-result > svg {
+    width: 33px;
+    height: 33px;
+  }
+  .show-place {
+    font-size: 20px;
+    min-width: 22px;
+  }
+  .show-award {
+    min-width: 85px;
+  }
+  .show-award strong {
+    font-size: 22px;
+  }
+  .show-player strong {
+    font-size: 12px;
+  }
+  .show-player small {
+    font-size: 10px;
+  }
+  .dice-cube {
+    width: 46px;
+    height: 46px;
+  }
+  .dice-face {
+    gap: 3px;
+    padding: 8px;
+  }
+  .dice-tray {
+    gap: 7px;
+  }
+  .die {
+    padding: 12px 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .show-particles {
+    display: none;
+  }
+  .dice-cube.rolling,
+  .playing-card,
+  .show-result,
+  .price-reveal > div,
+  .sea-grid .hit,
+  .show-suspense {
+    animation: none;
+  }
+}
+.game-board {
+  position: relative;
+  isolation: isolate;
+}
+.dice-crew {
+  max-height: 215px;
+  overflow-y: auto;
+  padding-right: 5px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.dice-turn-heading {
+  position: sticky;
+  top: 0;
+  background: #19202c;
+  z-index: 2;
+}
+.crew-dice-card summary {
+  padding: 10px 8px;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.crew-dice-card summary > svg {
+  width: 28px;
+  height: 28px;
+}
+.crew-dice-card summary strong {
+  font-size: 12px;
+}
+.mini-dice {
+  margin-left: auto;
+}
+.die {
+  background: #1b2940;
+  border-color: #3c4a62;
+  color: #a6b0c6;
+}
+.die.held {
+  background: #293f31;
+}
+.show-particles {
+  z-index: 0;
+}
+.show-particles + * {
+  position: relative;
+}
+.score-show-rows,
+.score-rule-strip {
+  position: relative;
+}
+.score-show .show-particles {
+  z-index: -1;
+}
+.wiki-full {
+  overflow-wrap: anywhere;
+}
+.wiki-full a:not([data-wiki-title]) {
+  color: inherit;
+  text-decoration: none;
+  cursor: default;
+}
+@media (max-width: 1000px) {
+  .dice-crew {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 700px) {
+  .dice-crew {
+    grid-template-columns: 1fr;
+    max-height: 175px;
+  }
+  .crew-dice-card summary {
+    flex-wrap: nowrap;
+  }
+  .dice-turn-heading {
+    font-size: 12px;
+  }
+  .dice-tray .die .dice-face {
+    width: 46px;
+    height: 46px;
+  }
+}
+html[data-motion="reduced"] .show-particles,
+html[data-intense="off"] .show-particles {
+  display: none;
+}
+html[data-motion="reduced"] .dice-cube.rolling,
+html[data-motion="reduced"] .playing-card,
+html[data-motion="reduced"] .show-result,
+html[data-motion="reduced"] .price-reveal > div,
+html[data-motion="reduced"] .sea-grid .hit,
+html[data-motion="reduced"] .show-suspense {
+  animation: none;
+}

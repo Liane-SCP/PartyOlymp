@@ -1,0 +1,8 @@
+Art Easel Set Up by reyshapes
+Source: https://poly.pizza/m/2ZP3o8hyPA
+Download: https://static.poly.pizza/de6672ae-e7be-47eb-9836-f4894bbc82f2.glb
+License: CC0-1.0 - https://creativecommons.org/publicdomain/zero/1.0/
+Verified: 2026-10-18
+Changes: Preserved positions, normals, authored node transforms and the vertex-painted palette. Combined ten material primitives into one opaque rough nonmetallic material; packed vertex colors as normalized unsigned bytes with at most 0.5/255 component error; removed unused UVs and FBX extras. Scaled and placed beside the idea-city workshop.
+Original SHA-256: 077681f09cc23e190159d9f48c33bac5032dc6eaf6cf582297b6d1ed4aa32d84
+Prepared SHA-256: c94e8f66b7e526741775806ce562bc9574cfedcc1bf765bdaf6d1100da69e5b1

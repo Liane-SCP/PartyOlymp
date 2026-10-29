@@ -1,0 +1,39 @@
+/* The live shop gets a separate browsing desk below the world. No navigation
+   button sits over a product, a crew member or the native 3D hit surface. */
+.adventure-stage[data-shopping-view]{min-height:620px;--shopping-desk:210px}
+.adventure-stage[data-shopping-view]>.adventure-canvas{position:absolute;top:104px;bottom:var(--shopping-desk);height:auto}
+.adventure-stage[data-shopping-view]>.adventure-vignette{top:104px;bottom:var(--shopping-desk);background:linear-gradient(transparent 75%,#16353c33);box-shadow:none}
+.adventure-stage[data-shopping-view]>.adventure-heading{top:18px}
+.adventure-stage[data-shopping-view]>.adventure-heading h2{font-size:25px}
+.adventure-stage[data-shopping-view]>.adventure-tools{top:12px}
+.shopping-tour{position:absolute;left:12px;right:12px;bottom:66px;z-index:5;display:grid;gap:7px;padding:9px;border:1px solid #d1bf8e55;border-radius:12px;background:#183a43;color:#f3e7cc;box-shadow:0 5px 18px #061f2830}
+.shopping-offer-nav{display:grid;grid-template-columns:auto 44px minmax(0,1fr) 44px;gap:5px;align-items:center}
+.shopping-tour button,.shopping-tour select{min-height:44px;min-width:0;border:1px solid #b8c6a86b;border-radius:8px;background:#254b51;color:#fff1d3;font-size:12px;padding:6px 9px;cursor:pointer}
+.shopping-tour select{width:100%;text-overflow:ellipsis;font-size:13px}
+.shopping-tour button[aria-pressed=true]{background:#526f5a;border-color:#e9cb89}
+.shopping-tour button:disabled{opacity:.45;cursor:default}
+.shopping-tour :focus-visible{outline:2px solid #f0d49b;outline-offset:2px}
+.shopping-offer-description{display:flex;gap:12px;align-items:center;min-width:0}
+.shopping-offer-description>div{flex:1;min-width:0}
+.shopping-offer-description strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:12px;line-height:1.35}
+.shopping-offer-description span{display:block;margin-top:3px;font-size:10px;color:#cad9c9}
+.shopping-offer-description>button{flex:none;min-width:90px}
+.shopping-department-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}
+.shopping-department-nav button{font-size:11px;padding:6px 3px;background:#1c3e46}
+.adventure-stage[data-shopping-view=overview]{--shopping-desk:160px}
+.adventure-stage[data-shopping-view]>.adventure-hover{bottom:calc(var(--shopping-desk) + 7px)}
+@media(max-width:600px){
+ .adventure-stage[data-shopping-view]{height:650px!important;min-height:650px;--shopping-desk:225px}
+ .adventure-stage[data-shopping-view=overview]{--shopping-desk:170px}
+ .adventure-stage[data-shopping-view]>.adventure-canvas,.adventure-stage[data-shopping-view]>.adventure-vignette{top:104px}
+ .adventure-stage[data-shopping-view]>.adventure-heading h2{font-size:23px}
+ .adventure-stage[data-shopping-view]>.adventure-heading p{max-width:240px}
+ .shopping-tour{left:8px;right:8px;padding:7px;gap:6px}
+ .shopping-offer-nav{grid-template-columns:auto 44px minmax(0,1fr) 44px;gap:4px}
+ .shopping-offer-nav>button:first-child{max-width:82px;font-size:11px;padding:5px}
+ .shopping-tour select{font-size:12px;padding:5px}
+ .shopping-offer-description{gap:7px}
+ .shopping-offer-description strong{font-size:11px}
+ .shopping-offer-description span{font-size:10px}
+ .shopping-offer-description>button{font-size:11px;min-width:80px}
+}

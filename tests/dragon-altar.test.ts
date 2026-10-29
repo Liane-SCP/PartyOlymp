@@ -1,0 +1,23 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {createHash} from 'node:crypto';import * as T from 'three';import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {dragonChoices,dragonEstimate,dragonOwnDraft,dragonDraftKey} from '../lib/dragon-altar';import {dragonScore} from '../lib/game/boss-rules';import {createAdventureModels} from '../components/olymp/adventure-models';
+function glb(path:string){const bytes=fs.readFileSync(path),length=bytes.readUInt32LE(12);return {bytes,json:JSON.parse(bytes.subarray(20,20+length).toString()),binary:bytes.subarray(20+length)};}
+test('Authored treasure geometry, lid hierarchy and all animation clips survive curation',()=>{
+ const source=glb('assets/source-models/pirate/chest.glb'),derived=glb('public/adventure-models/props/treasure-chest.glb'),meta=JSON.parse(fs.readFileSync('public/adventure-models/props/treasure-chest-source.json','utf8')),hash=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
+ assert.equal(meta.license,'CC0-1.0');assert.match(fs.readFileSync('assets/source-models/pirate/LICENSE.txt','utf8'),/CC0/);assert.equal(hash(source.bytes),meta.sourceSha256);assert.equal(hash(derived.bytes),meta.sha256);assert.equal(derived.bytes.length,meta.bytes);assert.ok(meta.bytes<30000);assert.equal(meta.triangles,232);
+ assert.deepEqual(derived.binary,source.binary);for(const key of ['nodes','meshes','accessors','animations','materials','bufferViews'])assert.deepEqual(derived.json[key],source.json[key]);assert.ok(derived.json.animations.some((a:any)=>a.name==='open'));assert.ok(derived.json.nodes.some((n:any)=>n.name==='lid'));assert.ok(fs.existsSync('public/adventure-models/props/'+derived.json.images[0].uri));assert.equal(hash(fs.readFileSync('public/adventure-models/props/Textures/pirate-colormap.png')),meta.paletteSha256);
+ assert.deepEqual(JSON.parse(fs.readFileSync('public/adventure-models/manifest.json','utf8')).assets.find((a:any)=>a.id===meta.id),meta);
+});
+test('Price parsing and restored drafts retain exact cents, valid risk and current private phase',()=>{
+ assert.equal(dragonEstimate('12,34'),1234);assert.equal(dragonEstimate('12.34'),1234);assert.equal(dragonEstimate('1000000'),100000000);for(const input of ['0','-1','NaN','1e2','12,345','1000000,01'])assert.equal(dragonEstimate(input),undefined);
+ const room:any={code:'ABC123',phaseKey:'phase-a',game:{round:2,mine:{timeoutInput:{phase:'phase-a',action:{type:'estimate',guess:1234,risk:'risky',round:2}}}}};assert.deepEqual(dragonOwnDraft(room),{price:'12,34',risk:'risky'});room.phaseKey='phase-b';assert.deepEqual(dragonOwnDraft(room),{price:'',risk:'safe'});room.game.mine={submitted:true,guess:2345,risk:'bold'};assert.deepEqual(dragonOwnDraft(room),{price:'23,45',risk:'bold'});room.game.mine=null;assert.deepEqual(dragonOwnDraft(room),{price:'',risk:'safe'});assert.notEqual(dragonDraftKey(room,'a'),dragonDraftKey(room,'b'));
+});
+test('All three displayed treasure maxima match authoritative perfect-price scoring',()=>{for(const choice of dragonChoices)assert.equal(dragonScore(12345,12345,choice.id).score,Number(choice.max.replace('.','')));});
+test('Shared immutable clips animate distinct model instances and retain resource ownership',async()=>{
+ const original=GLTFLoader.prototype.loadAsync,geometry=new T.BoxGeometry(),material=new T.MeshStandardMaterial(),clip=new T.AnimationClip('open',1,[new T.QuaternionKeyframeTrack('lid.quaternion',[0,1],[0,0,0,1,Math.SQRT1_2,0,0,Math.SQRT1_2])]);let loads=0;
+ GLTFLoader.prototype.loadAsync=(async()=>{loads++;const scene=new T.Group(),lid=new T.Mesh(geometry,material);lid.name='lid';scene.add(lid);return {scene,animations:[clip]};}) as unknown as typeof GLTFLoader.prototype.loadAsync;
+ const manager=createAdventureModels(),parent=new T.Group();try{
+  const a=await manager.place({id:'props/treasure-chest',parent,position:[0,0,0],height:1}),b=await manager.place({id:'props/treasure-chest',parent,position:[2,0,0],height:1});assert.equal(loads,1);assert.equal(a!.userData.animationClips[0],clip);assert.equal(b!.userData.animationClips[0],clip);
+  const mixer=new T.AnimationMixer(a!);mixer.clipAction(a!.userData.animationClips[0]).play();mixer.update(.5);assert.ok(Math.abs(a!.getObjectByName('lid')!.quaternion.x)>.1);assert.equal(b!.getObjectByName('lid')!.quaternion.x,0);mixer.stopAllAction();mixer.uncacheRoot(a!);
+  let disposed=0;geometry.addEventListener('dispose',()=>disposed++);manager.dispose();assert.equal(disposed,1);assert.equal(parent.children.length,0);
+ }finally{manager.dispose();GLTFLoader.prototype.loadAsync=original;}
+});

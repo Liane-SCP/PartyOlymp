@@ -1,0 +1,8 @@
+Gazebo by Quaternius
+Source: https://poly.pizza/m/xYZB1TmGMv
+Download: https://static.poly.pizza/a0c33317-3662-478e-b826-78590c348d83.glb
+License: CC0-1.0 - https://creativecommons.org/publicdomain/zero/1.0/
+Verified: 2026-10-18
+Changes: Roof recolored muted terracotta and wood warm honey; roughness increased and metalness reduced. Original geometry, normals, UVs, node transforms and binary retained. Scaled and placed as the picnic garden's rear shelter.
+Source SHA-256: 2b60d9b6c9483ccb2d8db0f608aff1e4782ad2a37995c11e1ba59a7e316493c0
+Prepared SHA-256: 02a06d7d167dea2bf8ee2529f0228eebbdad5ddae77c8929cab9894bf92532b2

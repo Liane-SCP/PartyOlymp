@@ -1,0 +1,67 @@
+.phase-podium .finale:before { display: none; }
+.victory-ceremony { position: relative; isolation: isolate; overflow: hidden; height: clamp(540px, 65vw, 680px); margin: 0 0 30px; border: 1px solid #d5b66b45; border-radius: 24px; background: radial-gradient(ellipse at 50% 60%, #293754, #060b18 75%); box-shadow: 0 20px 80px #0005; }
+.ceremony-viewport, .ceremony-vignette { position: absolute; inset: 0; }
+.ceremony-viewport canvas { display: block; width: 100%; height: 100%; }
+.ceremony-vignette { pointer-events: none; background: linear-gradient(#060b1855, transparent 28%, transparent 68%, #060b18 94%); }
+.ceremony-title { position: absolute; inset: 28px 20px auto; text-align: center; pointer-events: none; }
+.ceremony-title > span { color: #e1c58a; letter-spacing: 3px; font-size: 9px; font-weight: 700; }
+.ceremony-title h2 { margin: 16px 0 8px; font-size: clamp(26px, 3.4vw, 46px); line-height: 1.06; letter-spacing: -1.8px; color: #fff5dc; text-shadow: 0 3px 25px #000; }
+.ceremony-title p { margin: 0 auto; max-width: 650px; font-size: 12px; color: #b6c0d3; line-height: 1.5; }
+.is-crowned .ceremony-title p { color: #ffda80; font-size: clamp(18px, 2.5vw, 28px); font-weight: 800; overflow-wrap: anywhere; }
+.many-champions.is-crowned .ceremony-title p { font-size: 14px; max-width: 600px; }
+.ceremony-places { position: absolute; inset: auto 6% 85px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.ceremony-place { opacity: 0; transform: translateY(15px); transition: opacity .7s, transform .7s; padding: 12px 7px; border-top: 1px solid #b4c8e86b; background: linear-gradient(#0b1526dd, #0b152655); border-radius: 0 0 12px 12px; min-width: 0; }
+.ceremony-place.is-revealed { opacity: 1; transform: none; }
+.ceremony-place > span { display: block; font-size: 8px; letter-spacing: 1.7px; color: #afc3df; }
+.ceremony-place strong { display: block; font-size: clamp(12px, 1.6vw, 18px); margin: 7px 0; overflow-wrap: anywhere; line-height: 1.2; }
+.ceremony-place b { color: #e5ecf8; font-size: 14px; }
+.ceremony-place small { font-size: 9px; font-weight: 400; color: #a9b3c5; }
+.ceremony-place.medal-1 { border-color: #ffcf73; background: linear-gradient(#4d361bd9, #4d361b44); }
+.ceremony-place.medal-1 > span, .ceremony-place.medal-1 b { color: #ffcf73; }
+.ceremony-place.medal-3 { border-color: #d08b62; }
+.ceremony-place.medal-3 > span { color: #dca883; }
+.ceremony-footer { position: absolute; inset: auto 20px 20px; display: flex; align-items: center; justify-content: space-between; gap: 10px; text-align: left; }
+.ceremony-footer > span { color: #8f9ab0; font-size: 10px; }
+.ceremony-footer button { display: inline-flex; gap: 7px; align-items: center; font-size: 10px; padding: 9px 11px; background: #ffffff08; border-color: #d5b66b45; }
+.ceremony-fallback { position: absolute; inset: 35% 10% auto; display: grid; place-items: center; gap: 18px; color: #ffcf73; }
+.ceremony-fallback > svg { width: 70px; height: 70px; }
+.ceremony-fallback > span { font-size: 12px; }
+.ceremony-fallback > div { display: flex; gap: 20px; }
+.ceremony-fallback .avatar-art { width: 65px; }
+.is-calm .ceremony-place { transition: none; }
+.victory-ceremony{height:clamp(700px,70vw,800px)}
+.ceremony-title p,.is-crowned .ceremony-title p{font-size:18px;line-height:1.3;max-height:48px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ceremony-places{bottom:144px}
+.ceremony-place{height:96px;padding:9px 7px}
+.ceremony-place strong{font-size:14px;line-height:1.15;margin:5px 0;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ceremony-participant{position:absolute;left:20px;right:20px;bottom:66px;display:flex;gap:12px;align-items:end;color:#dfd5b9}
+.ceremony-participant label{flex:1;min-width:0;max-width:420px;font-size:10px;text-align:left}
+.ceremony-participant select{display:block;width:100%;margin-top:4px;min-height:44px}
+.ceremony-participant output{font-size:11px;line-height:1.4;min-width:95px;text-align:right;align-self:end;padding-bottom:6px}
+.ceremony-participant output b{display:block;color:#ffda80}
+.ceremony-participant select,.ceremony-quality select{border:1px solid #b8b39177;background:#152d3c;color:#f1e7cf;border-radius:8px;padding:7px 9px;font-size:12px;min-height:44px}
+.ceremony-footer{bottom:14px;min-height:44px}
+.ceremony-footer button{min-height:44px}
+.ceremony-quality{display:flex;align-items:center;gap:6px;font-size:10px;color:#c7c2b1}
+.ceremony-quality select{min-width:92px}
+.ceremony-fallback>div{flex-wrap:wrap;justify-content:center;gap:10px;max-width:520px}
+.ceremony-fallback .avatar-art{width:42px}
+.victory-ceremony :focus-visible{outline:2px solid #ffda80;outline-offset:3px}
+@media (max-width: 600px) {
+  .victory-ceremony { height: 700px; border-radius: 17px; }
+  .ceremony-title { top: 22px; }
+  .ceremony-title > span { font-size: 7px; letter-spacing: 2px; }
+  .ceremony-title h2 { letter-spacing: -1px; font-size: 28px; }
+  .ceremony-title p { font-size: 10px; }
+  .is-crowned .ceremony-title p { font-size: 20px; }
+  .ceremony-places { left: 10px; right: 10px; bottom: 144px; gap: 5px; }
+  .ceremony-place { padding: 10px 4px; }
+  .ceremony-place > span { font-size: 7px; letter-spacing: 1px; }
+  .ceremony-place b { font-size: 12px; }
+  .ceremony-place small { display: block; margin-top: 3px; }
+  .ceremony-footer { left: 12px; right: 12px; bottom: 16px; }
+  .ceremony-footer > span { max-width: 130px; line-height: 1.5; font-size: 9px; }
+  .ceremony-footer > span{display:none}
+  .ceremony-participant{left:12px;right:12px;gap:8px}
+  .ceremony-place strong{font-size:12px}
+}

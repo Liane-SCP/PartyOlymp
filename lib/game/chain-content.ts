@@ -1,0 +1,101 @@
+// Fifty broad categories with a concrete boundary for fair peer review.
+export const chainTopics = [
+  [
+    "Automarken",
+    "Marken, unter denen Autos verkauft werden. Keine Modellnamen.",
+  ],
+  ["Länder", "Heutige souveräne Staaten; keine Städte oder Kontinente."],
+  ["Deutsche Städte", "Städte in Deutschland."],
+  ["Städte weltweit", "Städte überall auf der Welt."],
+  ["Hauptstädte", "Heutige Hauptstädte von Ländern."],
+  ["Flüsse", "Benannte Flüsse auf der ganzen Welt."],
+  ["Inseln", "Einzelne benannte Inseln; keine Inselgruppen."],
+  ["Sprachen", "Gesprochene oder Gebärdensprachen; keine Programmiersprachen."],
+  [
+    "Säugetiere",
+    "Tierarten oder gebräuchliche Tiergruppen wie Hund oder Delfin.",
+  ],
+  [
+    "Vogelarten",
+    "Vögel wie Amsel, Adler oder Pinguin; keine erfundenen Tiere.",
+  ],
+  ["Wassertiere", "Tiere, die überwiegend im Wasser leben."],
+  ["Hunderassen", "Benannte Hunderassen; keine einzelnen Haustiernamen."],
+  [
+    "Insekten",
+    "Insektenarten oder gebräuchliche Gruppen. Spinnen zählen nicht.",
+  ],
+  ["Obst", "Obstsorten im Küchengebrauch; keine Marken."],
+  ["Gemüse", "Gemüse im Küchengebrauch; keine fertigen Gerichte."],
+  ["Gerichte", "Benannte Speisen wie Lasagne oder Kartoffelsalat."],
+  ["Getränke", "Getränkearten; reine Markennamen zählen nicht."],
+  [
+    "Süßigkeiten",
+    "Süßwaren oder konkrete Süßwarenprodukte; keine reinen Firmennamen.",
+  ],
+  ["Gewürze und Küchenkräuter", "Pflanzliche Küchengewürze und Kräuter."],
+  ["Käsesorten", "Benannte Käsesorten; keine Marken allein."],
+  ["Backwaren", "Brot, Brötchen, Kuchen und andere benannte Backwaren."],
+  ["Pizzabeläge", "Essbare Zutaten, die als Pizzabelag verwendet werden."],
+  [
+    "Küchengeräte und Küchenutensilien",
+    "Dinge zum Kochen, Zubereiten und Servieren.",
+  ],
+  ["Berufe", "Konkrete berufliche Tätigkeiten; keine bloßen Eigenschaften."],
+  [
+    "Sportarten",
+    "Benannte Sportarten; Teams und einzelne Sportler zählen nicht.",
+  ],
+  ["Sportgeräte", "Gegenstände, die man zum Ausüben einer Sportart benutzt."],
+  [
+    "Kleidungsstücke",
+    "Benannte Kleidungsstücke, einschließlich Schuhe und Kopfbedeckungen.",
+  ],
+  ["Möbelstücke", "Arten von Möbeln; keine Marken."],
+  ["Werkzeuge", "Handwerkzeuge und elektrisch betriebene Werkzeuge."],
+  [
+    "Dinge im Badezimmer",
+    "Gegenstände, die üblicherweise in einem Badezimmer vorkommen.",
+  ],
+  [
+    "Schreibwaren",
+    "Gegenstände zum Schreiben, Zeichnen oder Ordnen von Papier.",
+  ],
+  ["Musikinstrumente", "Akustische oder elektronische Musikinstrumente."],
+  ["Musikgenres", "Benannte Musikrichtungen; Interpreten zählen nicht."],
+  ["Bands", "Musikgruppen; keine allein auftretenden Solokünstler."],
+  ["Sänger und Sängerinnen", "Bekannte Personen, die professionell singen."],
+  [
+    "Schauspieler und Schauspielerinnen",
+    "Personen mit Schauspielrollen; keine Figurennamen.",
+  ],
+  ["Filme", "Veröffentlichte Filmtitel; keine Serien."],
+  ["Serien", "Veröffentlichte Fernseh- oder Streamingserien."],
+  ["Videospiele", "Veröffentlichte Spieltitel; keine Publisher oder Konsolen."],
+  [
+    "Brett- und Kartenspiele",
+    "Benannte Gesellschaftsspiele, die am Tisch gespielt werden.",
+  ],
+  ["YouTuber", "Namen von YouTube-Creatorn oder ihren Hauptkanälen."],
+  ["Romanfiguren", "Benannte Figuren aus veröffentlichten Romanen."],
+  ["Superhelden", "Benannte Superhelden aus Comics, Filmen oder Serien."],
+  [
+    "Märchen",
+    "Benannte Märchengeschichten; nicht nur die Namen ihrer Autoren.",
+  ],
+  ["Blumen", "Blühende Zier- oder Wildpflanzen mit gebräuchlichem Namen."],
+  ["Bäume", "Baumarten oder gebräuchliche Baumgruppen."],
+  [
+    "Chemische Elemente",
+    "Offizielle deutsche Elementnamen oder ihre eindeutigen Symbole.",
+  ],
+  ["Apps", "Benannte Apps für Smartphone oder Tablet."],
+  [
+    "Sehenswürdigkeiten",
+    "Konkrete benannte Bauwerke, Denkmäler oder Natursehenswürdigkeiten.",
+  ],
+  [
+    "Fortbewegungsmittel",
+    "Arten von Fahrzeugen und Hilfsmitteln zur Fortbewegung; keine Marken.",
+  ],
+].map(([name, hint], i) => ({ id: `chain-topic-${i}`, name, hint }));

@@ -1,0 +1,8 @@
+Wrench by Armory_3D
+Source: https://poly.pizza/m/TvT0yqLRln
+Download: https://static.poly.pizza/f117ea86-ca0d-4b7a-8e32-213a1238e406.glb
+License: CC0-1.0 - https://creativecommons.org/publicdomain/zero/1.0/
+Verified: 2026-10-18
+Changes: Added a root rotation to stand the long axis vertically and face the thin tool toward Z. Original geometry, UVs, normals and binary retained. Material recolored muted steel with reduced metalness and increased roughness; instances scaled and slightly tilted on toolboards.
+Source SHA-256: 20da37f659df01c11191c63b5342f219a889f895c53d4ee091ab0616c06d23db
+Prepared SHA-256: b45a139bed87e4a8501661f643c5e97014686e1963cd17ae2ee679d7986e5579

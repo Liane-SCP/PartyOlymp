@@ -1,0 +1,10 @@
+{
+  "title": "Gavel",
+  "author": "Poly by Google",
+  "source": "https://poly.pizza/m/6yKiq1_NH5K",
+  "download": "https://static.poly.pizza/4bf03f3f-7898-4973-a5ae-d7e2c29db2db.glb",
+  "license": "CC-BY-3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "verified": "2026-10-18",
+  "changes": "Original geometry and material palette retained; sound block separated from the hammer by connected topology, hammer pivot added at its grip, scale/orientation/roughness adapted for the auction lectern."
+}

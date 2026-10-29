@@ -1,0 +1,11 @@
+{
+  "id": "props/workshop-wrench",
+  "title": "Wrench",
+  "author": "Armory_3D",
+  "source": "https://poly.pizza/m/TvT0yqLRln",
+  "download": "https://static.poly.pizza/f117ea86-ca0d-4b7a-8e32-213a1238e406.glb",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "verified": "2026-10-18",
+  "changes": "Added a root rotation to stand the long axis vertically and face the thin tool toward Z. Original geometry, UVs, normals and binary retained. Material recolored muted steel with reduced metalness and increased roughness; instances scaled and slightly tilted on toolboards."
+}

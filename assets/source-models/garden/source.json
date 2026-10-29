@@ -1,0 +1,11 @@
+{
+  "id": "props/garden-gazebo",
+  "title": "Gazebo",
+  "author": "Quaternius",
+  "source": "https://poly.pizza/m/xYZB1TmGMv",
+  "download": "https://static.poly.pizza/a0c33317-3662-478e-b826-78590c348d83.glb",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "verified": "2026-10-18",
+  "changes": "Roof recolored muted terracotta and wood warm honey; roughness increased and metalness reduced. Original geometry, normals, UVs, node transforms and binary retained. Scaled and placed as the picnic garden's rear shelter."
+}

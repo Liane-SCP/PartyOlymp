@@ -1,0 +1,913 @@
+.wardrobe .character-preview {
+  margin: 12px 0;
+  padding: 14px 18px;
+  min-height: 120px;
+}
+.wardrobe .character-preview > .avatar-art {
+  width: 92px;
+  overflow: visible;
+}
+.wardrobe-random {
+  border: 1px solid #7184a4;
+  background: #263750;
+  color: #eaf2ff;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 11px;
+  width: fit-content;
+}
+.wardrobe-colors {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.wardrobe-colors fieldset {
+  min-width: 0;
+  margin: 8px 0 14px;
+}
+.wardrobe .color-swatches {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 7px;
+}
+.wardrobe .color-swatches button {
+  width: 21px;
+  height: 21px;
+  justify-self: center;
+}
+.wardrobe-tabs,
+.reaction-tabs {
+  display: flex;
+  gap: 5px;
+  border-bottom: 1px solid #42516b;
+  padding-bottom: 8px;
+}
+.wardrobe-tabs button,
+.reaction-tabs button {
+  flex: 1;
+  padding: 8px 5px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: #ffffff06;
+  color: #b4c4dc;
+  font-size: 12px;
+  font-weight: 700;
+}
+.wardrobe-tabs button[aria-selected="true"],
+.reaction-tabs button[aria-selected="true"] {
+  background: #bcff5c18;
+  color: #d1ff91;
+  border-color: #bcff5c60;
+}
+.wardrobe-tabs span {
+  margin-left: 6px;
+  opacity: 0.6;
+  font-size: 10px;
+}
+.wardrobe-hint {
+  font-size: 11px;
+  color: #acbdd5;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+.wardrobe-options {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  max-height: 265px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 4px 3px 8px;
+  gap: 7px;
+}
+.wardrobe-options > button {
+  position: relative;
+  min-width: 0;
+  transition:
+    background 0.15s,
+    transform 0.15s;
+  padding: 9px 2px 6px;
+}
+.wardrobe-options > button:hover {
+  background: #334662;
+  transform: translateY(-2px);
+}
+.wardrobe-options .avatar-art {
+  width: 43px;
+  height: 43px;
+  overflow: visible;
+}
+.wardrobe-options small {
+  font-size: 9px;
+  color: #d0dbec;
+}
+.wardrobe-check {
+  position: absolute;
+  right: 3px;
+  top: 1px;
+  color: #c5ff7f;
+  font-size: 10px;
+}
+.emote-picker.reaction-studio {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  display: block;
+  width: min(540px, calc(100vw - 24px));
+  padding: 14px;
+  max-height: min(75dvh, 650px);
+  overflow: hidden;
+  border: 1px solid #7483a1;
+  border-radius: 20px;
+}
+.reaction-preview {
+  display: flex;
+  gap: 23px;
+  align-items: center;
+  padding: 4px 12px 15px;
+}
+.reaction-stage {
+  display: grid;
+  place-items: center;
+  width: 114px;
+  height: 112px;
+  flex-shrink: 0;
+  background: radial-gradient(ellipse, #899bec30, transparent 70%);
+}
+.reaction-stage .avatar-art {
+  width: 88px;
+  height: 88px;
+  animation-play-state: running;
+}
+.reaction-preview > div:last-child {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 9px;
+}
+.reaction-preview strong,
+.reaction-preview small {
+  grid-column: 1/-1;
+}
+.reaction-preview strong {
+  font-size: 17px;
+  color: white;
+}
+.reaction-preview small {
+  font-size: 11px;
+  color: #b0bdd2;
+}
+.reaction-preview button {
+  padding: 7px 10px;
+  font-size: 11px;
+  color: #dce8ff;
+}
+.reaction-preview .reaction-send {
+  background: #bcff5c;
+  color: #172035;
+  border-color: #bcff5c;
+  font-weight: 800;
+}
+.reaction-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 6px;
+  overflow-y: auto;
+  max-height: min(42dvh, 360px);
+  padding: 14px 3px 4px;
+  overscroll-behavior: contain;
+}
+.reaction-grid button {
+  min-width: 0;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+.reaction-grid button.selected {
+  border-color: #bcff5c;
+  background: #bcff5c12;
+}
+.reaction-grid .avatar-art {
+  width: 45px;
+  height: 45px;
+}
+.reaction-grid span {
+  font-size: 9px;
+  line-height: 1.2;
+  text-align: center;
+  color: #d5e1f3;
+  overflow-wrap: anywhere;
+}
+.live-emote {
+  min-height: 65px;
+  background: linear-gradient(135deg, #34415d, #202a3f);
+  border: 1px solid #7b91b455;
+  box-shadow: 0 6px 18px #0003;
+  animation: reaction-arrive 0.32s cubic-bezier(0.2, 1.5, 0.5, 1) both;
+}
+.live-emote .avatar-art {
+  width: 52px;
+  height: 52px;
+  margin: 3px 5px;
+}
+/* Each reaction has anticipation, a gesture and a settling beat. */
+.avatar-art.emote-face {
+  animation: none;
+}
+.emote-face .mascot-body {
+  transform-origin: 50px 78px;
+  animation: reaction-cheer 1.55s both;
+}
+.emote-face.react-laugh .mascot-body,
+.emote-face.react-giggle .mascot-body {
+  animation: reaction-laugh 1.35s both;
+}
+.emote-face.react-sob .mascot-body,
+.emote-face.react-violin .mascot-body {
+  animation: reaction-sob 1.8s both;
+}
+.emote-face.react-rage .mascot-body,
+.emote-face.react-no .mascot-body {
+  animation: reaction-rage 1.2s both;
+}
+.emote-face.react-gasp .mascot-body,
+.emote-face.react-explode .mascot-body {
+  animation: reaction-gasp 1.3s both;
+}
+.emote-face.react-dance .mascot-body {
+  animation: reaction-dance 1.5s both;
+}
+.emote-face.react-launch .mascot-body,
+.emote-face.react-ufo .mascot-body {
+  animation: reaction-launch 1.6s both;
+}
+.emote-face.react-dizzy .mascot-body {
+  animation: reaction-dizzy 1.7s both;
+}
+.emote-face.react-suspicious .mascot-body,
+.emote-face.react-wink .mascot-body,
+.emote-face.react-shush .mascot-body {
+  animation: reaction-look 1.45s both;
+}
+.emote-face.react-sleep .mascot-body,
+.emote-face.react-sigh .mascot-body,
+.emote-face.react-sip .mascot-body {
+  animation: reaction-sigh 1.6s both;
+}
+.emote-face .face-eyes {
+  transform-origin: 50px 44px;
+  animation: reaction-blink 2s both;
+}
+.emote-face.react-laugh .face-detail,
+.emote-face.react-giggle .face-detail {
+  transform-origin: 50px 62px;
+  animation: reaction-chuckle 0.2s 5 alternate;
+}
+.snicker-hand,
+.hide-hands,
+.pleading-hands,
+.coffee-sip {
+  transform-origin: 50px 85px;
+  animation: prop-gesture 1.6s both;
+}
+.mic-drop {
+  transform-origin: 70px 60px;
+  animation: microphone-drop 1.4s both;
+}
+.suspicion {
+  animation: reaction-look 1.45s both;
+  transform-origin: 50px 40px;
+}
+.mind-burst {
+  transform-origin: 50px 20px;
+  animation: brain-pop 1.4s both;
+}
+.tiny-violin {
+  transform-origin: 55px 70px;
+  animation: violin-bow 0.35s 4 alternate;
+}
+.lucky-spin {
+  transform-origin: 77px 64px;
+  animation: lucky-twirl 1.3s both;
+}
+.chess-stamp {
+  animation: chess-drop 1.4s both;
+}
+.waterfall {
+  animation: waterfall-flow 0.4s 4 alternate;
+  transform-origin: 50px 48px;
+}
+.flex-arms {
+  transform-origin: 50px 75px;
+  animation: flex-pose 1.4s both;
+}
+.ufo-beam {
+  animation: ufo-hover 1.7s both;
+}
+.royal-wave {
+  transform-origin: 79px 80px;
+  animation: royal-wave 1.5s both;
+}
+.ko-stars,
+.dance-notes {
+  transform-origin: 50px 30px;
+  animation: stars-orbit 1.5s both;
+}
+@keyframes reaction-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes reaction-cheer {
+  0%,
+  100% {
+    transform: none;
+  }
+  12% {
+    transform: scale(1.1, 0.85);
+  }
+  30% {
+    transform: translateY(-9px) scale(0.94, 1.1);
+  }
+  45% {
+    transform: scale(1.08, 0.94);
+  }
+  65% {
+    transform: translateY(-4px);
+  }
+}
+@keyframes reaction-laugh {
+  0%,
+  100% {
+    transform: none;
+  }
+  15%,
+  45%,
+  75% {
+    transform: rotate(-5deg) scale(1.12, 0.88);
+  }
+  30%,
+  60%,
+  90% {
+    transform: translateY(-5px) rotate(4deg) scale(0.96, 1.06);
+  }
+}
+@keyframes reaction-sob {
+  0%,
+  100% {
+    transform: none;
+  }
+  20%,
+  60% {
+    transform: translateY(4px) rotate(-6deg) scale(1.03, 0.94);
+  }
+  40%,
+  80% {
+    transform: rotate(5deg);
+  }
+}
+@keyframes reaction-rage {
+  0%,
+  100% {
+    transform: none;
+  }
+  15% {
+    transform: scale(1.12);
+  }
+  25%,
+  45%,
+  65% {
+    transform: translateX(-3px) rotate(-5deg);
+  }
+  35%,
+  55%,
+  75% {
+    transform: translateX(3px) rotate(5deg);
+  }
+}
+@keyframes reaction-gasp {
+  0%,
+  100% {
+    transform: none;
+  }
+  12% {
+    transform: scale(1.06, 0.82);
+  }
+  30% {
+    transform: translateY(-8px) scale(0.85, 1.2);
+  }
+  55% {
+    transform: scale(1.1, 0.96);
+  }
+}
+@keyframes reaction-dance {
+  0%,
+  100% {
+    transform: none;
+  }
+  15%,
+  55% {
+    transform: translateX(-6px) rotate(-12deg);
+  }
+  35%,
+  75% {
+    transform: translateX(6px) rotate(12deg);
+  }
+  90% {
+    transform: translateY(-7px);
+  }
+}
+@keyframes reaction-launch {
+  0%,
+  100% {
+    transform: none;
+  }
+  20% {
+    transform: scale(1.1, 0.8);
+  }
+  50% {
+    transform: translateY(-14px) scale(0.85, 1.12);
+  }
+  75% {
+    transform: translateY(-4px);
+  }
+}
+@keyframes reaction-dizzy {
+  0%,
+  100% {
+    transform: none;
+  }
+  20% {
+    transform: rotate(12deg);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
+  65% {
+    transform: translateY(6px) rotate(17deg) scale(1, 0.85);
+  }
+  85% {
+    transform: rotate(-4deg);
+  }
+}
+@keyframes reaction-look {
+  0%,
+  100% {
+    transform: none;
+  }
+  25%,
+  65% {
+    transform: translateX(4px) rotate(7deg);
+  }
+  80% {
+    transform: rotate(-3deg);
+  }
+}
+@keyframes reaction-sigh {
+  0%,
+  100% {
+    transform: none;
+  }
+  25% {
+    transform: scale(1, 1.06);
+  }
+  65%,
+  85% {
+    transform: translateY(5px) scale(1.04, 0.9);
+  }
+}
+@keyframes reaction-blink {
+  0%,
+  40%,
+  48%,
+  100% {
+    transform: scaleY(1);
+  }
+  44% {
+    transform: scaleY(0.1);
+  }
+}
+@keyframes reaction-chuckle {
+  to {
+    transform: scaleY(1.15);
+  }
+}
+@keyframes prop-gesture {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  20%,
+  70% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes microphone-drop {
+  0%,
+  35% {
+    transform: rotate(-20deg);
+  }
+  65% {
+    transform: translateY(18px) rotate(65deg);
+  }
+  80% {
+    transform: translateY(12px) rotate(48deg);
+  }
+  100% {
+    transform: translateY(17px) rotate(60deg);
+  }
+}
+@keyframes brain-pop {
+  0%,
+  20% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-10px) scale(0.95);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-17px) scale(1.1);
+    opacity: 0;
+  }
+}
+@keyframes violin-bow {
+  from {
+    transform: rotate(-8deg);
+  }
+  to {
+    transform: rotate(8deg);
+  }
+}
+@keyframes lucky-twirl {
+  0% {
+    transform: scale(0) rotate(-180deg);
+  }
+  60% {
+    transform: scale(1.2) rotate(15deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes chess-drop {
+  0% {
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+    transform: translateY(3px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  65%,
+  100% {
+    transform: none;
+  }
+}
+@keyframes waterfall-flow {
+  from {
+    transform: scaleY(0.75);
+    opacity: 0.65;
+  }
+  to {
+    transform: scaleY(1.06);
+    opacity: 1;
+  }
+}
+@keyframes flex-pose {
+  0%,
+  100% {
+    transform: none;
+  }
+  25%,
+  70% {
+    transform: translateY(-8px) scaleX(1.12);
+  }
+}
+@keyframes ufo-hover {
+  0% {
+    transform: translateX(-45px);
+    opacity: 0;
+  }
+  30%,
+  70% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-12px);
+    opacity: 0.5;
+  }
+}
+@keyframes royal-wave {
+  0%,
+  100% {
+    transform: none;
+  }
+  20%,
+  60% {
+    transform: rotate(-12deg);
+  }
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes stars-orbit {
+  0% {
+    opacity: 0;
+    transform: rotate(-20deg);
+  }
+  25%,
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+    transform: rotate(20deg);
+  }
+}
+/* Library tiles stay still until deliberately previewed. Quick bar stays quiet. */
+.emote-picker .emote-face,
+.quick-emotes .emote-face,
+.favorite-grid .emote-face,
+.reaction-stage .emote-face {
+  animation: none;
+}
+.reaction-grid .emote-face *,
+.quick-emotes .emote-face *,
+.favorite-grid .emote-face * {
+  animation: none !important;
+}
+.reaction-stage .emote-face .mascot-body {
+  animation-play-state: running;
+}
+@media (min-width: 800px) {
+  .wardrobe-options {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    max-height: 245px;
+  }
+  .entry-modal:has(.wardrobe) {
+    width: 650px;
+    max-width: calc(100vw - 40px);
+  }
+}
+@media (max-width: 500px) {
+  .wardrobe-options {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-height: 230px;
+  }
+  .reaction-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .reaction-preview {
+    gap: 10px;
+    padding-inline: 0;
+  }
+  .reaction-stage {
+    width: 90px;
+  }
+  .reaction-preview strong {
+    font-size: 14px;
+  }
+  .reaction-preview button {
+    font-size: 10px;
+    padding: 7px;
+  }
+  .live-emote .avatar-art {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .emote-face,
+  .emote-face *,
+  .live-emote,
+  .wardrobe .avatar-art {
+    animation: none !important;
+  }
+}
+html[data-motion="reduced"] .emote-face,
+html[data-motion="reduced"] .emote-face *,
+html[data-motion="reduced"] .live-emote {
+  animation: none !important;
+}
+.emote-picker.direct-emotes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.emote-menu-heading,
+.emote-favorite-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.emote-menu-heading strong {
+  font-size: 18px;
+  color: #f2f6ff;
+}
+.emote-menu-heading small,
+.emote-favorite-heading small {
+  font-size: 10px;
+  color: #adbbd2;
+  margin-left: 6px;
+}
+.emote-menu-heading p {
+  font-size: 11px;
+  color: #adbbd2;
+  margin: 5px 0 0;
+}
+.emote-menu-heading > button {
+  font-size: 22px;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  color: #dce8ff;
+}
+.emote-favorite-heading strong {
+  font-size: 12px;
+  color: #d6efa7;
+}
+.emote-favorite-heading > span {
+  font-size: 10px;
+  color: #a3b6d0;
+}
+.emote-slots {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 7px;
+}
+.emote-slots > button {
+  position: relative;
+  min-width: 0;
+  height: 59px;
+  background: #111d31;
+  border: 1px solid #5d715144;
+  border-radius: 10px;
+  padding: 5px;
+}
+.emote-slots .avatar-art {
+  width: 37px;
+  height: 37px;
+}
+.emote-slots .avatar-art,
+.emote-slots .avatar-art * {
+  animation: none !important;
+}
+.emote-slots kbd {
+  position: absolute;
+  bottom: 3px;
+  left: 5px;
+  font-size: 9px;
+  color: #9baac4;
+}
+.slot-remove {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  color: #c3cfdf;
+  font-size: 14px;
+}
+.emote-slots .empty-slot {
+  font-size: 27px;
+  color: #5a6c89;
+}
+.emote-slots.replacing > button {
+  border-color: #c0ff67;
+  background: #bcff5c16;
+}
+.emote-favorite-help {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  min-height: 25px;
+  font-size: 10px;
+  line-height: 1.4;
+  color: #b5c4db;
+}
+.emote-favorite-help > button {
+  padding: 4px 7px;
+  color: #e3eaff;
+  flex-shrink: 0;
+}
+.direct-emotes .reaction-tabs {
+  flex-shrink: 0;
+}
+.direct-emotes > :not(.reaction-grid) {
+  flex-shrink: 0;
+}
+.direct-emotes .reaction-grid {
+  min-height: 0;
+  padding-top: 5px;
+  margin: 0;
+  flex: 1 1 auto;
+}
+.emote-choice {
+  position: relative;
+  min-width: 0;
+}
+.reaction-grid .emote-send-choice {
+  width: 100%;
+  height: 100%;
+  padding: 15px 2px 7px;
+  gap: 7px;
+}
+.reaction-grid .emote-star {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border: 0;
+  background: #182137e8;
+  font-size: 21px;
+  line-height: 1;
+  color: #8192af;
+  border-radius: 7px;
+  display: grid;
+  place-items: center;
+}
+.reaction-grid .emote-star.selected {
+  color: #ffd86b;
+  background: #3d352b;
+}
+.live-reactions .live-emote {
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  padding: 6px;
+  min-width: 0;
+  border-radius: 14px;
+}
+.live-reactions .live-emote span {
+  max-width: 100%;
+  font-size: 11px;
+  font-weight: 700;
+  color: #eef4ff;
+}
+.live-reactions .live-emote .avatar-art {
+  margin: 0;
+  width: 48px;
+  height: 48px;
+}
+.spectrum-clue-help {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #aebfd7;
+  margin: 8px 0;
+}
+.spectrum-clue-help.invalid {
+  color: #ffc0cb;
+  background: #9e294526;
+  border: 1px solid #ee72914a;
+  border-radius: 8px;
+  padding: 10px;
+}
+@media (max-width: 760px) {
+  .emote-toggle span {
+    display: block;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+  .emote-toggle {
+    gap: 5px;
+    padding: 6px;
+  }
+  .quick-emotes > button {
+    width: 35px;
+  }
+  .quick-emotes .avatar-art {
+    width: 31px;
+  }
+  .room-stage .emote-dock {
+    max-width: calc(100vw - 16px);
+  }
+  .emote-slots .avatar-art {
+    width: 31px;
+    height: 31px;
+  }
+  .emote-slots > button {
+    height: 53px;
+  }
+  .emote-menu-heading strong {
+    font-size: 16px;
+  }
+}

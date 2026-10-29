@@ -1,0 +1,61 @@
+import test from 'node:test';import assert from 'node:assert/strict';import * as T from 'three';
+import {herdFrame,herdCamera,herdThoughtCamera,herdSeat,herdWrap,HERD_GATHER_MS} from '../lib/herd-presentation';
+import {herdGroupCenter,herdMemberPosition} from '../lib/herd-layout';
+import {fixture} from './adventure-browser-engine';
+import {createAdventureScene} from '../components/olymp/adventure-scene';
+import {herdDraftKey} from '../lib/herd-draft';
+
+test('Real private answers stay sealed and actual winning, tied and missing results control the park',()=>{
+ for(const answers of [['Pizza','Pizza','Pasta',''],['Pizza','Pizza','Pasta','Pasta'],['Pizza','Pasta','Suppe','Reis'],['','','','']]){const m=fixture('herd',4),ids=m.room.participantIds;answers.forEach((answer,i)=>{if(answer)m.command(ids[i],{type:'game',action:{type:'answer',answer}});if(i===0&&answer)assert.ok(!JSON.stringify(m.view(ids[1]).room.game).includes(answer));});if(m.room.game!.stage==='answer')m.next();const g=m.view().room.game,at=g.revealStartedAt,f=herdFrame(g,m.room.players,at+HERD_GATHER_MS);assert.equal(f.revealed,true);assert.deepEqual(f.groups.map(group=>group.score),g.reveal.groups.map((group:any)=>Math.max(...group.ids.map((id:string)=>g.reveal.players.find((p:any)=>p.id===id).score))));assert.equal(f.missing,answers.filter(a=>!a).length);assert.equal(f.winners,answers[0]==='Pizza'&&answers[1]==='Pizza'&&answers[2]!=='Pizza'&&answers[3]===''?1:0);assert.equal(g.events.at(-1).type,'herdGather');assert.equal(g.events.at(-1).at,at);}
+});
+test('Same-tab drafts stay in their actual public room, Olympiad, discipline and player scope across phase changes',()=>{
+ const m=fixture('herd',2),before=m.view().room,key=herdDraftKey(before,m.first);assert.equal('startedAt' in before,false);m.command(m.first,{type:'game',action:{type:'answer',answer:'Pizza'}});assert.equal(herdDraftKey(m.view().room,m.first),key);m.command(m.room.participantIds[1],{type:'game',action:{type:'answer',answer:'Pizza'}});assert.equal(herdDraftKey(m.view().room,m.first),key);assert.notEqual(herdDraftKey(before,m.room.participantIds[1]),key);assert.notEqual(herdDraftKey({...before,code:'OTHER2'},m.first),key);m.room.startedAt+=1000;assert.notEqual(herdDraftKey(m.view().room,m.first),key);assert.notEqual(herdDraftKey({...before,index:before.index+1},m.first),key);
+});
+test('Movement uses the shared reveal timestamp and late join/reduced motion reach their actual groups',()=>{
+ const m=fixture('herd',12);m.resolve();const g=m.view().room.game,at=g.revealStartedAt,start=herdFrame(g,m.room.players,at),half=herdFrame(g,m.room.players,at+850),end=herdFrame(g,m.room.players,at+1700);assert.equal(start.progress,0);assert.equal(half.progress,.5);assert.equal(end.progress,1);for(const [i,row] of end.rows.entries()){const target=herdMemberPosition(end.groups,row.id!)!;assert.ok(Math.abs(row.x-target.x)<1e-9&&Math.abs(row.z-target.z)<1e-9);assert.ok(Math.abs(half.rows[i].x-(start.rows[i].x+row.x)/2)<1e-9);}assert.deepEqual(herdFrame(g,m.room.players,at+20000).rows,end.rows);assert.deepEqual(herdFrame(g,m.room.players,at,true).rows,end.rows);
+ const before=herdFrame({...g,stage:'answer'},m.room.players,at);assert.deepEqual(before.groups,[]);assert.equal(before.revealed,false);
+});
+test('Actual rendered figures follow the shared time and a new round removes every old group and caption',()=>{
+ const m=fixture('herd',4);m.resolve();const g=m.view().room.game,at=g.revealStartedAt,world=createAdventureScene(T,'herd',m.room.players,m.first),root=world.scene.getObjectByName('herd-thoughts-picnic-park')!;world.update(0,at+850,g);const expected=herdFrame(g,m.room.players,at+850);world.actors.forEach((a,i)=>{assert.ok(Math.abs(a.root.position.x-expected.rows[i].x)<1e-9);assert.ok(Math.abs(a.root.position.z-expected.rows[i].z)<1e-9);});assert.equal(root.getObjectByName('herd-group-caption-0')!.userData.group.score,100);world.update(99,at+850,g);world.actors.forEach((a,i)=>assert.ok(Math.abs(a.root.position.x-expected.rows[i].x)<1e-9));m.next();world.update(100,at+900,m.view().room.game);assert.deepEqual(root.userData.groups,[]);for(let i=0;i<4;i++){const caption=root.getObjectByName(`herd-group-caption-${i}`)!;assert.equal(caption.visible,false);assert.equal(caption.userData.group,undefined);}world.dispose();
+});
+test('Both group overview and every close view fit actual members and complete captions for 2–12 players',()=>{
+ for(let count=2;count<=12;count++)for(const sizes of [[count],Array(count).fill(1),[Math.ceil(count/2),Math.floor(count/2)]]){let i=0;const groups=sizes.map(n=>({ids:Array.from({length:n},()=>String(i++))}));for(const aspect of [.35,.65,1.5,3.5])for(let selected=-1;selected<groups.length;selected++){const view=herdCamera(aspect,groups,selected),camera=new T.PerspectiveCamera(42,aspect,.1,180);camera.position.set(view.target[0],view.target[1]+Math.sin(view.pitch)*view.distance,view.target[2]+Math.cos(view.pitch)*view.distance);camera.lookAt(new T.Vector3(...view.target));camera.updateMatrixWorld();const points:T.Vector3[]=[];groups.forEach((group,index)=>{if(selected>=0&&selected!==index)return;const center=herdGroupCenter(index,groups.length);for(const x of[-3.1,3.1])for(const y of[3.5,5.8])points.push(new T.Vector3(center.x+x,y,center.z-2.8));for(const id of group.ids){const p=herdMemberPosition(groups,id)!;points.push(new T.Vector3(p.x,.25,p.z),new T.Vector3(p.x,2.5,p.z));}});for(const p of points){p.project(camera);assert.ok(Math.abs(p.x)<.94&&Math.abs(p.y)<.91,'Group subject clipped');}}}
+});
+test('Long words and Unicode answers preserve every glyph within the card line budget',()=>{for(const text of ['W'.repeat(60),'🍕'.repeat(30),'Ein gemeinsamer Gedanke mit einer sehr langen Formulierung']){const lines=herdWrap(text,940,s=>[...s].length*46);assert.equal(lines.join(''),text);assert.ok(lines.every(s=>[...s].length*46<=940));assert.ok(lines.length<=3);}});
+
+test('Every private thought camera fits the real seat, avatar and clickable note at wide and narrow input aspects',()=>{
+ for(let count=2;count<=12;count++)for(let index=0;index<count;index++)for(const aspect of[.35,.65,1.5,3.5]){const p=herdSeat(index,count),v=herdThoughtCamera(index,count,aspect),camera=new T.PerspectiveCamera(42,aspect,.1,180);camera.position.set(v.target[0],v.target[1]+Math.sin(v.pitch)*v.distance,v.target[2]+Math.cos(v.pitch)*v.distance);camera.lookAt(new T.Vector3(...v.target));camera.updateMatrixWorld();for(const dx of[-1.1,1.1])for(const y of[.25,2.6])for(const dz of[-1,1]){const point=new T.Vector3(p.x+dx,y,p.z+dz).project(camera);assert.ok(Math.abs(point.x)<.94&&Math.abs(point.y)<.9,'Private thought clipped');}}
+});
+
+test('Overview plaques cannot hide the twelve real figure faces; full answer boards appear only in the selected group',()=>{
+ const m=fixture('herd',12);for(const [i,id]of m.room.participantIds.entries())m.command(id,{type:'game',action:{type:'answer',answer:'Gedanke '+i}});const g=m.view().room.game,world=createAdventureScene(T,'herd',m.room.players,m.first),root=world.scene.getObjectByName('herd-thoughts-picnic-park')!;world.update(0,g.revealStartedAt+2000,g);world.scene.updateMatrixWorld(true);const plaques:T.Object3D[]=[];for(let i=0;i<12;i++){assert.equal(root.getObjectByName(`herd-group-caption-${i}`)!.visible,false);const p=root.getObjectByName(`herd-group-plaque-${i}`)!;assert.equal(p.visible,true);plaques.push(p);}for(const aspect of[.35,.7,1.5]){const v=herdCamera(aspect,g.reveal.groups),origin=new T.Vector3(v.target[0],v.target[1]+Math.sin(v.pitch)*v.distance,v.target[2]+Math.cos(v.pitch)*v.distance);for(const a of world.actors){const head=a.root.position.clone().add(new T.Vector3(0,1.4,0)),ray=new T.Raycaster(origin,head.clone().sub(origin).normalize(),0,origin.distanceTo(head));assert.equal(ray.intersectObjects(plaques,false).length,0,'Overview plaque blocks a face');}}world.update(1,g.revealStartedAt+2000,g,{herdGroup:11});assert.equal(root.getObjectByName('herd-group-caption-11')!.visible,true);assert.equal(root.getObjectByName('herd-group-plaque-11')!.visible,false);world.dispose();
+});
+
+test('Festival decoration leaves every group face, full answer card and private thought clear',()=>{
+ for(const count of[2,8,12])for(const unique of[false,true]){
+  const m=fixture('herd',count),world=createAdventureScene(T,'herd',m.room.players,m.first),garden=world.scene.getObjectByName('hivemind-festival-garden')!;assert.ok(garden);garden.traverse(o=>assert.equal(o instanceof T.Light,false));
+  for(const [i,id]of m.room.participantIds.entries())m.command(id,{type:'game',action:{type:'answer',answer:unique?'Gedanke '+i:'Pizza'}});const g=m.view().room.game;world.update(0,g.revealStartedAt+2000,g);world.scene.updateMatrixWorld(true);
+  for(const aspect of[.35,1,3])for(let selected=-1;selected<g.reveal.groups.length;selected++){
+   const v=herdCamera(aspect,g.reveal.groups,selected),origin=new T.Vector3(v.target[0],v.target[1]+Math.sin(v.pitch)*v.distance,v.target[2]+Math.cos(v.pitch)*v.distance),points=world.actors.filter(a=>selected<0||g.reveal.groups[selected].ids.includes(a.id)).map(a=>a.root.position.clone().add(new T.Vector3(0,1.4,0)));
+   if(selected>=0){const c=herdGroupCenter(selected,g.reveal.groups.length);for(const x of[-3.1,3.1])for(const y of[3.5,5.8])points.push(new T.Vector3(c.x+x,y,c.z-2.8));}
+   for(const p of points){const ray=new T.Raycaster(origin,p.clone().sub(origin).normalize(),0,origin.distanceTo(p)-.03);assert.equal(ray.intersectObject(garden,true).length,0,`${count}/${unique}/${selected}: garden hides a participant or answer`);}
+  }
+  for(let i=0;i<count;i++){const v=herdThoughtCamera(i,count,.4),origin=new T.Vector3(v.target[0],v.target[1]+Math.sin(v.pitch)*v.distance,v.target[2]+Math.cos(v.pitch)*v.distance),p=new T.Vector3(herdSeat(i,count).x,2.15,herdSeat(i,count).z),ray=new T.Raycaster(origin,p.clone().sub(origin).normalize(),0,origin.distanceTo(p)-.03);assert.equal(ray.intersectObject(garden,true).length,0,'Private thought must remain reachable');}
+  world.dispose();
+ }
+});
+
+test('Shared three-dimensional thought clouds disappear for gathering, return next round and release once',()=>{
+ const m=fixture('herd',12),world=createAdventureScene(T,'herd',m.room.players,m.first),cloud=world.scene.getObjectByName('sealed-thought-clouds') as T.InstancedMesh;assert.ok(cloud.isInstancedMesh);assert.equal(cloud.count,60);world.update(0,Date.now(),m.view().room.game);assert.equal(cloud.visible,true);
+ for(const id of m.room.participantIds)m.command(id,{type:'game',action:{type:'answer',answer:'Pizza'}});world.update(1,Date.now(),m.view().room.game);assert.equal(cloud.visible,false);m.next();world.update(2,Date.now(),m.view().room.game);assert.equal(cloud.visible,true);let releases=0,materials=0;cloud.addEventListener('dispose',()=>releases++);(cloud.material as T.Material).addEventListener('dispose',()=>materials++);world.dispose();assert.equal(releases,1);assert.equal(materials,1);
+});
+
+test('Every own thought bubble includes its visible edge while other participants and sealed answers cannot be picked',()=>{
+ for(const count of[2,8,12])for(const index of[0,count-1]){
+  const m=fixture('herd',count),id=m.room.participantIds[index],world=createAdventureScene(T,'herd',m.room.players,id);world.update(0,Date.now(),m.view(id).room.game);world.scene.updateMatrixWorld(true);
+  const enabled=world.pickables.filter(o=>o.userData.pick==='herdAnswer'&&!o.userData.pickDisabled);assert.equal(enabled.length,1);const hit=enabled[0] as T.Mesh;assert.equal((hit.material as T.Material).visible,false);
+  const v=herdThoughtCamera(index,count,.4),origin=new T.Vector3(v.target[0],v.target[1]+Math.sin(v.pitch)*v.distance,v.target[2]+Math.cos(v.pitch)*v.distance);
+  for(const dx of[-.65,.65]){const p=hit.position.clone().add(new T.Vector3(dx,0,0)),ray=new T.Raycaster(origin,p.clone().sub(origin).normalize());assert.equal(ray.intersectObjects(enabled,false)[0]?.object,hit,'The actual cloud edge must hit its private station');}
+  m.command(id,{type:'game',action:{type:'answer',answer:'Pizza'}});world.update(1,Date.now(),m.view(id).room.game);assert.equal(world.pickables.some(o=>o.userData.pick==='herdAnswer'&&!o.userData.pickDisabled),false);world.dispose();
+ }
+});

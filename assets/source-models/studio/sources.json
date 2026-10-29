@@ -1,0 +1,26 @@
+[
+  {
+    "name": "spotlight",
+    "id": "props/studio-spotlight",
+    "title": "Theater spotlight",
+    "author": "lakescorp",
+    "source": "https://poly.pizza/m/Thhuwj9HCg",
+    "download": "https://static.poly.pizza/164d67f5-1d1f-4f57-b4ae-3aeedf6172f3.glb",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "verified": "2026-10-18",
+    "changes": "Original geometry, nodes, normals and embedded palette retained. Scale, placement, orientation and roughness normalized for the overhead rig. No extra real-time light is created."
+  },
+  {
+    "name": "camera",
+    "id": "props/studio-camera",
+    "title": "Movie / film camera on tripod",
+    "author": "Franziska Haaf",
+    "source": "https://poly.pizza/m/3-paG1j-iYS",
+    "download": "https://static.poly.pizza/f629aff6-d013-42e4-b3ce-ca98129550df.glb",
+    "license": "CC-BY-3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "verified": "2026-10-18",
+    "changes": "Original geometry, node transforms, normals and binary retained. The original white body and lens/tripod materials are recolored slate blue and charcoal, with matte roughness. Scale and orientation normalized at placement. Attribution and changes are also visible in the studio's Models & Artists disclosure."
+  }
+]

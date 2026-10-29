@@ -1,0 +1,20 @@
+{
+  "title": "Treasure chest",
+  "author": "Kenney",
+  "source": "https://kenney.nl/assets/pirate-kit",
+  "download": "https://kenney.nl/media/pages/assets/pirate-kit/e6d4bb1525-1771333093/kenney_pirate-kit.zip",
+  "packVersion": "2.1",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "verified": "2026-10-18",
+  "sourceFile": "chest.glb",
+  "sourceSha256": "26d26c4c032a12320fe05b5005a72eba96db7167db0d35873639a4b7dcc06bcb",
+  "archiveSha256": "667ed2caf92954ddb98f7b7cede831fe99ab75063c26b25e23d32715bee9c943",
+  "paletteSha256": "451e1d7a53b8e76f4b2ee58742e241509fee5f82cf2cee6e3f7aca86ba718abe",
+  "id": "props/treasure-chest",
+  "file": "/adventure-models/props/treasure-chest.glb",
+  "sha256": "ec9653a337b6a0ddd910075d90d66fecb7dd2f282d92ef43ae4e19b5cb2e6059",
+  "bytes": 25172,
+  "triangles": 232,
+  "changes": "Original meshes, node hierarchy, hinged lid, open/close clips, normals, UVs, palette and binary retained. Only palette URI and generator metadata changed. Placement scale and roughness normalized at runtime."
+}

@@ -1,0 +1,8 @@
+Erlenmeyer flask by Poly by Google
+Source: https://poly.pizza/m/eqIGxcsBe1V
+Download: https://static.poly.pizza/0ec46b5b-d7ee-48f5-a06d-4274db0dfb1e.glb
+License: CC-BY-3.0 - https://creativecommons.org/licenses/by/3.0/
+Verified: 2026-10-18
+Changes: Removed the floating turquoise bubble primitive; retained the flask and its graduation marks. Tinted opaque ceramic ivory and graphite, adjusted roughness, placed and scaled for the pigment laboratory. Original binary mesh data retained.
+Source SHA-256: be1ef297cb1d3c63fb15f70bdaa072ef6cfaaa56d6ada40c26aa4c785ff917fb
+Prepared SHA-256: f63af158eacd8adbfaf81aee6fb9daf49b181c4dd7184afd8425505c1d5b8b6a

@@ -1,0 +1,33 @@
+Rock Golem — used as the Party Olymp Würfelkoloss
+
+Source and author-uploaded original:
+https://opengameart.org/content/rock-golem
+https://opengameart.org/sites/default/files/RockGolem.blend
+
+Authors and contributions:
+- hendori-sama — original golem model
+  Original reference: http://www.blendswap.com/blends/view/68618
+- umask007 — rigging improvements and UV work
+  https://opengameart.org/content/fireicestone-golem
+- Dm3d — updated rock textures and authored animations for OpenDungeons
+  https://opengameart.org/users/dm3d
+
+License: Creative Commons Attribution 3.0 Unported (CC BY 3.0).
+The source offers CC BY 3.0 and CC BY-SA 3.0 as alternatives; this copy uses
+CC BY 3.0.
+https://creativecommons.org/licenses/by/3.0/
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Modifications for this game:
+- Converted the original Blender 2.69 file to glTF 2.0 / GLB.
+- Rebuilt legacy Blender Internal materials as metallic-roughness PBR using
+  the original packed diffuse and normal textures.
+- Derived an eye-emission mask from the author's painted red eye pixels.
+- Applied the original Mirror modifier and smoothed vertex normals.
+- Preserved the original weighted skeleton and fourteen authored character
+  animation clips; removed only presentation camera and light animations.
+- Partitioned authored crown and chest triangles into removable skinned armor;
+  added a recessed inner surface and a luminous chest core for battle phases.
+
+The authors do not endorse Party Olymp. No additional restrictions are placed
+on the original licensed model. Preparation script: scripts/assets/prepare-colossus.py.

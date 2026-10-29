@@ -1,0 +1,19 @@
+{
+  "author": "Kenney",
+  "source": "https://kenney.nl/assets/watercraft-kit",
+  "license": "CC0-1.0",
+  "packVersion": "2.1",
+  "sourceFile": "ship-large.glb",
+  "sourceSha256": "df6960d351c803d2f0ad0dac2874de02633a2cfb72c14b4bb6c9fc46abc817f9",
+  "paletteSha256": "311138350e74e35c5497a1bd8076a01740b7c302bed11027639fa553459a68de",
+  "id": "watercraft/ship-hull",
+  "file": "/adventure-models/watercraft/ship-hull.glb",
+  "sha256": "5e78d22a3c85ae2e703a8ead95de1a7e988fa0f7617fd567e61d47640bf5f523",
+  "bytes": 55076,
+  "triangles": 721,
+  "surfaceRepair": {
+    "croppedTriangles": 628,
+    "affectedTriangles": 49
+  },
+  "changes": "Derived from ship-large: sails/flags removed; clipped at Y=2.45; coplanar overlapping faces resolved by planar subtraction, retaining the first authored surface and interpolating attributes at new boundaries. Lower hull/deck silhouette, normal directions, UV field, palette and material retained. Native main deck Y=2.1."
+}

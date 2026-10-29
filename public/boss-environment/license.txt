@@ -1,0 +1,42 @@
+PARTY OLYMP - BOSS ENVIRONMENT ASSET SOURCES
+
+The texture maps and HDRI in this directory are Poly Haven assets released
+under Creative Commons CC0 1.0 Universal (public-domain dedication).
+Commercial use, modification and redistribution are permitted.
+Attribution is not required; the original artists are credited here voluntarily.
+
+License: https://creativecommons.org/publicdomain/zero/1.0/
+Full legal text: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+Publisher's asset license: https://polyhaven.com/license
+Downloaded: 2026-10-11. Original files, no image modifications.
+
+STONE - Monastery Stone Floor, by Amal Kumar / Poly Haven
+Source: https://polyhaven.com/a/monastery_stone_floor
+Coverage: 1.8 x 1.8 metres per repeat.
+Maps: 1024 x 1024 JPEG; OpenGL tangent-space (+Y) normal map.
+stone-color.jpg (sRGB base color):
+https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/monastery_stone_floor/monastery_stone_floor_diff_1k.jpg
+stone-normal.jpg (linear/data, OpenGL normal):
+https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/monastery_stone_floor/monastery_stone_floor_nor_gl_1k.jpg
+stone-roughness.jpg (linear/data roughness):
+https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/monastery_stone_floor/monastery_stone_floor_rough_1k.jpg
+
+WOOD - Brown Planks 03, by Rob Tuytel / Poly Haven
+Source: https://polyhaven.com/a/brown_planks_03
+Coverage: 1 x 1 metre per repeat.
+Maps: 1024 x 1024 JPEG; OpenGL tangent-space (+Y) normal map.
+wood-color.jpg (sRGB base color):
+https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brown_planks_03/brown_planks_03_diff_1k.jpg
+wood-normal.jpg (linear/data, OpenGL normal):
+https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brown_planks_03/brown_planks_03_nor_gl_1k.jpg
+wood-roughness.jpg (linear/data roughness):
+https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brown_planks_03/brown_planks_03_rough_1k.jpg
+
+NIGHT SKY - Kloppenheim 07 (Pure Sky)
+Original photograph by Greg Zaal; sky edits by Jarod Guest / Poly Haven.
+Source: https://polyhaven.com/a/kloppenheim_07_puresky
+night-sky.hdr: 1024 x 512 Radiance HDR, equirectangular environment.
+https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/kloppenheim_07_puresky_1k.hdr
+
+Every downloaded file was checked against the MD5 checksum published by
+the official https://api.polyhaven.com/files/ endpoint for that asset.

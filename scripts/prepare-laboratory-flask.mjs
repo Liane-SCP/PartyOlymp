@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';import {createHash} from 'node:crypto';import {Color} from 'three';
+const folder='assets/source-models/laboratory',source=JSON.parse(await fs.readFile(`${folder}/source.json`,'utf8'));
+if(source.source!=='https://poly.pizza/m/eqIGxcsBe1V'||source.license!=='CC-BY-3.0')throw Error('Unverified laboratory source');
+const original=await fs.readFile(`${folder}/flask.glb`),length=original.readUInt32LE(12),j=JSON.parse(original.subarray(20,20+length));
+if(original.readUInt32LE(0)!==0x46546c67||original.readUInt32LE(8)!==original.length||j.buffers.some(b=>b.uri)||j.images?.some(i=>i.uri)||j.animations?.length)throw Error('Expected a still, self-contained GLB');
+if(j.meshes.length!==1||j.meshes[0].primitives.length!==3||j.materials[2].name!=='00BCD4'||j.meshes[0].primitives[2].material!==2)throw Error('Source primitive layout changed');
+j.meshes[0].primitives=j.meshes[0].primitives.slice(0,2);j.materials=j.materials.slice(0,2);
+for(const[i,m]of j.materials.entries()){m.pbrMetallicRoughness.baseColorFactor=[...new Color(i?'#4c6268':'#e0dfcc').toArray(),1];m.pbrMetallicRoughness.roughnessFactor=.76;m.pbrMetallicRoughness.metallicFactor=.03;}
+const json=Buffer.from(JSON.stringify(j)),chunk=Buffer.alloc(Math.ceil(json.length/4)*4,0x20);json.copy(chunk);const rest=original.subarray(20+length),data=Buffer.alloc(20+chunk.length+rest.length);original.copy(data,0,0,20);data.writeUInt32LE(data.length,8);data.writeUInt32LE(chunk.length,12);chunk.copy(data,20);rest.copy(data,20+chunk.length);
+const triangles=j.meshes[0].primitives.reduce((n,p)=>n+j.accessors[p.indices].count/3,0),entry={...source,file:`/adventure-models/${source.id}.glb`,bytes:data.length,triangles,sourceSha256:createHash('sha256').update(original).digest('hex'),sha256:createHash('sha256').update(data).digest('hex')};
+await fs.writeFile(`public${entry.file}`,data);const path='public/adventure-models/manifest.json',manifest=JSON.parse(await fs.readFile(path,'utf8'));manifest.assets=manifest.assets.filter(a=>a.id!==source.id);manifest.assets.push(entry);await fs.writeFile(path,JSON.stringify(manifest,null,2)+'\n');
+const credit=`${source.title} by ${source.author}\nSource: ${source.source}\nDownload: ${source.download}\nLicense: ${source.license} - ${source.licenseUrl}\nVerified: ${source.verified}\nChanges: ${source.changes}\nSource SHA-256: ${entry.sourceSha256}\nPrepared SHA-256: ${entry.sha256}\n`;
+await fs.writeFile(`${folder}/LICENSE.txt`,credit);await fs.writeFile('public/adventure-models/props/laboratory-flask-LICENSE.txt',credit);console.log(JSON.stringify({id:entry.id,bytes:entry.bytes,triangles}));

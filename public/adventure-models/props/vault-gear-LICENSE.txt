@@ -1,0 +1,8 @@
+Collectible Gear by Quaternius
+Source: https://poly.pizza/m/1tgrqxAQia
+Download: https://static.poly.pizza/35b7626f-c4ff-4532-8720-679ccd105861.glb
+License: CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+Verified: 2026-10-18
+Changes: Original mesh, normals, topology, material palette and binary retained. A new root aligns the dominant gear face to +Z, allowing an axial Z rotation. Uniform size and roughness normalized by the shared loader.
+Source SHA-256: 829ee90420dc369aa270a84a3cb80ed4a328576c5f8b276f42f4137a3fc01b8b
+Prepared SHA-256: 4997e4898a66aa2b141b52e6f44e06f62c67261b5e897279668991807749239e

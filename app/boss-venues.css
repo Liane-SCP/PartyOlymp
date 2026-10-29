@@ -1,0 +1,76 @@
+.boss-world-toggle{width:100%;margin:0 0 10px;padding:8px 12px;border:1px solid #cbb98566;border-radius:10px;background:#203d49;color:#ecd9aa;font:600 11px system-ui;cursor:pointer}
+.boss-world-view .boss-world-toggle{margin:0}
+.boss-station-toggle{width:100%;min-height:44px;margin-top:8px;padding:8px 10px;background:#e8d4a5;color:#213941;border:1px solid #fff6;border-radius:10px;font:700 12px system-ui;cursor:pointer}
+.boss-station-toggle[aria-pressed="true"]{background:#bad5cc}
+.boss-world-view.boss-kraken #boss-control-panel > :not(.boss-kraken-control){display:none}
+.boss-world-view.boss-kraken .boss-kraken-control > :not(.boss-charge):not(.boss-charge-tip){display:none}
+.boss-world-view.boss-kraken .boss-charge{margin:12px 0 0}
+.boss-world-view.boss-kraken .boss-charge-tip{font-size:10px;margin:6px 0 0}
+.immersive-boss .boss-station-view .boss-command{top:auto;bottom:80px}
+@media(min-width:601px){.immersive-boss .boss-world-view .boss-arena-footer{top:140px;bottom:auto;left:16px;right:216px}}
+.boss-world-hint{margin:9px 0 0;color:#e8dbba;font-size:11px;line-height:1.5}
+.boss-world-view .boss-crew,.boss-world-view .boss-crew-heading{display:none}
+.boss-panorama-toggle{display:none}
+.dragon-altar-risk-select,.dragon-altar-risk-hint{display:none}
+.dragon-altar-product-heading{display:none}
+.boss-world-view.boss-dragon #boss-control-panel > :not(.boss-dragon-control){display:none}
+.boss-world-view.boss-dragon .boss-dragon-control{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 88px;align-items:end;gap:6px}
+.boss-world-view.boss-dragon .boss-treasure-product,.boss-world-view.boss-dragon .boss-risk,.boss-world-view.boss-dragon .boss-price-note{display:none}
+.boss-world-view.boss-dragon .boss-price-input{margin:0;min-width:0}
+.boss-world-view.boss-dragon .boss-price-input>span,.boss-world-view.boss-dragon .dragon-altar-risk-select>span{display:block;margin:0 0 4px;font-size:10px;line-height:1.2}
+.boss-world-view.boss-dragon .boss-price-input input{height:44px;min-width:0;padding:8px 24px 8px 8px;font-size:16px}
+.boss-world-view.boss-dragon .dragon-altar-risk-select{display:block;min-width:0}
+.boss-world-view.boss-dragon .dragon-altar-risk-select select{display:block;width:100%;height:44px;padding:5px;color:#f0dbb1;background:#172b35;border:1px solid #9ba99888;border-radius:10px;font:600 11px system-ui}
+.boss-world-view.boss-dragon .boss-primary{min-height:44px;margin:0;padding:7px 5px;font-size:11px;line-height:1.2}
+.boss-world-view.boss-dragon .boss-primary svg{display:none}
+.boss-world-view.boss-dragon .dragon-altar-risk-hint{display:block;grid-column:1/-1;margin:0;color:#e8d4ad;font-size:9px;line-height:1.25}
+.immersive-boss .boss-dragon.boss-world-view.boss-station-view .boss-command{width:350px}
+.boss-world-view.boss-dragon.boss-station-view .boss-world-hint{display:none}
+@media(max-width:600px){
+ .immersive-boss .dragon-altar-product-heading{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;position:fixed;z-index:12;top:194px;left:14px;right:14px;padding:6px 9px;background:#10252ee8;border:1px solid #c9b58a55;border-radius:10px;color:#f3dfb5;font:600 11px/1.3 system-ui}
+ .immersive-boss .boss-dragon.boss-world-view.boss-station-view .boss-command{left:10px;right:10px;width:auto;display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:10px}
+ .immersive-boss .boss-dragon.boss-world-view.boss-station-view .boss-command>.boss-world-toggle,.immersive-boss .boss-dragon.boss-world-view.boss-station-view .boss-command>.boss-station-toggle{min-height:44px;margin:0}
+ .immersive-boss .boss-dragon.boss-world-view.boss-station-view #boss-control-panel{grid-column:1/-1}
+}
+.immersive-boss .boss-world-view .boss-command{width:180px;max-height:none}
+@media(max-width:600px){.immersive-boss .boss-world-view .boss-command{left:auto;right:10px;width:180px}}
+@media(max-width:600px){
+ .immersive-boss .boss-kraken.boss-world-view.boss-station-view .boss-command{left:10px;right:10px;width:auto;display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:10px}
+ .immersive-boss .boss-kraken.boss-world-view.boss-station-view .boss-world-toggle,.immersive-boss .boss-kraken.boss-world-view.boss-station-view .boss-station-toggle{min-height:44px;margin:0}
+ .immersive-boss .boss-kraken.boss-world-view.boss-station-view .boss-world-hint,.immersive-boss .boss-kraken.boss-world-view.boss-station-view #boss-control-panel{grid-column:1/-1}
+ .immersive-boss .boss-kraken.boss-world-view.boss-station-view .boss-world-hint{margin:0;font-size:10px;line-height:1.35}
+ .immersive-boss .boss-kraken.boss-world-view.boss-station-view .boss-charge{height:54px;margin:8px 0 0}
+ .immersive-boss .boss-kraken.boss-world-view.boss-station-view .boss-charge-tip{min-height:0;margin:4px 0 0;font-size:9px;line-height:1.35}
+}
+@media(max-width:600px) and (min-height:600px){
+ .immersive-boss .boss-colossus.boss-world-view:not(.boss-station-view) .boss-command{left:10px;right:10px;width:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:10px}
+ .immersive-boss .boss-colossus.boss-world-view:not(.boss-station-view) .boss-command>button{min-height:44px;margin:0;padding:7px 5px;font-size:10px}
+ .immersive-boss .boss-colossus .boss-panorama-toggle{display:block;border:1px solid #8eb5bf66;border-radius:10px;background:#203d49;color:#ecd9aa;font:600 11px system-ui;cursor:pointer}
+ .immersive-boss .boss-colossus .boss-panorama-toggle[aria-pressed="true"]{background:#bad5cc;color:#213941}
+ .immersive-boss .boss-colossus.boss-world-view:not(.boss-station-view) .boss-world-hint{grid-column:1/-1;margin:0;font-size:10px;line-height:1.35}
+ .immersive-boss .boss-colossus.boss-world-view.boss-stage-roundReveal .boss-command,.immersive-boss .boss-colossus.boss-world-view.boss-stage-done .boss-command{grid-template-columns:1fr 1fr}
+ .immersive-boss .boss-colossus.boss-world-view .boss-cinematic-caption{top:auto;bottom:156px;padding:8px 12px;background:#07141dc9;border-radius:12px}
+ .immersive-boss .boss-colossus.boss-world-view .boss-cinematic-caption strong{font-size:20px}
+ .immersive-boss .boss-colossus.boss-world-view:not(.boss-temple-view) .boss-cinematic-caption{top:198px;bottom:auto}
+ .immersive-boss .boss-dragon.boss-world-view:not(.boss-station-view) .boss-command{left:10px;right:10px;width:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:10px}
+ .immersive-boss .boss-dragon.boss-world-view:not(.boss-station-view) .boss-command>button{min-height:44px;margin:0;padding:7px 5px;font-size:10px}
+ .immersive-boss .boss-dragon .boss-panorama-toggle{display:block;border:1px solid #8eb5bf66;border-radius:10px;background:#203d49;color:#ecd9aa;font:600 11px system-ui;cursor:pointer}
+ .immersive-boss .boss-dragon .boss-panorama-toggle[aria-pressed="true"]{background:#bad5cc;color:#213941}
+ .immersive-boss .boss-dragon.boss-world-view:not(.boss-station-view) .boss-world-hint{grid-column:1/-1;margin:0;font-size:10px;line-height:1.35}
+ .immersive-boss .boss-dragon.boss-world-view.boss-stage-roundReveal .boss-command,.immersive-boss .boss-dragon.boss-world-view.boss-stage-done .boss-command{grid-template-columns:1fr 1fr}
+ .immersive-boss .boss-dragon.boss-world-view .boss-cinematic-caption{top:auto;bottom:156px;padding:8px 12px;background:#07141dc9;border-radius:12px}
+ .immersive-boss .boss-dragon.boss-world-view .boss-cinematic-caption strong{font-size:20px}
+ .immersive-boss .boss-dragon.boss-world-view:not(.boss-hort-view) .boss-cinematic-caption{top:198px;bottom:auto}
+ .immersive-boss .boss-kraken.boss-world-view:not(.boss-station-view) .boss-command{left:10px;right:10px;width:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:10px}
+ .immersive-boss .boss-kraken.boss-world-view:not(.boss-station-view) .boss-command>button{min-height:44px;margin:0;padding:7px 5px;font-size:10px}
+ .immersive-boss .boss-kraken .boss-panorama-toggle{display:block;border:1px solid #8eb5bf66;border-radius:10px;background:#203d49;color:#ecd9aa;font:600 11px system-ui;cursor:pointer}
+ .immersive-boss .boss-kraken .boss-panorama-toggle[aria-pressed="true"]{background:#bad5cc;color:#213941}
+ .immersive-boss .boss-kraken.boss-world-view:not(.boss-station-view) .boss-world-hint,.immersive-boss .boss-kraken.boss-world-view:not(.boss-station-view) #boss-control-panel{grid-column:1/-1}
+ .immersive-boss .boss-kraken.boss-world-view:not(.boss-station-view) .boss-world-hint{margin:0;font-size:10px;line-height:1.35}
+ .immersive-boss .boss-kraken.boss-world-view:not(.boss-station-view) .boss-charge{height:54px;margin:8px 0 0}
+ .immersive-boss .boss-kraken.boss-world-view:not(.boss-station-view) .boss-charge-tip{min-height:0;margin:4px 0 0;font-size:9px;line-height:1.35}
+ .immersive-boss .boss-kraken.boss-world-view.boss-stage-roundReveal .boss-command,.immersive-boss .boss-kraken.boss-world-view.boss-stage-done .boss-command{grid-template-columns:1fr 1fr}
+ .immersive-boss .boss-kraken.boss-world-view .boss-cinematic-caption{top:auto;bottom:156px;padding:8px 12px;background:#07141dc9;border-radius:12px}
+ .immersive-boss .boss-kraken.boss-world-view .boss-cinematic-caption strong{font-size:20px}
+ .immersive-boss .boss-kraken.boss-world-view:not(.boss-ship-view) .boss-cinematic-caption{top:198px;bottom:auto}
+}

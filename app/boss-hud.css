@@ -1,0 +1,442 @@
+/* The world owns the viewport. Every interface element floats above it. */
+.platform.immersive-boss {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100dvh;
+  max-width: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  isolation: isolate;
+  --hud-surface: linear-gradient(145deg, #0c1524dd, #0b1421bb);
+}
+.immersive-boss .room-stage,
+.immersive-boss .room-stage .room-shell,
+.immersive-boss .room-layout,
+.immersive-boss .stage-panel,
+.immersive-boss .boss-battle-layout {
+  display: contents;
+}
+.immersive-boss .boss-game {
+  position: fixed;
+  inset: 0;
+  display: block;
+  pointer-events: none;
+}
+.immersive-boss .boss-arena {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+  pointer-events: auto;
+}
+.immersive-boss .site-header {
+  position: fixed;
+  inset: max(12px, env(safe-area-inset-top)) 16px auto;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  z-index: 30;
+  pointer-events: none;
+}
+.immersive-boss .site-header a,
+.immersive-boss .header-actions {
+  pointer-events: auto;
+}
+.immersive-boss .brand {
+  font-size: 17px;
+  filter: drop-shadow(0 2px 8px #000);
+}
+.immersive-boss .brand small {
+  display: none;
+}
+.immersive-boss .brand > svg {
+  width: 23px;
+}
+.immersive-boss .header-actions {
+  padding: 4px;
+  background: #07101dbb;
+  border-radius: 12px;
+}
+.immersive-boss .icon-button {
+  width: 34px;
+  height: 34px;
+}
+.immersive-boss .connection {
+  font-size: 10px;
+}
+.immersive-boss .room-top {
+  position: fixed;
+  top: 88px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  z-index: 30;
+}
+.immersive-boss .room-top > div:first-child {
+  display: none;
+}
+.immersive-boss .room-top .desktop-crew-toggle {
+  display: block;
+  margin: 0;
+  padding: 7px 10px;
+  font-size: 11px;
+  background: #0c1524cc;
+}
+.immersive-boss .room-code {
+  padding: 5px 10px;
+  background: #0c1524cc;
+}
+.immersive-boss .room-code span {
+  display: none;
+}
+.immersive-boss .room-code strong {
+  font-size: 13px;
+}
+.immersive-boss .game-topline {
+  position: fixed;
+  left: 16px;
+  top: 82px;
+  width: 230px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px 12px;
+  padding: 8px 10px;
+  margin: 0;
+  border: 0;
+  border-radius: 10px;
+  background: #09121dcc;
+  z-index: 20;
+  font-size: 9px;
+}
+.immersive-boss .game-topline .timer {
+  flex-basis: 100%;
+  font-size: 13px;
+}
+.immersive-boss .boss-health-panel {
+  inset: 20px auto auto 50%;
+  transform: translateX(-50%);
+  width: min(680px, calc(100vw - 560px));
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 9px 14px 12px;
+  border-radius: 14px;
+  background: linear-gradient(#08111edb, #08111e45);
+  gap: 6px 12px;
+}
+.immersive-boss .boss-health-panel .boss-realm {
+  display: none;
+}
+.immersive-boss .boss-health-panel h2 {
+  font-size: 22px;
+}
+.immersive-boss .boss-health-number {
+  position: static;
+  font-size: 12px;
+}
+.immersive-boss .boss-health-track {
+  height: 10px;
+  box-shadow: 0 0 22px var(--boss-soft);
+}
+.immersive-boss .boss-command {
+  position: absolute;
+  right: 16px;
+  top: 140px;
+  bottom: auto;
+  width: 300px;
+  max-height: calc(100dvh - 160px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  padding: 16px;
+  border: 1px solid #ffffff24;
+  background: var(--hud-surface);
+  backdrop-filter: none;
+  box-shadow: 0 15px 50px #0004;
+  z-index: 10;
+  pointer-events: auto;
+}
+.immersive-boss .boss-command-heading h3 {
+  font-size: 19px;
+}
+.immersive-boss .boss-instruction {
+  margin: 9px 0 12px;
+  font-size: 11px;
+}
+.immersive-boss .boss-crew-heading {
+  position: absolute;
+  left: 18px;
+  top: 152px;
+  width: 206px;
+  margin: 0;
+  z-index: 10;
+}
+.immersive-boss .boss-crew-heading span {
+  display: none;
+}
+.immersive-boss .boss-crew {
+  position: absolute;
+  left: 16px;
+  top: 175px;
+  width: 210px;
+  max-height: calc(100dvh - 198px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  margin: 0;
+  z-index: 10;
+  pointer-events: auto;
+}
+.immersive-boss .boss-crew-member {
+  min-height: 39px;
+  padding: 5px 7px;
+  gap: 6px;
+  background: #081321b8;
+  backdrop-filter: none;
+}
+.immersive-boss .boss-crew-member > .avatar-art {
+  width: 25px;
+  height: 25px;
+}
+.immersive-boss .boss-crew-member strong {
+  font-size: 11px;
+}
+.immersive-boss .boss-crew-member span {
+  font-size: 8px;
+}
+.immersive-boss .boss-crew-member > b {
+  font-size: 12px;
+}
+.immersive-boss .boss-crew-member > b > small {
+  display: none;
+}
+.immersive-boss .boss-arena-footer {
+  left: 250px;
+  right: 336px;
+  bottom: 94px;
+}
+.immersive-boss .boss-cinematic-caption {
+  left: 235px;
+  right: 325px;
+  bottom: 130px;
+}
+.immersive-boss .boss-intro-title,
+.immersive-boss .boss-victory {
+  left: 235px;
+  right: 325px;
+}
+.immersive-boss .room-stage .emote-dock {
+  position: fixed;
+  left: 50%;
+  bottom: max(12px, env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100vw - 32px);
+  margin: 0;
+  z-index: 40;
+  background: #0b1522c9;
+  backdrop-filter: none;
+}
+.immersive-boss .live-reactions {
+  position: fixed;
+  left: 50%;
+  bottom: 90px;
+  transform: translateX(-50%);
+  width: min(500px, 40vw);
+  z-index: 35;
+  pointer-events: none;
+}
+.immersive-boss .crew-panel {
+  display: none;
+}
+.immersive-boss .crew-expanded .crew-panel {
+  display: block;
+  position: fixed;
+  top: 136px;
+  right: 16px;
+  width: 300px;
+  max-height: calc(100dvh - 152px);
+  overflow-y: auto;
+  background: #101a2af5;
+  z-index: 50;
+}
+.immersive-boss .error-banner {
+  position: fixed;
+  top: 105px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+}
+@media (min-width: 1700px) {
+  .immersive-boss .boss-command {
+    width: 330px;
+    right: 24px;
+  }
+  .immersive-boss .boss-crew {
+    width: 230px;
+    left: 24px;
+  }
+}
+@media (max-width: 1000px) {
+  .immersive-boss .boss-health-panel {
+    top: 66px;
+    width: min(660px, calc(100vw - 24px));
+  }
+  .immersive-boss .boss-health-panel h2 {
+    font-size: 18px;
+  }
+  .immersive-boss .room-top {
+    top: 14px;
+    right: 152px;
+  }
+  .immersive-boss .room-code {
+    display: none;
+  }
+  .immersive-boss .connection {
+    display: none;
+  }
+  .immersive-boss .game-topline {
+    top: 146px;
+    width: 180px;
+  }
+  .immersive-boss .boss-crew,
+  .immersive-boss .boss-crew-heading {
+    display: none;
+  }
+  .immersive-boss .boss-command {
+    top: auto;
+    bottom: 84px;
+    width: 310px;
+    max-height: calc(100dvh - 225px);
+  }
+  .immersive-boss .boss-arena-footer {
+    left: 16px;
+    right: 342px;
+    bottom: 95px;
+  }
+  .immersive-boss .boss-cinematic-caption {
+    left: 20px;
+    right: 340px;
+    bottom: 140px;
+  }
+  .immersive-boss .boss-intro-title,
+  .immersive-boss .boss-victory {
+    left: 20px;
+    right: 340px;
+  }
+}
+@media (max-width: 600px) {
+  .immersive-boss .site-header {
+    left: 10px;
+    right: 10px;
+  }
+  .immersive-boss .brand {
+    font-size: 12px;
+  }
+  .immersive-boss .brand > svg {
+    width: 18px;
+  }
+  .immersive-boss .brand small {
+    display: none;
+  }
+  .immersive-boss .room-top {
+    right: 126px;
+    top: 16px;
+  }
+  .immersive-boss .room-top .desktop-crew-toggle {
+    padding: 7px;
+    font-size: 10px;
+  }
+  .immersive-boss .header-actions {
+    gap: 3px;
+  }
+  .immersive-boss .icon-button {
+    width: 30px;
+    height: 30px;
+  }
+  .immersive-boss .boss-phase-labels {
+    font-size: 8px;
+  }
+  .immersive-boss .game-topline {
+    left: 12px;
+    right: 12px;
+    top: 143px;
+    width: auto;
+    padding: 6px 8px;
+    font-size: 8px;
+  }
+  .immersive-boss .game-topline .timer {
+    flex-basis: auto;
+    font-size: 10px;
+  }
+  .immersive-boss .boss-command {
+    left: 10px;
+    right: 10px;
+    bottom: 80px;
+    width: auto;
+    max-height: 42dvh;
+    padding: 12px;
+    border-radius: 16px;
+  }
+  .immersive-boss .boss-command-heading h3 {
+    font-size: 16px;
+  }
+  .immersive-boss .boss-command-heading > .game-art {
+    width: 25px;
+    height: 25px;
+  }
+  .immersive-boss .boss-command-heading span {
+    display: none;
+  }
+  .immersive-boss .boss-instruction {
+    margin: 6px 0 9px;
+    font-size: 10px;
+  }
+  .immersive-boss .boss-arena-footer {
+    left: 14px;
+    right: 14px;
+    top: 179px;
+    bottom: auto;
+    font-size: 8px;
+  }
+  .immersive-boss .boss-cinematic-caption {
+    left: 12px;
+    right: 12px;
+    top: 28%;
+    bottom: auto;
+  }
+  .immersive-boss .boss-intro-title,
+  .immersive-boss .boss-victory {
+    left: 12px;
+    right: 12px;
+    top: 31%;
+    bottom: auto;
+  }
+  .immersive-boss .boss-intro-title h3,
+  .immersive-boss .boss-victory h3 {
+    font-size: 28px;
+  }
+  .immersive-boss .live-reactions {
+    left: 12px;
+    bottom: 52dvh;
+    transform: none;
+    width: calc(100vw - 24px);
+  }
+  .immersive-boss .crew-expanded .crew-panel {
+    top: 65px;
+    right: 10px;
+    width: min(320px, calc(100vw - 20px));
+    max-height: calc(100dvh - 145px);
+  }
+}

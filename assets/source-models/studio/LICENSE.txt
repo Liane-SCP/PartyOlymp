@@ -1,0 +1,17 @@
+Theater spotlight by lakescorp
+Source: https://poly.pizza/m/Thhuwj9HCg
+Download: https://static.poly.pizza/164d67f5-1d1f-4f57-b4ae-3aeedf6172f3.glb
+License: CC0-1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+Verified: 2026-10-18
+Changes: Original geometry, nodes, normals and embedded palette retained. Scale, placement, orientation and roughness normalized for the overhead rig. No extra real-time light is created.
+Source SHA-256: 70b9424c7728459162cf58e0c12cc1a420f97c0ba099f7c4a0a578a1936704c2
+Prepared SHA-256: 70b9424c7728459162cf58e0c12cc1a420f97c0ba099f7c4a0a578a1936704c2
+
+Movie / film camera on tripod by Franziska Haaf
+Source: https://poly.pizza/m/3-paG1j-iYS
+Download: https://static.poly.pizza/f629aff6-d013-42e4-b3ce-ca98129550df.glb
+License: CC-BY-3.0 — https://creativecommons.org/licenses/by/3.0/
+Verified: 2026-10-18
+Changes: Original geometry, node transforms, normals and binary retained. The original white body and lens/tripod materials are recolored slate blue and charcoal, with matte roughness. Scale and orientation normalized at placement. Attribution and changes are also visible in the studio's Models & Artists disclosure.
+Source SHA-256: 7f05fbd2efd1028d588cc2b2abcbe168c2eefaefaf6e625100d8b81aad4591b7
+Prepared SHA-256: 490a1e05bb44ab25532bcae910fd5c381bf982b42e8724c373f66f30dd79a385

@@ -1,0 +1,12 @@
+export function geoCrewSeat(index:number,count:number){const row=Math.floor(index/6),columns=Math.min(6,count-row*6);return [(index%6-(columns-1)/2)*3.8,1.1,count>6?(row===0?9.2:6.2):8.3] as [number,number,number];}
+export function geoPrivatePin(game:any,phaseKey:string){const mine=game.mine,stored=mine?.timeoutInput,candidate=mine?.submitted?mine.answer:game.stage==='answer'&&stored?.phase===phaseKey&&stored.action?.type==='pin'?stored.action:null;return candidate&&Number.isFinite(candidate.lat)&&Number.isFinite(candidate.lon)&&Math.abs(candidate.lat)<=90&&Math.abs(candidate.lon)<=180?{lat:candidate.lat,lon:candidate.lon}:null;}
+
+/** Bind a local inspection choice to this published result, never an answer draft. */
+export function geoResultKey(game:any){const place=['roundReveal','done'].includes(game.stage)?game.reveal?.place:null;return place&&Number.isFinite(place.lat)&&Number.isFinite(place.lon)?`${game.round}:${game.revealStartedAt??0}:${place.lat}:${place.lon}`:null;}
+export function geoResultSelection(game:any,crew:{id?:string;name?:string}[],draft:any){const key=geoResultKey(game),selection=draft?.geoHighlight;if(!key||selection?.key!==key||typeof selection.player!=='string')return null;const index=crew.findIndex(p=>p.id===selection.player),row=game.reveal?.players?.find((p:any)=>p.id===selection.player);return index>=0&&row?.guess&&Number.isFinite(row.guess.lat)&&Number.isFinite(row.guess.lon)?{id:selection.player,index,name:crew[index].name??'Crew',guess:row.guess,distance:row.distance}:null;}
+
+/** Public readiness and published results only; no foreign private guesses. */
+export function geoCrewCards(game:any,crew:{id?:string;name?:string}[]){const reveal=['roundReveal','done'].includes(game.stage);return crew.map(p=>{const row=reveal?game.reveal?.players?.find((r:any)=>r.id===p.id):null,sealed=!!game.submitted?.[p.id??''];return {id:p.id,text:`${(p.name??'Crew').slice(0,8)} · ${reveal?(row?.guess&&typeof row.distance==='number'?`${Math.round(row.distance)} KM`:'OHNE TIPP'):sealed?'VERSIEGELT':'ORT WÄHLEN'}`,sealed,reveal};});}
+
+/** Shared server milliseconds; late joins and legacy results must not restart a flight. */
+export function geoFlightFrame(game:any,now:number,reduced=false){const reveal=['roundReveal','done'].includes(game.stage),start=game.revealStartedAt,progress=typeof start==='number'&&Number.isFinite(start)?Math.max(0,Math.min(1,(now-start)/2000)):1;return {progress,visible:reveal&&!!game.reveal?.place&&!!game.mine?.answer&&!reduced&&progress<1};}

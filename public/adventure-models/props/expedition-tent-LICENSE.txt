@@ -1,0 +1,8 @@
+Tent by Quaternius
+Source: https://poly.pizza/m/5Q7qIrfDxA
+Download: https://static.poly.pizza/fc8d560d-91b5-439c-88bf-4cbddb7eadbb.glb
+License: CC0-1.0 - https://creativecommons.org/publicdomain/zero/1.0/
+Verified: 2026-10-18
+Changes: Preserved the tent geometry and authored root transform. Removed unused UVs and FBX extras, repacked active binary data, adapted opaque canvas, wood and rope colors and nonmetallic roughness. Scaled and placed at the rear of the base camp.
+Original SHA-256: 2f3519156ebbd28ab47a3d8600cecfcbbea63cc25eba044effa154b280d87d48
+Prepared SHA-256: 6d1c7a139f52094e898d84be5190a2c5c59eca52c3d91add6151b5c9bac17637

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build",
+  "regions": ["fra1"],
+  "env": {
+    "OLYMP_BACKEND_ORIGIN": "https://party-olymp.vividboar4.chatgpt.site",
+    "NEXT_PUBLIC_ROOM_TRANSPORT": "http"
+  }
+}

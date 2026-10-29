@@ -1,0 +1,8 @@
+Theater spotlight by lakescorp
+Source: https://poly.pizza/m/Thhuwj9HCg
+Download: https://static.poly.pizza/164d67f5-1d1f-4f57-b4ae-3aeedf6172f3.glb
+License: CC0-1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+Verified: 2026-10-18
+Changes: Original geometry, nodes, normals and embedded palette retained. Scale, placement, orientation and roughness normalized for the overhead rig. No extra real-time light is created.
+Source SHA-256: 70b9424c7728459162cf58e0c12cc1a420f97c0ba099f7c4a0a578a1936704c2
+Prepared SHA-256: 70b9424c7728459162cf58e0c12cc1a420f97c0ba099f7c4a0a578a1936704c2

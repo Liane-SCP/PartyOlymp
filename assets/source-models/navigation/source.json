@@ -1,0 +1,11 @@
+{
+  "id": "props/navigation-compass",
+  "title": "Compass",
+  "author": "Quaternius",
+  "source": "https://poly.pizza/m/LlnxQPETHh",
+  "download": "https://static.poly.pizza/db18fada-a70e-44da-961c-0cc31dffdaa6.glb",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "verified": "2026-10-18",
+  "changes": "Preserved all compass geometry, indices and authored transforms. Adapted opaque brass, dark face, red and cream material colors and roughness. Placed as static navigation equipment on the side workbench, independent of the hidden destination or panorama heading."
+}

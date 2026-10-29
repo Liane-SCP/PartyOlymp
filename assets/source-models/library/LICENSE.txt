@@ -1,0 +1,7 @@
+Open Book by Quaternius
+Source: https://poly.pizza/m/FsCIGEfTEs
+Download: https://static.poly.pizza/8127840e-d767-4dbf-89a8-1aad1fffed13.glb
+License: CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+Verified: 2026-10-18
+Changes: Original geometry, materials, normals and binary retained. Placement, uniform scale and roughness normalized by the shared loader; used as a fixed open goal book and reading-desk prop. No navigation or scoring data is embedded in the decoration.
+SHA-256: 5e2341d6a227f5cffd4b9118388a34e2f8f0b875401e3f6dd35b399ff7cafb05

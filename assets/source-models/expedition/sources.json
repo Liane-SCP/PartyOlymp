@@ -1,0 +1,14 @@
+[
+ {
+  "id":"props/expedition-ruin-arch","title":"Wall_ArchRound_Broken from Modular Ruins Pack","author":"Quaternius",
+  "source":"https://poly.pizza/m/F2LAK03B0r","download":"https://static.poly.pizza/fa6cf69d-a091-4eb7-b62e-56290d8b9097.glb",
+  "license":"CC0-1.0","licenseUrl":"https://creativecommons.org/publicdomain/zero/1.0/","verified":"2026-10-18",
+  "changes":"Selected only Wall_ArchRound_Broken and its root transform. Removed all other kit objects, unused embedded images, UVs and buffer data. Preserved active positions, normals and indices; recolored two opaque stone materials to match the river ruins and set nonmetallic roughness. Scaled and placed behind the playable route."
+ },
+ {
+  "id":"props/expedition-tent","title":"Tent","author":"Quaternius",
+  "source":"https://poly.pizza/m/5Q7qIrfDxA","download":"https://static.poly.pizza/fc8d560d-91b5-439c-88bf-4cbddb7eadbb.glb",
+  "license":"CC0-1.0","licenseUrl":"https://creativecommons.org/publicdomain/zero/1.0/","verified":"2026-10-18",
+  "changes":"Preserved the tent geometry and authored root transform. Removed unused UVs and FBX extras, repacked active binary data, adapted opaque canvas, wood and rope colors and nonmetallic roughness. Scaled and placed at the rear of the base camp."
+ }
+]

@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import {build} from 'esbuild';
+import {chromium} from '../../.tools/qa/node_modules/playwright/index.mjs';
+await build({entryPoints:['tests/adventure-browser-engine.ts'],outfile:'outputs/shopping-fixture.mjs',bundle:true,platform:'node',format:'esm'});
+const {fixture}=await import('../outputs/shopping-fixture.mjs');
+const browser=await chromium.launch({headless:true,args:['--use-angle=swiftshader','--enable-webgl','--ignore-gpu-blocklist','--enable-unsafe-swiftshader']});
+try{for(const width of[1440,390]){
+ const m=fixture('budget',12),page=await browser.newPage({viewport:{width,height:1100},hasTouch:width===390});const errors=[];
+ page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.url().includes('/adventure-models/')&&r.status()!==200)errors.push(`${r.status()} ${r.url()}`);});
+ await page.routeWebSocket('**/api/live',ws=>ws.close());await page.addInitScript(pid=>{localStorage.setItem('olymp.session',JSON.stringify({code:'ADV234',playerId:pid,token:'fixture'}));localStorage.setItem('olymp.settings',JSON.stringify({muted:true}));},m.first);
+ await page.route('**/api/room',route=>{const body=route.request().postDataJSON();if(body.type==='action')m.act(body.action);return route.fulfill({json:m.view()});});
+ await page.goto('http://127.0.0.1:5173');await page.locator('.adventure-ready').waitFor();
+ const state=()=>page.locator('.adventure-canvas canvas').getAttribute('data-shopping').then(JSON.parse);
+ await page.waitForFunction(()=>!!document.querySelector('.adventure-canvas canvas')?.dataset.shopping);
+ assert.equal((await state()).total,null,'Prices must stay private before reveal');
+ const department=page.getByRole('button',{name:'Technik',exact:true});if(width===390)await department.tap();else await department.click();
+ await page.waitForFunction(()=>{const p=JSON.parse(document.querySelector('.adventure-canvas canvas').dataset.position);return Math.abs(p[0])<.1&&Math.abs(p[2])<.1;});
+ await page.locator('.adventure-canvas canvas').focus();await page.keyboard.press('ArrowDown');
+ await page.waitForFunction(()=>JSON.parse(document.querySelector('.adventure-canvas canvas').dataset.position)[2]>.4);
+ await page.locator('.product-grid > button').first().click();await page.locator('.adventure-stage').scrollIntoViewIfNeeded();
+ await page.waitForFunction(()=>JSON.parse(document.querySelector('.adventure-canvas canvas').dataset.shopping).selected===1);
+ assert.equal((await state()).total,null);
+ await page.locator('.product-grid > button').first().click();await page.locator('.adventure-stage').scrollIntoViewIfNeeded();
+ await page.waitForFunction(()=>JSON.parse(document.querySelector('.adventure-canvas canvas').dataset.shopping).selected===0);
+ m.resolve();await page.locator('.round-reveal').waitFor();await page.locator('.adventure-stage').scrollIntoViewIfNeeded();
+ await page.waitForFunction(()=>JSON.parse(document.querySelector('.adventure-canvas canvas').dataset.shopping).scanned===1);
+ assert.equal((await state()).total,m.room.game.reveal?.items?.[0]?.price??m.view().room.game.reveal.items[0].price);
+ await page.locator('.adventure-stage').screenshot({path:`outputs/qa/shopping-checkout-${width}.png`});
+ m.next();await page.waitForFunction(()=>JSON.parse(document.querySelector('.adventure-canvas canvas').dataset.shopping).total===null);
+ assert.equal((await state()).selected,0);assert.deepEqual(errors,[]);await page.close();console.log(`${width}: private basket add/remove, authoritative checkout, next-round reset, 12 players passed`);
+}}finally{await browser.close();}

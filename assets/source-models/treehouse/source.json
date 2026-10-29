@@ -1,0 +1,11 @@
+{
+  "id": "props/treehouse-clubhouse",
+  "title": "Low Poly Tree House",
+  "author": "Gilang Romadhan",
+  "source": "https://poly.pizza/m/0wSdvRTUV3A",
+  "download": "https://static.poly.pizza/c9f41c0d-5fd4-4714-8435-6d2ef6e732c5.glb",
+  "license": "CC-BY-3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "verified": "2026-10-18",
+  "changes": "Removed the earth base, grass and stone path for placement on a timber terrace. Retained the trunk house, door, porch, balcony and fixtures. Recolored cedar wood, cream trim and muted metal; retained active geometry, normals, UVs and node transform. Repacked only referenced accessors and buffer views, scaled and placed on the rear treehouse terrace."
+}

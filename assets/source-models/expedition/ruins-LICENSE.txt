@@ -1,0 +1,8 @@
+Wall_ArchRound_Broken from Modular Ruins Pack by Quaternius
+Source: https://poly.pizza/m/F2LAK03B0r
+Download: https://static.poly.pizza/fa6cf69d-a091-4eb7-b62e-56290d8b9097.glb
+License: CC0-1.0 - https://creativecommons.org/publicdomain/zero/1.0/
+Verified: 2026-10-18
+Changes: Selected only Wall_ArchRound_Broken and its root transform. Removed all other kit objects, unused embedded images, UVs and buffer data. Preserved active positions, normals and indices; recolored two opaque stone materials to match the river ruins and set nonmetallic roughness. Scaled and placed behind the playable route.
+Original SHA-256: 0f942354dd20b00b91d2ce9d1641da481fab553361139877cd23dcdc62cfaa55
+Prepared SHA-256: e281315be3bddca70fcafe8befe07b367d94033c9ffa88ff471035a909e3db92

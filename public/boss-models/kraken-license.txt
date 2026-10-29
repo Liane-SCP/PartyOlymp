@@ -1,0 +1,6 @@
+Octopus vulgaris procedural & rigged
+Author: Joachim Bornemann
+Source: https://www.blenderkit.com/asset-gallery-detail/85c9bbbe-b4ab-4247-b17d-31be195132a8/
+License: CC0 1.0 Universal
+https://creativecommons.org/publicdomain/zero/1.0/
+Adaptation: selective detail reduction preserving original tentacle loops and skin weights; baked 2048-pixel PBR textures; original 141-bone skeleton, standard linear skeletal skinning, five animation clips interpolated from original artist poses with cinematic arm-root fan and spread; upright presentation.

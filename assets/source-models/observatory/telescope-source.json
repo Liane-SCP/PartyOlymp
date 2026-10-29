@@ -1,0 +1,10 @@
+{
+  "title": "Telescope",
+  "author": "CreativeTrio",
+  "source": "https://poly.pizza/m/RjyTCQvA8b",
+  "download": "https://static.poly.pizza/2c0070d8-e239-4a8f-939f-be5b2007ce93.glb",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "verified": "2026-10-18",
+  "changes": "Original 734-triangle geometry and embedded palette retained. Placement, uniform scale, roughness and metalness normalized by the shared model loader. Fixed observational prop; no periodic animation or moving light."
+}

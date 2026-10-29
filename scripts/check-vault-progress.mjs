@@ -1,0 +1,28 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {build} from 'esbuild';
+import {chromium} from '../../.tools/qa/node_modules/playwright/index.mjs';
+await build({entryPoints:['tests/adventure-browser-engine.ts'],outfile:'outputs/vault-fixture.mjs',bundle:true,platform:'node',format:'esm'});
+const {fixture}=await import('../outputs/vault-fixture.mjs');
+const quality=process.env.VAULT_QUALITY==='high'?'high':'low';
+const browser=await chromium.launch({headless:true,args:['--use-angle=swiftshader','--enable-webgl','--ignore-gpu-blocklist','--enable-unsafe-swiftshader']}),results=[],errors=[];
+const state=p=>p.locator('.adventure-canvas canvas').getAttribute('data-vault').then(JSON.parse);
+async function time(p,t){p.qaNow=t;await p.evaluate(t=>{window.__vaultNow=t;sessionStorage.setItem('__vaultNow',String(t));},t);}
+async function ready(p,count){await p.locator('.adventure-ready').waitFor({timeout:60000});await p.locator('.adventure-stage').scrollIntoViewIfNeeded();await p.waitForFunction(count=>Number(document.querySelector('.adventure-canvas canvas')?.dataset.readyAvatars)===count,count);}
+async function open(m,pid,width){const p=await browser.newPage({viewport:{width,height:1100},hasTouch:width===390});p.qaNow=Date.now();p.on('pageerror',e=>errors.push(e.message));p.on('console',e=>{if(e.type()==='error')errors.push(e.text());});await p.routeWebSocket('**/api/live',w=>w.close());await p.addInitScript(({pid,now,quality})=>{localStorage.setItem('olymp.session',JSON.stringify({code:'ADV234',playerId:pid,token:'fixture'}));localStorage.setItem('olymp.settings',JSON.stringify({muted:true}));localStorage.setItem('olymp.graphics',quality);window.__vaultNow=Number(sessionStorage.getItem('__vaultNow'))||now;Date.now=()=>window.__vaultNow;},{pid,now:p.qaNow,quality});await p.route('**/api/room',r=>{const a=r.request().postDataJSON();if(a.type==='action')m.command(pid,a.action);const v=m.view(pid);v.room.serverTime=p.qaNow;return r.fulfill({json:v});});await p.goto('http://127.0.0.1:5173');await ready(p,m.room.participantIds.length);return p;}
+try{for(const count of(process.env.VAULT_COUNTS?.split(',').map(Number)??[2,8,12]))for(const width of[1440,390]){
+ const m=fixture('code',count),g=m.room.game,ids=m.room.participantIds;g.secret.code=[0,1,2,3];const a=await open(m,ids[0],width),b=await open(m,ids[1],width);
+ assert.equal((await state(a)).canUse,true);assert.equal((await state(a)).progress,0);
+ const render=await a.locator('.adventure-canvas canvas').evaluate(c=>({draws:Number(c.dataset.drawCalls),triangles:Number(c.dataset.triangles),textures:Number(c.dataset.textures),geometries:Number(c.dataset.geometries)}));assert.ok(render.draws<=(quality==='high'?180:100),JSON.stringify(render));assert.ok(render.triangles<=(quality==='high'?250000:100000));
+ await a.locator('.adventure-stage').screenshot({path:`outputs/qa/vault-${quality}-${count}-${width}-ready.png`});
+ m.command(ids[0],{type:'game',action:{type:'guess',colors:[0,1,2,3],round:1,turn:1}});await a.waitForFunction(()=>JSON.parse(document.querySelector('.adventure-canvas canvas').dataset.vault)?.ready===1);assert.equal((await state(a)).canUse,false);assert.equal((await state(b)).progress,0);assert.equal(m.view(ids[1]).room.game.roster[ids[0]].pending,undefined);
+ for(const id of ids.slice(1))m.command(id,{type:'game',action:{type:'guess',colors:[1,0,3,2],round:1,turn:1}});const start=g.public.firstSolvedAt;assert.ok(start>0);assert.equal(g.stage,'guess');assert.equal(m.view(ids[1]).room.game.roster[ids[0]].guesses,undefined);
+ for(const p of[a,b])await time(p,start+600);for(const p of[a,b])await p.waitForFunction(()=>JSON.parse(document.querySelector('.adventure-canvas canvas').dataset.vault)?.progress===.5);
+ const left=await state(a),right=await state(b);assert.equal(left.doorAngle,right.doorAngle);assert.equal(left.wheelAngle,right.wheelAngle);assert.equal(left.canUse,false);assert.equal(right.canUse,true);assert.equal(left.roster.length,count);assert.equal(right.roster[0].solved,true);assert.equal(right.roster[1].feedback.misplaced,4);assert.ok(!JSON.stringify(right).includes('colors'));
+ await b.reload();await ready(b,count);await b.waitForFunction(()=>JSON.parse(document.querySelector('.adventure-canvas canvas').dataset.vault)?.progress===.5);assert.equal((await state(b)).doorAngle,left.doorAngle);
+ for(const p of[a,b])await time(p,start+1500);for(const p of[a,b])await p.waitForFunction(()=>JSON.parse(document.querySelector('.adventure-canvas canvas').dataset.vault)?.progress===1);
+ await a.locator('.adventure-stage').screenshot({path:`outputs/qa/vault-${quality}-${count}-${width}-open.png`});
+ for(const id of ids.slice(1))m.command(id,{type:'game',action:{type:'giveUp',round:1,turn:2}});await a.locator('.round-reveal').waitFor();m.next();for(const p of[a,b])await p.waitForFunction(()=>{const f=JSON.parse(document.querySelector('.adventure-canvas canvas')?.dataset.vault||'null');return f?.progress===0&&f.solved===0&&f.canUse;});assert.deepEqual(errors,[]);
+ results.push({count,width,quality,render,sharedDoor:true,rejoin:true,aggregateOnly:true,reset:true});console.log(`PASS vault ${count}/${width}/${quality}: public progress, shared door/wheel, reload, secrecy and reset; ${render.draws} draws`);await a.close();await b.close();
+ }fs.writeFileSync(`outputs/qa/vault-progress-${quality}.json`,JSON.stringify({results,errors,limit:'Chromium SwiftShader with coordinated engine fixtures; no physical-device FPS or full live Olympiad acceptance'},null,2));
+}catch(e){for(const p of browser.contexts().flatMap(c=>c.pages()))await p.screenshot({path:'outputs/qa/vault-progress-failure.png'}).catch(()=>{});throw e;}finally{await browser.close();}

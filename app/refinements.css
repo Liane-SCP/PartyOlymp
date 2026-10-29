@@ -1,0 +1,170 @@
+@media (max-width: 760px) {
+  .phase-playing .crew-panel .crew-list {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 3px;
+  }
+  .phase-playing .crew-panel .player-tile {
+    flex: 0 0 130px;
+  }
+  .phase-playing .crew-panel .crew-note,
+  .phase-playing .crew-panel > .text-button {
+    display: none;
+  }
+  .phase-playing .crew-panel {
+    padding: 10px;
+  }
+  .phase-playing .emote-bubble {
+    bottom: 0;
+    left: 22px;
+  }
+  .phase-playing .room-top h1 {
+    font-size: 24px;
+  }
+  .phase-playing .stage-panel {
+    margin-bottom: 20px;
+  }
+}
+.scoreboard {
+  position: relative;
+}
+.scoreboard-row {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.scoreboard-row > b {
+  min-width: 62px;
+  text-align: right;
+}
+.compact .scoreboard-row > b {
+  min-width: 35px;
+}
+.die {
+  animation: enter 0.25s;
+}
+.game-board.board-blackjack .playing-card,
+.game-board.board-cards .playing-card {
+  animation: deal 0.3s ease-out;
+}
+.final-podium {
+  animation: enter 0.8s;
+}
+.finale:before {
+  content: "✦ · ✧ · ✦ · ✧ · ✦";
+  display: block;
+  color: var(--lime);
+  font-size: 25px;
+  letter-spacing: 20px;
+  margin-bottom: 20px;
+  animation: float 2s infinite;
+}
+html[data-intense="off"] .finale:before {
+  display: none;
+}
+@keyframes deal {
+  from {
+    opacity: 0;
+    transform: translateY(-25px) rotate(-8deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.calibrated {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 250px;
+  padding-bottom: 50px;
+}
+.calibrated .reference-bar {
+  top: auto;
+  bottom: 50px;
+  max-height: 160px;
+}
+.calibrated .size-object {
+  flex-shrink: 0;
+  margin: 0;
+}
+.calibrated .silhouette {
+  display: block;
+  object-fit: contain;
+}
+.camera-scale {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: 10px;
+  font-size: 9px;
+  text-align: center;
+}
+.player-tile {
+  animation: enter 0.3s ease-out;
+}
+.platform.in-room {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+.in-room .site-header {
+  flex-shrink: 0;
+}
+.room-stage {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.room-stage .room-shell {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-bottom: 28px;
+}
+.room-stage .emote-dock {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  transform: none;
+  flex-shrink: 0;
+  align-self: center;
+  margin: 8px auto;
+}
+.live-reactions {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 6px;
+  width: min(620px, 95%);
+  align-self: center;
+  flex-shrink: 0;
+}
+.live-reactions:empty {
+  display: none;
+}
+.live-emote {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #222a39;
+  border-radius: 10px;
+  padding: 4px 6px;
+  font-size: 10px;
+}
+.live-emote .avatar-art {
+  width: 34px;
+  flex-shrink: 0;
+}
+.live-emote span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (max-width: 760px) {
+  .live-reactions {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

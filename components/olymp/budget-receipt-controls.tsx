@@ -1,0 +1,15 @@
+'use client';
+import {budgetReceiptFrame,receiptMoney,type BudgetReceiptOptions,type BudgetReceiptView} from '@/lib/budget-receipts';
+
+export function BudgetReceiptControls({frame,onChange}:{frame:ReturnType<typeof budgetReceiptFrame>;onChange:(value:BudgetReceiptOptions)=>void}){
+ if(!frame.public)return null;const chosen=frame.selected!,step=frame.mode==='receipt'?1:frame.size;
+ function turn(direction:number){const index=frame.mode==='receipt'?Math.max(0,Math.min(frame.rows.length-1,chosen.index+direction)):Math.max(0,Math.min(frame.rows.length-1,(frame.page+direction)*step));onChange({selected:frame.rows[index].id,view:frame.mode==='receipt'?'receipt':'gallery'});}
+ function view(view:BudgetReceiptView){onChange({view});}
+ if(frame.mode==='checkout')return <nav className="budget-receipt-controls budget-receipt-scan" aria-label="Kassenbons vergleichen"><button type="button" onClick={()=>view('gallery')}>Bons vergleichen</button>{frame.own&&<button type="button" onClick={()=>onChange({selected:frame.own,view:'receipt'})}>Mein Bon</button>}</nav>;
+ return <nav className="budget-receipt-controls" aria-label="Kassenbons vergleichen">
+  <div><button type="button" aria-label="Vorherige Kassenbons" disabled={frame.mode==='receipt'?chosen.index===0:frame.page===0} onClick={()=>turn(-1)}>←</button><label><span>Bon auswählen</span><select aria-label="Kassenbon auswählen" value={chosen.id} onChange={e=>onChange({selected:e.target.value,view:'receipt'})}>{frame.rows.map(r=><option key={r.id} value={r.id}>{r.name} · {r.count} Artikel</option>)}</select></label><button type="button" aria-label="Nächste Kassenbons" disabled={frame.mode==='receipt'?chosen.index===frame.rows.length-1:frame.page===frame.pages-1} onClick={()=>turn(1)}>→</button></div>
+  <div><button type="button" aria-pressed={false} onClick={()=>view('checkout')}>Kassenscan</button><button type="button" aria-pressed={frame.mode==='gallery'} onClick={()=>view('gallery')}>Bonübersicht</button>{frame.mode!=='receipt'&&<button type="button" onClick={()=>view('receipt')}>Bon lesen</button>}{frame.own&&<button type="button" onClick={()=>onChange({selected:frame.own,view:'receipt'})}>Mein Bon</button>}<span>{frame.mode==='receipt'?`${chosen.index+1} / ${frame.rows.length}`:`${frame.page+1} / ${frame.pages}`}</span>
+   <details key={frame.mode} className="budget-receipt-text"><summary>Bon als Text</summary><article tabIndex={0} aria-label={`Vollständiger Kassenbon von ${chosen.name}`}><h3>{chosen.name}</h3><p>{chosen.rank===null?'':`Platz ${chosen.rank} · `}{chosen.count} Artikel</p>{chosen.items.length?<ol>{chosen.items.map((item,i)=><li key={i}><span>{item.name}</span><strong>{receiptMoney(item.price)}</strong></li>)}</ol>:<p>Dein Korb war leer.</p>}<dl><div><dt>Summe</dt><dd>{receiptMoney(chosen.sum)}</dd></div><div><dt>Budget</dt><dd>{receiptMoney(chosen.budget)}</dd></div><div><dt>{chosen.remaining!==null&&chosen.remaining<0?'Über Budget':'Übrig'}</dt><dd>{receiptMoney(chosen.remaining===null?null:Math.abs(chosen.remaining))}</dd></div></dl><small>Spielbon mit Referenzpreisen.</small></article></details>
+  </div>
+ </nav>;
+}

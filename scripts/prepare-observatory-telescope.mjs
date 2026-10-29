@@ -1,0 +1,20 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+
+const source=JSON.parse(await readFile('assets/source-models/observatory/telescope-source.json','utf8'));
+if(source.source!=='https://poly.pizza/m/RjyTCQvA8b'||source.license!=='CC0-1.0')throw Error('Unverified telescope source');
+const data=await readFile('assets/source-models/observatory/telescope.glb');
+if(data.readUInt32LE(0)!==0x46546c67||data.readUInt32LE(8)!==data.length)throw Error('Invalid telescope GLB');
+const json=JSON.parse(data.subarray(20,20+data.readUInt32LE(12)));
+if(json.buffers.some(b=>b.uri)||json.images?.some(i=>i.uri)||json.animations?.length)throw Error('Telescope must be self-contained and still');
+const triangles=json.meshes.reduce((n,m)=>n+m.primitives.reduce((n,p)=>{if(p.mode!==undefined&&p.mode!==4)throw Error('Unexpected topology');return n+json.accessors[p.indices].count/3;},0),0);
+const entry={...source,id:'props/observatory-telescope',file:'/adventure-models/props/observatory-telescope.glb',sha256:createHash('sha256').update(data).digest('hex'),bytes:data.length,triangles};
+await mkdir('public/adventure-models/props',{recursive:true});
+await writeFile(`public${entry.file}`,data);
+const attribution=`Telescope by CreativeTrio\nSource: ${source.source}\nDownload: ${source.download}\nLicense: CC0 1.0 — ${source.licenseUrl}\nVerified: ${source.verified}\nChanges: ${source.changes}\nSHA-256: ${entry.sha256}\n`;
+await writeFile('assets/source-models/observatory/LICENSE.txt',attribution);
+await writeFile('public/adventure-models/props/observatory-telescope-LICENSE.txt',attribution);
+const manifestPath='public/adventure-models/manifest.json',manifest=JSON.parse(await readFile(manifestPath,'utf8'));
+manifest.assets=manifest.assets.filter(a=>a.id!==entry.id);manifest.assets.push(entry);
+await writeFile(manifestPath,JSON.stringify(manifest,null,2)+'\n');
+console.log(JSON.stringify({id:entry.id,bytes:entry.bytes,triangles,sha256:entry.sha256}));

@@ -1,0 +1,4244 @@
+{
+  "reviewDate": "2026-10-10",
+  "method": "Visual review of every equirectangular image; full-size inspection of ambiguous views. Indoor scenes, enclosed arcades, cabin viewpoints and caves excluded.",
+  "removed": [
+    {
+      "id": "place-005",
+      "image": "/world-panoramas/place-005.webp",
+      "name": "St. Patrick’s Basilica · Montréal, Kanada",
+      "lat": 45.503713,
+      "lon": -73.565495,
+      "source": "https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_de_San_Patricio_360_panoramic_view.jpg",
+      "author": "Wilfredor",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "place-019",
+      "image": "/world-panoramas/place-019.webp",
+      "name": "Essen · Deutschland",
+      "lat": 51.455347,
+      "lon": 7.013792,
+      "source": "https://commons.wikimedia.org/wiki/File:Wilhelm_Riesenrad_in_Essen_Panorama.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Predominantly covered/enclosed viewpoint; excluded conservatively"
+    },
+    {
+      "id": "place-024",
+      "image": "/world-panoramas/place-024.webp",
+      "name": "Noyal-sur-Vilaine · Frankreich",
+      "lat": 48.114533,
+      "lon": -1.523814,
+      "source": "https://commons.wikimedia.org/wiki/File:%C3%89glise_de_Noyal-sur-Vilaine.jpg",
+      "author": "Bernard Marti",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-1b0fb6fe93a8",
+      "image": "/world-panoramas/pano-1b0fb6fe93a8.webp",
+      "name": "Edmonton City Hall atrium",
+      "lat": 53.545672,
+      "lon": -113.490269,
+      "source": "https://commons.wikimedia.org/wiki/File:Edmonton_City_Hall_atrium.jpg",
+      "author": "Sdkb",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-fde4dc6dc517",
+      "image": "/world-panoramas/pano-fde4dc6dc517.webp",
+      "name": "Vranja Jama",
+      "lat": 45.873721,
+      "lon": 14.24637,
+      "source": "https://commons.wikimedia.org/wiki/File:Vranja_Jama_Photosphere.jpg",
+      "author": "Cave2596",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Tunnel or viewpoint inside cave; not an outdoor scene"
+    },
+    {
+      "id": "pano-3cafc78b57c8",
+      "image": "/world-panoramas/pano-3cafc78b57c8.webp",
+      "name": "Dartmoor Forest Church of St Michael, Princetown 20170705154700",
+      "lat": 50.546055,
+      "lon": -3.995984,
+      "source": "https://commons.wikimedia.org/wiki/File:Dartmoor_Forest_-_Church_of_St_Michael,_Princetown_-_20170705154700.jpg",
+      "author": "Virtual-Pano",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-5046aef94bc6",
+      "image": "/world-panoramas/pano-5046aef94bc6.webp",
+      "name": "Galleria Vittorio Emanuele II",
+      "lat": 45.465464,
+      "lon": 9.190136,
+      "source": "https://commons.wikimedia.org/wiki/File:Galleria_Vittorio_Emanuele_II_photosphere.jpg",
+      "author": "Sdkb",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-9bd0849dbbc3",
+      "image": "/world-panoramas/pano-9bd0849dbbc3.webp",
+      "name": "Kloster Eberbach Laienrefrektorium",
+      "lat": 50.043497,
+      "lon": 8.045572,
+      "source": "https://commons.wikimedia.org/wiki/File:MK_30772-94_Kloster_Eberbach_Laienrefrektorium.jpg",
+      "author": "Martin Kraft",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-1e31909b244f",
+      "image": "/world-panoramas/pano-1e31909b244f.webp",
+      "name": "Bunzlau Pfarrkirche Mariä Himmelfahrt vChor",
+      "lat": 51.26236,
+      "lon": 15.56672,
+      "source": "https://commons.wikimedia.org/wiki/File:Bunzlau-Pfarrkirche-Mari%C3%A4-Himmelfahrt-vChor-IMG_6385-5x5B-360x180G-PanoS-07-08-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-241583f04eab",
+      "image": "/world-panoramas/pano-241583f04eab.webp",
+      "name": "Verkleinert Orgelempore Dorfkirche Birkenwerder",
+      "lat": 52.690758,
+      "lon": 13.277306,
+      "source": "https://commons.wikimedia.org/wiki/File:Verkleinert_Orgelempore_Dorfkirche_Birkenwerder.jpg",
+      "author": "Matthias Wiegandt",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-d651f72fdac3",
+      "image": "/world-panoramas/pano-d651f72fdac3.webp",
+      "name": "Obere Rathaushalle (Bremer Rathaus)",
+      "lat": 53.075948,
+      "lon": 8.807597,
+      "source": "https://commons.wikimedia.org/wiki/File:MK16304-29_Obere_Rathaushalle_(Bremer_Rathaus).jpg",
+      "author": "Martin Kraft",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-beef87cdc5b7",
+      "image": "/world-panoramas/pano-beef87cdc5b7.webp",
+      "name": "Orlando International Airport Intermodal Terminal (37675506785)",
+      "lat": 28.427122,
+      "lon": -81.308478,
+      "source": "https://commons.wikimedia.org/wiki/File:Orlando_International_Airport_Intermodal_Terminal_(37675506785).jpg",
+      "author": "elisfkc from Orlando, FL, United States",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-a722cb4af45e",
+      "image": "/world-panoramas/pano-a722cb4af45e.webp",
+      "name": "Pfarrkirche Going, , 160623, ako",
+      "lat": 47.513523,
+      "lon": 12.328567,
+      "source": "https://commons.wikimedia.org/wiki/File:Pfarrkirche_Going,_360x180,_160623,_ako.jpg",
+      "author": "Ansgar Koreng",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-b10116358879",
+      "image": "/world-panoramas/pano-b10116358879.webp",
+      "name": "Drüggelter Kapelle 01",
+      "lat": 51.491853,
+      "lon": 8.096581,
+      "source": "https://commons.wikimedia.org/wiki/File:Dr%C3%BCggelter_Kapelle_Panorama_01.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-2cbd7069a2b3",
+      "image": "/world-panoramas/pano-2cbd7069a2b3.webp",
+      "name": "Geithain St Nikolai vor OrgelEmpore",
+      "lat": 51.0543,
+      "lon": 12.68906,
+      "source": "https://commons.wikimedia.org/wiki/File:Geithain-St-Nikolai-vor-OrgelEmpore-IMG_5495-6x3B-360x180G-PanoS-11-05-2022.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-fcf6e46e0382",
+      "image": "/world-panoramas/pano-fcf6e46e0382.webp",
+      "name": "Arya masjid desa majasih 2014 0",
+      "lat": -6.449708,
+      "lon": 108.342247,
+      "source": "https://commons.wikimedia.org/wiki/File:Arya_360-masjid_desa_majasih-2014_0.jpg",
+      "author": "Aris riyanto",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-4419b38b01f2",
+      "image": "/world-panoramas/pano-4419b38b01f2.webp",
+      "name": "Dulles International Airport station platform",
+      "lat": 38.955842,
+      "lon": -77.448156,
+      "source": "https://commons.wikimedia.org/wiki/File:Dulles_International_Airport_station_platform_photosphere.jpg",
+      "author": "Sdkb",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-ee0664549b74",
+      "image": "/world-panoramas/pano-ee0664549b74.webp",
+      "name": "Kapelle Ossum °",
+      "lat": 51.306607,
+      "lon": 6.645653,
+      "source": "https://commons.wikimedia.org/wiki/File:Kapelle_Ossum_360%C2%B0.jpg",
+      "author": "MSh",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-a3758bb723c2",
+      "image": "/world-panoramas/pano-a3758bb723c2.webp",
+      "name": "Scheetunnel",
+      "lat": 51.310852,
+      "lon": 7.240121,
+      "source": "https://commons.wikimedia.org/wiki/File:Scheetunnel_Panorama.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Tunnel or viewpoint inside cave; not an outdoor scene"
+    },
+    {
+      "id": "pano-79f68571615a",
+      "image": "/world-panoramas/pano-79f68571615a.webp",
+      "name": "Rosenkranz Basilika, Berlin Steglitz (), 1706281217, ako",
+      "lat": 52.458888,
+      "lon": 13.324167,
+      "source": "https://commons.wikimedia.org/wiki/File:Rosenkranz-Basilika,_Berlin-Steglitz_(360x180),_1706281217,_ako.jpg",
+      "author": "Ansgar Koreng",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-01e900c2f081",
+      "image": "/world-panoramas/pano-01e900c2f081.webp",
+      "name": "Eisenerz Oswaldikirche",
+      "lat": 47.540818,
+      "lon": 14.889908,
+      "source": "https://commons.wikimedia.org/wiki/File:Eisenerz_Oswaldikirche_panosphere_20210723.jpg",
+      "author": "Daniel Kraft",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-0c1d3f75e0bc",
+      "image": "/world-panoramas/pano-0c1d3f75e0bc.webp",
+      "name": "Palmengarten Frankfurt in May 2026 03",
+      "lat": 50.122181,
+      "lon": 8.656814,
+      "source": "https://commons.wikimedia.org/wiki/File:Palmengarten_Frankfurt_in_May_2026_03.jpg",
+      "author": "Sdkb",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-6d599a82f24b",
+      "image": "/world-panoramas/pano-6d599a82f24b.webp",
+      "name": "Grimma Höfgen Jutta Park Bismarckturm Eingangsbereich",
+      "lat": 51.21671,
+      "lon": 12.75344,
+      "source": "https://commons.wikimedia.org/wiki/File:Grimma-H%C3%B6fgen-Jutta-Park-Bismarckturm-Eingangsbereich-IMG_7820-8x3B-360x180G-PanoS-30-07-2023.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-6dcc0dad53f3",
+      "image": "/world-panoramas/pano-6dcc0dad53f3.webp",
+      "name": "Matenatunnel",
+      "lat": 51.491183,
+      "lon": 6.736556,
+      "source": "https://commons.wikimedia.org/wiki/File:Matenatunnel_Panorama.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Tunnel or viewpoint inside cave; not an outdoor scene"
+    },
+    {
+      "id": "pano-7c01ae500781",
+      "image": "/world-panoramas/pano-7c01ae500781.webp",
+      "name": "B.F. Keith Memorial Theater, Boston Opera House",
+      "lat": 42.354172,
+      "lon": -71.063208,
+      "source": "https://commons.wikimedia.org/wiki/File:B.F._Keith_Memorial_Theater,_Boston_Opera_House_panorama.jpg",
+      "author": "Sdkb",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-e14a26c6a68e",
+      "image": "/world-panoramas/pano-e14a26c6a68e.webp",
+      "name": "Kings Cross Railway Station Concourse , London, UK Diliff",
+      "lat": 51.53158,
+      "lon": -0.124304,
+      "source": "https://commons.wikimedia.org/wiki/File:Kings_Cross_Railway_Station_Concourse_360x180,_London,_UK_-_Diliff.jpg",
+      "author": "Diliff",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-216cf7922859",
+      "image": "/world-panoramas/pano-216cf7922859.webp",
+      "name": "Christian Zais Saal (Kurhaus Wiesbaden)",
+      "lat": 50.084973,
+      "lon": 8.247632,
+      "source": "https://commons.wikimedia.org/wiki/File:MK_30319-36_Christian-Zais-Saal_(Kurhaus_Wiesbaden).jpg",
+      "author": "Martin Kraft",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-fe823e769c36",
+      "image": "/world-panoramas/pano-fe823e769c36.webp",
+      "name": "Bad Dürrenberg LaGa Blumenhalle Nähe Eingang",
+      "lat": 51.29809,
+      "lon": 12.06233,
+      "source": "https://commons.wikimedia.org/wiki/File:Bad-D%C3%BCrrenberg-LaGa-Blumenhalle-N%C3%A4he-Eingang-IMG_3760-6x5B-360x180G-PanoS-05-07-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-0b5d912b56f3",
+      "image": "/world-panoramas/pano-0b5d912b56f3.webp",
+      "name": "Pfarrkirche Söll, , 160622, ako",
+      "lat": 47.50345,
+      "lon": 12.191262,
+      "source": "https://commons.wikimedia.org/wiki/File:Pfarrkirche_S%C3%B6ll,_360x180,_160622,_ako.jpg",
+      "author": "Ansgar Koreng",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-2166c76989ca",
+      "image": "/world-panoramas/pano-2166c76989ca.webp",
+      "name": "Borsdorf Kirche Panitzsch Empore vorOrgel",
+      "lat": 51.36531,
+      "lon": 12.53492,
+      "source": "https://commons.wikimedia.org/wiki/File:Borsdorf-Kirche-Panitzsch-Empore-vorOrgel-IMG_4965-4x5B-360x180G-PanoS-23-07-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-53a070b0406f",
+      "image": "/world-panoramas/pano-53a070b0406f.webp",
+      "name": "Schulenbergtunnel",
+      "lat": 51.388561,
+      "lon": 7.187284,
+      "source": "https://commons.wikimedia.org/wiki/File:Schulenbergtunnel_Panorama.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Tunnel or viewpoint inside cave; not an outdoor scene"
+    },
+    {
+      "id": "pano-064f818f3d6d",
+      "image": "/world-panoramas/pano-064f818f3d6d.webp",
+      "name": "Ahorntal Kirchahorn St Michael und Jakobus iChor",
+      "lat": 49.83392,
+      "lon": 11.40267,
+      "source": "https://commons.wikimedia.org/wiki/File:Ahorntal-Kirchahorn-St-Michael-und-Jakobus-iChor-IMG_1016-9x5B-360x180G-PanoS-28-09-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-6dca07d6edfc",
+      "image": "/world-panoramas/pano-6dca07d6edfc.webp",
+      "name": "Gustav Landauer Bibliothek Witten",
+      "lat": 51.4431,
+      "lon": 7.3321,
+      "source": "https://commons.wikimedia.org/wiki/File:Gustav_Landauer_Bibliothek_Witten_Panorama.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-fe7de2ec970a",
+      "image": "/world-panoramas/pano-fe7de2ec970a.webp",
+      "name": "Town Center Covered Area (26807840520)",
+      "lat": 28.3696,
+      "lon": -81.518212,
+      "source": "https://commons.wikimedia.org/wiki/File:Town_Center_Covered_Area_(26807840520).jpg",
+      "author": "elisfkc from Orlando, FL, United States",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "reason": "Predominantly covered/enclosed viewpoint; excluded conservatively"
+    },
+    {
+      "id": "pano-5cab87a768d4",
+      "image": "/world-panoramas/pano-5cab87a768d4.webp",
+      "name": "KostNixLaden Bochum",
+      "lat": 51.487544,
+      "lon": 7.210515,
+      "source": "https://commons.wikimedia.org/wiki/File:KostNixLaden_Bochum_Panorama.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-f08d49fcc111",
+      "image": "/world-panoramas/pano-f08d49fcc111.webp",
+      "name": "Eisenerz Schwarze Lacke",
+      "lat": 47.581917,
+      "lon": 14.825567,
+      "source": "https://commons.wikimedia.org/wiki/File:Eisenerz_Schwarze_Lacke_panosphere_20210723.jpg",
+      "author": "Daniel Kraft",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reason": "Tunnel or viewpoint inside cave; not an outdoor scene"
+    },
+    {
+      "id": "pano-4222688c2c3f",
+      "image": "/world-panoramas/pano-4222688c2c3f.webp",
+      "name": "St Barnabas Church , Pimlico, London, UK Diliff",
+      "lat": 51.490418,
+      "lon": -0.151652,
+      "source": "https://commons.wikimedia.org/wiki/File:St_Barnabas_Church_360x180,_Pimlico,_London,_UK_-_Diliff.jpg",
+      "author": "Diliff",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-75a451985026",
+      "image": "/world-panoramas/pano-75a451985026.webp",
+      "name": "Verlassener Lokschuppen 01",
+      "lat": 51.551078,
+      "lon": 7.243542,
+      "source": "https://commons.wikimedia.org/wiki/File:Verlassener_Lokschuppen_Panorama_01.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-a68b78b72629",
+      "image": "/world-panoramas/pano-a68b78b72629.webp",
+      "name": "Kammergericht, Berlin Schöneberg, Treppenhalle, , 160809, ako",
+      "lat": 52.492444,
+      "lon": 13.357278,
+      "source": "https://commons.wikimedia.org/wiki/File:Kammergericht,_Berlin-Sch%C3%B6neberg,_Treppenhalle,_360x180,_160809,_ako.jpg",
+      "author": "Ansgar Koreng",
+      "license": "CC BY-SA 3.0 de",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-255d6439fb10",
+      "image": "/world-panoramas/pano-255d6439fb10.webp",
+      "name": "Ahorntal Oberailsfeld St Burkard Mitte",
+      "lat": 49.81278,
+      "lon": 11.35389,
+      "source": "https://commons.wikimedia.org/wiki/File:Ahorntal-Oberailsfeld-St-Burkard-Mitte-IMG_0971-8x5B-360x180G-PanoS-28-09-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-8df566941e4c",
+      "image": "/world-panoramas/pano-8df566941e4c.webp",
+      "name": "St. Gertrude Old Church (Riga)",
+      "lat": 56.957778,
+      "lon": 24.121667,
+      "source": "https://commons.wikimedia.org/wiki/File:St._Gertrude_Old_Church_(Riga).jpg",
+      "author": "U. Bardins",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-9f23896f3bcc",
+      "image": "/world-panoramas/pano-9f23896f3bcc.webp",
+      "name": "Arya gua sunyaragi low res 2014 0",
+      "lat": -6.736828,
+      "lon": 108.543674,
+      "source": "https://commons.wikimedia.org/wiki/File:Arya_360-gua_sunyaragi-low_res-2014_0.jpg",
+      "author": "Aris riyanto",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Predominantly covered/enclosed viewpoint; excluded conservatively"
+    },
+    {
+      "id": "pano-1a14e802add3",
+      "image": "/world-panoramas/pano-1a14e802add3.webp",
+      "name": "Reformierte Kirche Langnau",
+      "lat": 47.288175,
+      "lon": 8.534535,
+      "source": "https://commons.wikimedia.org/wiki/File:Reformierte_Kirche_Langnau_panosphere_20210615.jpg",
+      "author": "Daniel Kraft",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-30d4c89027f1",
+      "image": "/world-panoramas/pano-30d4c89027f1.webp",
+      "name": "Riesenrad am Phoenixsee Dortmund",
+      "lat": 51.491006,
+      "lon": 7.505278,
+      "source": "https://commons.wikimedia.org/wiki/File:Riesenrad_am_Phoenixsee_Dortmund_Panorama.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Predominantly covered/enclosed viewpoint; excluded conservatively"
+    },
+    {
+      "id": "pano-dd90ab12d085",
+      "image": "/world-panoramas/pano-dd90ab12d085.webp",
+      "name": "St. Joseph, Berlin Wedding, , 160724, ako",
+      "lat": 52.544037,
+      "lon": 13.362942,
+      "source": "https://commons.wikimedia.org/wiki/File:St._Joseph,_Berlin-Wedding,_360x180,_160724,_ako.jpg",
+      "author": "Ansgar Koreng",
+      "license": "CC BY-SA 3.0 de",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-cc76b0c75449",
+      "image": "/world-panoramas/pano-cc76b0c75449.webp",
+      "name": "Landgericht Berlin, Littenstraße, Eingangshalle, , 160906, ako",
+      "lat": 52.5188,
+      "lon": 13.4141,
+      "source": "https://commons.wikimedia.org/wiki/File:Landgericht_Berlin,_Littenstra%C3%9Fe,_Eingangshalle,_360x180,_160906,_ako.jpg",
+      "author": "Ansgar Koreng",
+      "license": "CC BY-SA 3.0 de",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-6cc00c58ffce",
+      "image": "/world-panoramas/pano-6cc00c58ffce.webp",
+      "name": "Verkleinert Glockenstube Dorfkirche Hohen Neuendorf",
+      "lat": 52.670478,
+      "lon": 13.279847,
+      "source": "https://commons.wikimedia.org/wiki/File:Verkleinert_Glockenstube_Dorfkirche_Hohen_Neuendorf.jpg",
+      "author": "Matthias Wiegandt",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-112634daa1ea",
+      "image": "/world-panoramas/pano-112634daa1ea.webp",
+      "name": "Highland Fort William, High Street, St Andrew's Episcopal Church 20160722133055",
+      "lat": 56.818591,
+      "lon": -5.108981,
+      "source": "https://commons.wikimedia.org/wiki/File:Highland_-_Fort_William,_High_Street,_St_Andrew%27s_Episcopal_Church_-_20160722133055.jpg",
+      "author": "Virtual-Pano",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-73f878562215",
+      "image": "/world-panoramas/pano-73f878562215.webp",
+      "name": "Pfarrkirche Ellmau, , 160618, ako",
+      "lat": 47.512868,
+      "lon": 12.301521,
+      "source": "https://commons.wikimedia.org/wiki/File:Pfarrkirche_Ellmau,_360x180,_160618,_ako.jpg",
+      "author": "Ansgar Koreng",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-c7c1b0909352",
+      "image": "/world-panoramas/pano-c7c1b0909352.webp",
+      "name": "Monopteros",
+      "lat": 50.098168,
+      "lon": 8.23016,
+      "source": "https://commons.wikimedia.org/wiki/File:MJK_29044-53_Monopteros.jpg",
+      "author": "Martin Kraft",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reason": "Predominantly covered/enclosed viewpoint; excluded conservatively"
+    },
+    {
+      "id": "pano-99051002098d",
+      "image": "/world-panoramas/pano-99051002098d.webp",
+      "name": "Verlassenes Stellwerk 04",
+      "lat": 51.525722,
+      "lon": 7.428719,
+      "source": "https://commons.wikimedia.org/wiki/File:Verlassenes_Stellwerk_Panorama_04.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-fe1f4151b3a4",
+      "image": "/world-panoramas/pano-fe1f4151b3a4.webp",
+      "name": "Brompton Oratory , London, UK Diliff",
+      "lat": 51.497123,
+      "lon": -0.169618,
+      "source": "https://commons.wikimedia.org/wiki/File:Brompton_Oratory_360x180,_London,_UK_-_Diliff.jpg",
+      "author": "Diliff",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-65ce70af92ac",
+      "image": "/world-panoramas/pano-65ce70af92ac.webp",
+      "name": "St. Sebastian, Berlin Wedding, , 160429, ako",
+      "lat": 52.537895,
+      "lon": 13.383648,
+      "source": "https://commons.wikimedia.org/wiki/File:St._Sebastian,_Berlin-Wedding,_360x180,_160429,_ako.jpg",
+      "author": "Ansgar Koreng",
+      "license": "CC BY-SA 3.0 de",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-7c4b8176cb35",
+      "image": "/world-panoramas/pano-7c4b8176cb35.webp",
+      "name": "Leipzig Hauptbahnhof Osthalle Mitte",
+      "lat": 51.34414,
+      "lon": 12.38168,
+      "source": "https://commons.wikimedia.org/wiki/File:Leipzig-Hauptbahnhof-Osthalle-Mitte-IMG_2184-8x5B-360x180G-PanoS-18-10-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-c4138f081db8",
+      "image": "/world-panoramas/pano-c4138f081db8.webp",
+      "name": "Bad Liebenstein Laurentiuskirche Schweina Mitte",
+      "lat": 50.82528,
+      "lon": 10.3369,
+      "source": "https://commons.wikimedia.org/wiki/File:Bad-Liebenstein-Laurentiuskirche-Schweina-Mitte-IMG_8492-9x3B-360x180G-PanoS-19-08-2023.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-37bb728af94c",
+      "image": "/world-panoramas/pano-37bb728af94c.webp",
+      "name": "arya Jatibarang train station 2018",
+      "lat": -6.473356,
+      "lon": 108.306659,
+      "source": "https://commons.wikimedia.org/wiki/File:-arya-_Jatibarang_train_station_360_2018.jpg",
+      "author": "Aris riyanto",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Predominantly covered/enclosed viewpoint; excluded conservatively"
+    },
+    {
+      "id": "pano-696abe5d709e",
+      "image": "/world-panoramas/pano-696abe5d709e.webp",
+      "name": "Kokerei Kaiserstuhl 07",
+      "lat": 51.539764,
+      "lon": 7.494553,
+      "source": "https://commons.wikimedia.org/wiki/File:Kokerei_Kaiserstuhl_Panorama_07.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-0f96147913f7",
+      "image": "/world-panoramas/pano-0f96147913f7.webp",
+      "name": "Verlassener Gutshof 04",
+      "lat": 51.484064,
+      "lon": 7.470036,
+      "source": "https://commons.wikimedia.org/wiki/File:Verlassener_Gutshof_04.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-ed94669a555b",
+      "image": "/world-panoramas/pano-ed94669a555b.webp",
+      "name": "Stadtschloss Wiesbaden",
+      "lat": 50.082278,
+      "lon": 8.241233,
+      "source": "https://commons.wikimedia.org/wiki/File:MK_30645-58_Stadtschloss_Wiesbaden.jpg",
+      "author": "Martin Kraft",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-3f27b379fcc2",
+      "image": "/world-panoramas/pano-3f27b379fcc2.webp",
+      "name": "Leipzig Kretschmanns Hof Lichthof Ostseite",
+      "lat": 51.34239,
+      "lon": 12.37453,
+      "source": "https://commons.wikimedia.org/wiki/File:Leipzig-Kretschmanns-Hof-Lichthof-Ostseite-IMG_6065-7x5B-360x180G-PanoS-20-03-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-515c20c26683",
+      "image": "/world-panoramas/pano-515c20c26683.webp",
+      "name": "Bochum Langendreer Oesterheidestr 01",
+      "lat": 51.479287,
+      "lon": 7.327774,
+      "source": "https://commons.wikimedia.org/wiki/File:Bochum_Langendreer_Oesterheidestr_01_Panorama.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Predominantly covered/enclosed viewpoint; excluded conservatively"
+    },
+    {
+      "id": "pano-047ef5852e3f",
+      "image": "/world-panoramas/pano-047ef5852e3f.webp",
+      "name": "Frary Dining Hall",
+      "lat": 34.100472,
+      "lon": -117.710828,
+      "source": "https://commons.wikimedia.org/wiki/File:Frary_Dining_Hall_360-degree_view.jpg",
+      "author": "Sdkb",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-f8d8e90a86f7",
+      "image": "/world-panoramas/pano-f8d8e90a86f7.webp",
+      "name": "Reformierte Kirche Adliswil",
+      "lat": 47.308677,
+      "lon": 8.527476,
+      "source": "https://commons.wikimedia.org/wiki/File:Reformierte_Kirche_Adliswil_panosphere_20210629.jpg",
+      "author": "Daniel Kraft",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-2c4098c3ef75",
+      "image": "/world-panoramas/pano-2c4098c3ef75.webp",
+      "name": "Verlassenes Stellwerk 02",
+      "lat": 51.522103,
+      "lon": 7.435308,
+      "source": "https://commons.wikimedia.org/wiki/File:Verlassenes_Stellwerk_Panorama_02.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-06d9b2e62378",
+      "image": "/world-panoramas/pano-06d9b2e62378.webp",
+      "name": "Kokerei Kaiserstuhl 05",
+      "lat": 51.538461,
+      "lon": 7.488514,
+      "source": "https://commons.wikimedia.org/wiki/File:Kokerei_Kaiserstuhl_Panorama_05.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-272fbd34a9a0",
+      "image": "/world-panoramas/pano-272fbd34a9a0.webp",
+      "name": "PANO masjid jami al huda pilangsari 2019",
+      "lat": -6.708333,
+      "lon": 108.530105,
+      "source": "https://commons.wikimedia.org/wiki/File:PANO_360_masjid_jami_al_huda_pilangsari_2019.jpg",
+      "author": "Aris riyanto",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-2f2772f30f7b",
+      "image": "/world-panoramas/pano-2f2772f30f7b.webp",
+      "name": "Leipzig Peterskirche Taufkapelle",
+      "lat": 51.33045,
+      "lon": 12.37602,
+      "source": "https://commons.wikimedia.org/wiki/File:Leipzig-Peterskirche-Taufkapelle-IMG_9474-8x5B-360x180G-PanoS-02-09-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-48f9077f9f48",
+      "image": "/world-panoramas/pano-48f9077f9f48.webp",
+      "name": "Supermarkt im Staatstheater Wiesbaden",
+      "lat": 50.082717,
+      "lon": 8.245988,
+      "source": "https://commons.wikimedia.org/wiki/File:MJK_25285-96_Supermarkt_im_Staatstheater_Wiesbaden_Panorama.jpg",
+      "author": "Martin Kraft",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-d628207e8052",
+      "image": "/world-panoramas/pano-d628207e8052.webp",
+      "name": "Verlassenes Stellwerk 01",
+      "lat": 51.524239,
+      "lon": 7.431897,
+      "source": "https://commons.wikimedia.org/wiki/File:Verlassenes_Stellwerk_Panorama_01.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-4123c06b86f0",
+      "image": "/world-panoramas/pano-4123c06b86f0.webp",
+      "name": "Maria Heimsuchungskapelle, Ellmau, , 160615, ako",
+      "lat": 47.511017,
+      "lon": 12.304109,
+      "source": "https://commons.wikimedia.org/wiki/File:Maria_Heimsuchungskapelle,_Ellmau,_360x180,_160615,_ako.jpg",
+      "author": "Ansgar Koreng",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-d7101c0b3f03",
+      "image": "/world-panoramas/pano-d7101c0b3f03.webp",
+      "name": "Gößweinstein Burg Kapelle",
+      "lat": 49.77029,
+      "lon": 11.33444,
+      "source": "https://commons.wikimedia.org/wiki/File:G%C3%B6%C3%9Fweinstein-Burg-Kapelle-IMG_9501-9x3B-360x180G-PanoS-23-09-2023.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-557a781477e5",
+      "image": "/world-panoramas/pano-557a781477e5.webp",
+      "name": "Leipzig Brühl Arkade Nordseite",
+      "lat": 51.34358,
+      "lon": 12.37774,
+      "source": "https://commons.wikimedia.org/wiki/File:Leipzig-Br%C3%BChl-Arkade-Nordseite-IMG_3479-6x5B-360x180G-PanoS-23-02-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-a6d6a434035f",
+      "image": "/world-panoramas/pano-a6d6a434035f.webp",
+      "name": "Leipzig Petersbogen Juridicum Passage Rotunde OG",
+      "lat": 51.33724,
+      "lon": 12.37388,
+      "source": "https://commons.wikimedia.org/wiki/File:Leipzig-Petersbogen-Juridicum-Passage-Rotunde-OG-IMG_4829-6x5B-360x180G-PanoS-09-03-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-f52f694fd64e",
+      "image": "/world-panoramas/pano-f52f694fd64e.webp",
+      "name": "Kokerei Kaiserstuhl 09",
+      "lat": 51.540022,
+      "lon": 7.489628,
+      "source": "https://commons.wikimedia.org/wiki/File:Kokerei_Kaiserstuhl_Panorama_09.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-02090874cfed",
+      "image": "/world-panoramas/pano-02090874cfed.webp",
+      "name": "Andernach Christuskirche Westseite",
+      "lat": 50.43949,
+      "lon": 7.4027,
+      "source": "https://commons.wikimedia.org/wiki/File:Andernach-Christuskirche-Westseite-IMG_6571-8x3B-360x180G-PanoS-18-06-2025.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-72b81e3ca883",
+      "image": "/world-panoramas/pano-72b81e3ca883.webp",
+      "name": "Leipzig Messehofpassage große Halle",
+      "lat": 51.338864,
+      "lon": 12.37551,
+      "source": "https://commons.wikimedia.org/wiki/File:Leipzig-Messehofpassage-gro%C3%9Fe-Halle-IMG_4653-6x5B-360x180G-PanoS-03-03-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-75d763967950",
+      "image": "/world-panoramas/pano-75d763967950.webp",
+      "name": "Leipzig Passage Blauer Hecht",
+      "lat": 51.34215,
+      "lon": 12.37771,
+      "source": "https://commons.wikimedia.org/wiki/File:Leipzig-Passage-Blauer-Hecht-IMG_4199-7x5B-360x180G-PanoS-25-02-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-2009117a42d0",
+      "image": "/world-panoramas/pano-2009117a42d0.webp",
+      "name": "Leipzig Dresdner Hof Lichthof 1",
+      "lat": 51.33789,
+      "lon": 12.3767,
+      "source": "https://commons.wikimedia.org/wiki/File:Leipzig-Dresdner-Hof-Lichthof-1-IMG_4264-7x5B-360x180G-PanoS-29-02-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-d308ba13ed1b",
+      "image": "/world-panoramas/pano-d308ba13ed1b.webp",
+      "name": "Leipzig Hauptbahnhof Westhalle",
+      "lat": 51.34475,
+      "lon": 12.38017,
+      "source": "https://commons.wikimedia.org/wiki/File:Leipzig-Hauptbahnhof-Westhalle-IMG_3474-8x5B-360x180G-PanoS-26-11-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-b03511dd6aa1",
+      "image": "/world-panoramas/pano-b03511dd6aa1.webp",
+      "name": "Matenatunnel 01",
+      "lat": 51.490753,
+      "lon": 6.738164,
+      "source": "https://commons.wikimedia.org/wiki/File:Matenatunnel_Panorama_01.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Tunnel or viewpoint inside cave; not an outdoor scene"
+    },
+    {
+      "id": "pano-200352269d94",
+      "image": "/world-panoramas/pano-200352269d94.webp",
+      "name": "Leipzig Johannisplatz vEingang Grassimuseum",
+      "lat": 51.3376,
+      "lon": 12.38727,
+      "source": "https://commons.wikimedia.org/wiki/File:Leipzig-Johannisplatz-vEingang-Grassimuseum-IMG_3175-8x3B-360x180G-PanoS-20-04-2025.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Predominantly covered/enclosed viewpoint; excluded conservatively"
+    },
+    {
+      "id": "pano-881cf5aad3fb",
+      "image": "/world-panoramas/pano-881cf5aad3fb.webp",
+      "name": "Leipzig Hansahaus Lichthof",
+      "lat": 51.34007,
+      "lon": 12.3774,
+      "source": "https://commons.wikimedia.org/wiki/File:Leipzig-Hansahaus-Lichthof-IMG_1088-32-eTHI2-360Gx180G-PanoS-xn35s-14-09-2022.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-8c0062689369",
+      "image": "/world-panoramas/pano-8c0062689369.webp",
+      "name": "of St. Comgall's church",
+      "lat": 54.719428,
+      "lon": -6.220181,
+      "source": "https://commons.wikimedia.org/wiki/File:PHOTOSPHERE_of_St._Comgall%27s_church.jpg",
+      "author": "HenryPho17",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "reason": "Building interior or enclosed glass-roofed arcade"
+    },
+    {
+      "id": "pano-0f4b8e91eef7",
+      "image": "/world-panoramas/pano-0f4b8e91eef7.webp",
+      "name": "Wikimedia Sverige Kontor 3",
+      "lat": 59.328569,
+      "lon": 18.046739,
+      "source": "https://commons.wikimedia.org/wiki/File:Wikimedia_Sverige_Kontor_3.JPG",
+      "author": "Jan Ainali",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior"
+    },
+    {
+      "id": "pano-3013c38a330f",
+      "image": "/world-panoramas/pano-3013c38a330f.webp",
+      "name": "San Diego Panorama DSC 2002-DSC 2007",
+      "lat": 32.877457,
+      "lon": -117.25122,
+      "source": "https://commons.wikimedia.org/wiki/File:San_Diego_Panorama_DSC_2002-DSC_2007.jpg",
+      "author": "Troy Sankey",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Incomplete sphere with black polar bands"
+    },
+    {
+      "id": "pano-b09135aba4a0",
+      "image": "/world-panoramas/pano-b09135aba4a0.webp",
+      "name": "Geithain-St-Nikolai-Südschiff-Mitte-IMG 5438-6x3B-360x180G-PanoS-11-05-2022",
+      "lat": 51.05422,
+      "lon": 12.68914,
+      "source": "https://commons.wikimedia.org/wiki/File:Geithain-St-Nikolai-S%C3%BCdschiff-Mitte-IMG_5438-6x3B-360x180G-PanoS-11-05-2022.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior"
+    },
+    {
+      "id": "pano-69c03bdf6c04",
+      "image": "/world-panoramas/pano-69c03bdf6c04.webp",
+      "name": "MK 30955-71 Kloster Eberbach Dachstuhl",
+      "lat": 50.043439,
+      "lon": 8.045947,
+      "source": "https://commons.wikimedia.org/wiki/File:MK_30955-71_Kloster_Eberbach_Dachstuhl.jpg",
+      "author": "Martin Kraft",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reason": "Building interior"
+    },
+    {
+      "id": "pano-222c25529974",
+      "image": "/world-panoramas/pano-222c25529974.webp",
+      "name": "San Diego Panorama DSC 1908-DSC 1914",
+      "lat": 32.92597,
+      "lon": -117.18256,
+      "source": "https://commons.wikimedia.org/wiki/File:San_Diego_Panorama_DSC_1908-DSC_1914.jpg",
+      "author": "Troy Sankey",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Incomplete sphere with black polar bands"
+    },
+    {
+      "id": "pano-b2e806d5d899",
+      "image": "/world-panoramas/pano-b2e806d5d899.webp",
+      "name": "Ahorntal-Kirchahorn-St-Michael-und-Jakobus-Mitte-IMG 1081-8x5B-360x180G-PanoS-28-09-2024",
+      "lat": 49.83392,
+      "lon": 11.40257,
+      "source": "https://commons.wikimedia.org/wiki/File:Ahorntal-Kirchahorn-St-Michael-und-Jakobus-Mitte-IMG_1081-8x5B-360x180G-PanoS-28-09-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior"
+    },
+    {
+      "id": "pano-66286f35a0bf",
+      "image": "/world-panoramas/pano-66286f35a0bf.webp",
+      "name": "Ahorntal-Oberailsfeld-St-Burkard-vChor-IMG 0901-9x5B-360x180G-PanoS-28-09-2024",
+      "lat": 49.81278,
+      "lon": 11.35404,
+      "source": "https://commons.wikimedia.org/wiki/File:Ahorntal-Oberailsfeld-St-Burkard-vChor-IMG_0901-9x5B-360x180G-PanoS-28-09-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior"
+    },
+    {
+      "id": "pano-149d8247e526",
+      "image": "/world-panoramas/pano-149d8247e526.webp",
+      "name": "Verlassener Lokschuppen Panorama 02",
+      "lat": 51.550453,
+      "lon": 7.243725,
+      "source": "https://commons.wikimedia.org/wiki/File:Verlassener_Lokschuppen_Panorama_02.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior"
+    },
+    {
+      "id": "pano-dc1fce625d7b",
+      "image": "/world-panoramas/pano-dc1fce625d7b.webp",
+      "name": "MK 30660-78 Stadtschloss Wiesbaden",
+      "lat": 50.082262,
+      "lon": 8.241448,
+      "source": "https://commons.wikimedia.org/wiki/File:MK_30660-78_Stadtschloss_Wiesbaden.jpg",
+      "author": "Martin Kraft",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reason": "Building interior or enclosed roofed arcade"
+    },
+    {
+      "id": "pano-c6ab516f36b4",
+      "image": "/world-panoramas/pano-c6ab516f36b4.webp",
+      "name": "Leipzig-Brühl-Arkade-Südseite-IMG 3524-7x5B-360x180G-PanoS-23-02-2024",
+      "lat": 51.34328,
+      "lon": 12.37754,
+      "source": "https://commons.wikimedia.org/wiki/File:Leipzig-Br%C3%BChl-Arkade-S%C3%BCdseite-IMG_3524-7x5B-360x180G-PanoS-23-02-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed roofed arcade"
+    },
+    {
+      "id": "pano-543c31dbe814",
+      "image": "/world-panoramas/pano-543c31dbe814.webp",
+      "name": "Gößweinstein-Burg-Romanisches-Zimmer-IMG 9570-9x3B-360x180G-PanoS-23-09-2023",
+      "lat": 49.77006,
+      "lon": 11.33437,
+      "source": "https://commons.wikimedia.org/wiki/File:G%C3%B6%C3%9Fweinstein-Burg-Romanisches-Zimmer-IMG_9570-9x3B-360x180G-PanoS-23-09-2023.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed roofed arcade"
+    },
+    {
+      "id": "pano-1215e2e66533",
+      "image": "/world-panoramas/pano-1215e2e66533.webp",
+      "name": "Dortmund-Hafen-Sued-Ruine Panorama 03",
+      "lat": 51.522141,
+      "lon": 7.435334,
+      "source": "https://commons.wikimedia.org/wiki/File:Dortmund-Hafen-Sued-Ruine_Panorama_03.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed roofed arcade"
+    },
+    {
+      "id": "pano-f15d3f39b64d",
+      "image": "/world-panoramas/pano-f15d3f39b64d.webp",
+      "name": "Leipzig-Stentzlers-Hof-Lichthof-IMG 1249-9x5B-360x180G-PanoS-26-03-2024",
+      "lat": 51.33743,
+      "lon": 12.37523,
+      "source": "https://commons.wikimedia.org/wiki/File:Leipzig-Stentzlers-Hof-Lichthof-IMG_1249-9x5B-360x180G-PanoS-26-03-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed roofed arcade"
+    },
+    {
+      "id": "pano-a0cdac5c4d74",
+      "image": "/world-panoramas/pano-a0cdac5c4d74.webp",
+      "name": "Verlassener Gutshof 01",
+      "lat": 51.484056,
+      "lon": 7.469942,
+      "source": "https://commons.wikimedia.org/wiki/File:Verlassener_Gutshof_01.jpg",
+      "author": "DerMische",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed roofed arcade"
+    },
+    {
+      "id": "pano-b2c923ceaedb",
+      "image": "/world-panoramas/pano-b2c923ceaedb.webp",
+      "name": "Leipzig-Dresdner-Hof-Lichthof-2-IMG 4319-7x5B-360x180G-PanoS-29-02-2024",
+      "lat": 51.33787,
+      "lon": 12.37698,
+      "source": "https://commons.wikimedia.org/wiki/File:Leipzig-Dresdner-Hof-Lichthof-2-IMG_4319-7x5B-360x180G-PanoS-29-02-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed roofed arcade"
+    },
+    {
+      "id": "pano-ceac733b48f4",
+      "image": "/world-panoramas/pano-ceac733b48f4.webp",
+      "name": "Leipzig-Hansahaus-Lichthof-IMG 6789-11x5B-360x180G-PanoS-09-04-2024",
+      "lat": 51.34007,
+      "lon": 12.37741,
+      "source": "https://commons.wikimedia.org/wiki/File:Leipzig-Hansahaus-Lichthof-IMG_6789-11x5B-360x180G-PanoS-09-04-2024.jpg",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reason": "Building interior or enclosed roofed arcade"
+    }
+  ],
+  "accepted": [
+    {
+      "id": "place-001",
+      "sha256": "0893d790b1d6795b8cf8c2c6c9d0cd15ed6751b7dbed67e7040e4a2955c3de3d",
+      "evidence": "Original contact sheet 1, tile 1",
+      "decision": "outdoor"
+    },
+    {
+      "id": "place-003",
+      "sha256": "914059ea2890d4136065a9dd539e168ff05aaafa3e53c28a22c62c0db6cac4f2",
+      "evidence": "Original contact sheet 1, tile 2",
+      "decision": "outdoor"
+    },
+    {
+      "id": "place-004",
+      "sha256": "94c96ed432f1a82bf4a318f2bb6853801d646072706269659be898c412b43118",
+      "evidence": "Original contact sheet 1, tile 3",
+      "decision": "outdoor"
+    },
+    {
+      "id": "place-006",
+      "sha256": "2bd76d76f246ad8f75ef0e0806706495b846ca0259d430687378a1c150a3486c",
+      "evidence": "Original contact sheet 1, tile 5",
+      "decision": "outdoor"
+    },
+    {
+      "id": "place-007",
+      "sha256": "ccf4576fe7a1ddb435c9f3852788fa0b22eeb2af81a94066937babc85d79fcb1",
+      "evidence": "Original contact sheet 1, tile 6",
+      "decision": "outdoor"
+    },
+    {
+      "id": "place-009",
+      "sha256": "b0a44d540083c9cf7f3dbf7c9d610ba474fa2f3ec1c16d00d39cf7afd195b61c",
+      "evidence": "Original contact sheet 1, tile 7",
+      "decision": "outdoor"
+    },
+    {
+      "id": "place-011",
+      "sha256": "04f22fa2016118b4d86bf466498c9098c571f02d526a03dbc59e9bca3be6a3a2",
+      "evidence": "Original contact sheet 1, tile 8",
+      "decision": "outdoor"
+    },
+    {
+      "id": "place-013",
+      "sha256": "15385894beb28f671835b45f3435d1ce44335f5872e46fa4cefc97cd33c13ee1",
+      "evidence": "Original contact sheet 1, tile 9",
+      "decision": "outdoor"
+    },
+    {
+      "id": "place-014",
+      "sha256": "0b009e11d4c8f7f87b8fd3fbfefc1bf56ce2b7fd48d87e81b16ebbbf757afaae",
+      "evidence": "Original contact sheet 1, tile 10",
+      "decision": "outdoor"
+    },
+    {
+      "id": "place-016",
+      "sha256": "454b97130b27cab9027f668230e4a4e6374a8b08e4bce9a9136e450e8ae1725b",
+      "evidence": "Original contact sheet 1, tile 11",
+      "decision": "outdoor"
+    },
+    {
+      "id": "place-017",
+      "sha256": "2ba21954dafbda03a64516ba3d0e0534c6c692462d5848b636d800a48e90d0c2",
+      "evidence": "Original contact sheet 1, tile 12",
+      "decision": "outdoor"
+    },
+    {
+      "id": "place-021",
+      "sha256": "5fca0509296dcfd436cd8d2b71d3ac0b7b6f66cebff1e8d75ec770d29f8e314e",
+      "evidence": "Original contact sheet 1, tile 14",
+      "decision": "outdoor"
+    },
+    {
+      "id": "place-022",
+      "sha256": "ea71eafd6f981b746ea481990f84aa1279c4268a9ae80a1630d42ca3fdb942dc",
+      "evidence": "Original contact sheet 1, tile 15",
+      "decision": "outdoor"
+    },
+    {
+      "id": "place-023",
+      "sha256": "7b274b36b65ba938efe2089d1a0c96e723e59c6f5f31240ed61fa4368af9396e",
+      "evidence": "Original contact sheet 1, tile 16",
+      "decision": "outdoor"
+    },
+    {
+      "id": "place-025",
+      "sha256": "0bdb346da2e7a95882e5335340eab1d98ba706b9bbb66655c6d848546571b557",
+      "evidence": "Original contact sheet 1, tile 18",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-2089ced00a7a",
+      "sha256": "b44dbbd26ffeddace84af7d0c640cc414dbbb52c88c1a9be9713df156a9b9dd9",
+      "evidence": "Original contact sheet 1, tile 19",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-2ea4fa849910",
+      "sha256": "e157d78a01b68080463f84c446c77c474a6b1187b42326bc37f11103e8cd0011",
+      "evidence": "Original contact sheet 1, tile 20",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-443dfc8757f6",
+      "sha256": "f04fec8caf27f1ee337e48dc25913e581d7ec4f8d63f9a8d2c5203ed683aeb23",
+      "evidence": "Original contact sheet 1, tile 21",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b6d7c88097e6",
+      "sha256": "92df6757796f7c2be7b71e6f67f667b2417b0af3b1c813289ce1a2da0573a5b7",
+      "evidence": "Original contact sheet 1, tile 22",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ec6bbfd4ea1d",
+      "sha256": "1d51f4834126b600a09741ea03c88ff58f041f46a3fd9e5263b7541b3a7c0afb",
+      "evidence": "Original contact sheet 1, tile 23",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-04bf19edb319",
+      "sha256": "c738a803e452c5d3f6edc84b0c5f2b3982ad099f60288cf5802c01c7043e1faa",
+      "evidence": "Original contact sheet 1, tile 24",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-68045e95d397",
+      "sha256": "882e7b8a8f862b74f6a4bbfd2bf9114ed1a26ce3f68624f2c41a8f6ff61ed363",
+      "evidence": "Original contact sheet 1, tile 25",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-7244ffdcbf18",
+      "sha256": "753fdf0912c84ce737619d7352e99ac0a78dda3be04e75ed8006b9f0bf799a4a",
+      "evidence": "Original contact sheet 1, tile 26",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-23cf2912f079",
+      "sha256": "6fc110ac6a6e1304a3e88d585c4010246cdc483a8f093ded935b3c88a4758781",
+      "evidence": "Original contact sheet 1, tile 27",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-8bded8a3bff5",
+      "sha256": "2aa70eb432b0c1024d18e2813bff2f519f96127546a593ca5f21d55a8db0366f",
+      "evidence": "Original contact sheet 1, tile 28",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ecdc5544ed3a",
+      "sha256": "a0896c37edd9b7c10e6949ca374558b36141b2f33650b74f8ca0cffdd75c0e26",
+      "evidence": "Original contact sheet 1, tile 29",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-77907b8b7101",
+      "sha256": "0421d8112866fc98b1adfcff329c3d2a42641e41d98c22992b95fb24e59f82ac",
+      "evidence": "Original contact sheet 1, tile 30",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-6a2bd6133753",
+      "sha256": "b65b9c7602987bb10af9e1531bf665b92795144ec4b9a80121d6af3550fe074b",
+      "evidence": "Original contact sheet 1, tile 32",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-03738c0fa87b",
+      "sha256": "d4b7359e844ec754c20396700f6b1d7821430d9ab047a50ba442a0d0e37ee28b",
+      "evidence": "Original contact sheet 1, tile 33",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-058f9cc0049f",
+      "sha256": "bced9ee5940ce5175567f43a40522feb3125e722243937263a7047d676c01366",
+      "evidence": "Original contact sheet 1, tile 34",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-0807e91d204f",
+      "sha256": "77fb7b9e690086e72c8ca3ad93f939aacb1e0a1f8868bd23c39a4467c15549fe",
+      "evidence": "Original contact sheet 1, tile 35",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-62b5df669b3a",
+      "sha256": "81887553ae65486300ab231b178ba804949e8a628fd149df13b90173d0d4effe",
+      "evidence": "Original contact sheet 1, tile 36",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-3e253a83ea99",
+      "sha256": "deb4e1a4e0b95eebbc11332b5cd3429a434d96721f8702e35a9af2fdb0c6f6f3",
+      "evidence": "Original contact sheet 1, tile 37",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c7c09995c8ec",
+      "sha256": "817a10c69fbdfeccff0d65e0c5e83f14ccf195c920f87640411eeb4e31fe698d",
+      "evidence": "Original contact sheet 1, tile 39",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-14d4e33d0eb5",
+      "sha256": "d6900098ff6d3dc0833a368a201ada56af19ca550924545a3a4802ca6bb4b820",
+      "evidence": "Original contact sheet 1, tile 40",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-e0b30e426770",
+      "sha256": "c31a91938f8790ed89be0e1b1e107dbc34cc9e2b226321e778e884deb179136f",
+      "evidence": "Original contact sheet 1, tile 41",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-90bd39f98c4f",
+      "sha256": "9a781c3a89de1bdf1129493f985430d0159dfd2cd7ea2a7bce9ad0f639714ddd",
+      "evidence": "Original contact sheet 1, tile 42",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-67025ba965cc",
+      "sha256": "9ed3303c2adee42046ccf27802005448de2a2efd105e67a5fcf6cbfb95e89fa2",
+      "evidence": "Original contact sheet 1, tile 43",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ad3aeeca1310",
+      "sha256": "1b2c426733a6d8b7df43fb9382782b3b4775de0a5d229bfdbe2a67c41245ed06",
+      "evidence": "Original contact sheet 1, tile 44",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-3745db6d5797",
+      "sha256": "262bd38e982cbe8e1e8aefe0d525bfa5d916461fe363fa71d00f10cb866a96cf",
+      "evidence": "Original contact sheet 1, tile 46",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-51d1113b2d6b",
+      "sha256": "8205ee89bdea28180130baab78431d6066f2d8476892e8e54cf9e448b1eb83e9",
+      "evidence": "Original contact sheet 1, tile 48",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ee61095448cb",
+      "sha256": "151dde90edc0854d04d588b66dcccfb893511f6e3f995f6b77362492791935bc",
+      "evidence": "Original contact sheet 1, tile 49",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-290d91edba19",
+      "sha256": "b25204ab8a169470c4e2cf189b5984fe51429893f238f802d700bb28bfea4e0c",
+      "evidence": "Original contact sheet 1, tile 50",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-fa177a275eac",
+      "sha256": "eae67de8d0439a306c0e4a2da44d9348c068dee0bbd878fca01ff51c1535e538",
+      "evidence": "Original contact sheet 1, tile 51",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-579987dae9a9",
+      "sha256": "a19ae523666fc369568f0f54beb114330065386e90a10f1e81ab352e267f44c6",
+      "evidence": "Original contact sheet 1, tile 52",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-aecbf2d48bbe",
+      "sha256": "0dd07d56bcc48005118a17634189c0efb2a190fc5383edf6513c4f8a4e63bf52",
+      "evidence": "Original contact sheet 1, tile 53",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-32d5be7e06a0",
+      "sha256": "afd7ccb50cd2073055983557fbc20df693672983290be8d1f4190c4f55e80ff1",
+      "evidence": "Original contact sheet 1, tile 55",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-0fc504c29993",
+      "sha256": "c766184f3e7b1d109f216f05c37302e0c30a38d943d27b2b7eeb789e0918fded",
+      "evidence": "Original contact sheet 1, tile 56",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-bad63d88025f",
+      "sha256": "497fe794781d78aa2740ac9ef57ae5a0df446a606f4ec5adbe8ebca569841b1f",
+      "evidence": "Original contact sheet 1, tile 57",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-e0885ccfea51",
+      "sha256": "11e35f84dbe9ffcb1edda14d4f6a774f7ce882ddc77a6eddaed30d0d4fb5b011",
+      "evidence": "Original contact sheet 1, tile 60",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c8e8a7f4a6a4",
+      "sha256": "c5ef401d940142d8f52cd9e10fdf0b598ecd8a2914e2be23953d5ec164b78bd8",
+      "evidence": "Original contact sheet 1, tile 61",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-0d4ec68c71da",
+      "sha256": "2c93c08490741bb969dd742eccbe64bd5533821b1e660a3ec5618f3f3d27e46f",
+      "evidence": "Original contact sheet 1, tile 62",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-01f0d4b46980",
+      "sha256": "95730ec1a9ad1ae957531c5bba5cce0206bce357e0fddc71f1cf6b04ef8a8cf8",
+      "evidence": "Original contact sheet 1, tile 63",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-fc530cfc8546",
+      "sha256": "e2d03d7b751832ec722af8c267ce5ccf7ee7c60d0a2e6ffeb0158fb93ae4d1fc",
+      "evidence": "Original contact sheet 1, tile 64",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-a6396b5335e6",
+      "sha256": "7d2f43135fe43258f11fcf18760d46c18e3fb96fbd17c35d49e45852419f321e",
+      "evidence": "Original contact sheet 1, tile 65",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c91c287fc67c",
+      "sha256": "eb32186612bc4256c3b4aae7e0659636a75e95288260e07302ce04e3d0243906",
+      "evidence": "Original contact sheet 1, tile 66",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-8c2c5adb0a3b",
+      "sha256": "6e119826463865185793a562e7a0f1264ab86692dddd74f436c487ff5c1e6940",
+      "evidence": "Original contact sheet 1, tile 67",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-430dc3efdf57",
+      "sha256": "56122cd88324ee9146a73b683e1d6da676178bcc79909c6042bba6ab016367b7",
+      "evidence": "Original contact sheet 1, tile 68",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-1be4ff0f8969",
+      "sha256": "6492241eeb75b6b09342f5c988f35737a8e45501ff1a1cdaf0ed812b0648b589",
+      "evidence": "Original contact sheet 1, tile 69",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-55f59469899f",
+      "sha256": "0f047648e07f6761f2086df6c371bc539dbe7a02f15fc56d3e89322727ec7c24",
+      "evidence": "Original contact sheet 1, tile 70",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ff8b9f018213",
+      "sha256": "fc63f0b56b8bba9c21b1568b1bdc722a742d1969b80ee9ddca1975f6d2e4f95a",
+      "evidence": "Original contact sheet 1, tile 71",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-02169d10c3f9",
+      "sha256": "be5c8d42234c9c3d78d60a91f1e2c6538d9f165493d51e87044b119ef6c3b936",
+      "evidence": "Original contact sheet 1, tile 72",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-2712585e46b7",
+      "sha256": "b0af0ec10dcbbbbca00b3d0b845966ac016af9c1eca186bfc00f30f116e6b5a1",
+      "evidence": "Original contact sheet 1, tile 73",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-524f8eb7d0e2",
+      "sha256": "b3d4a0debd04f017031415329a490ccd54f6cb876cf8620f93ab29c5de7d7904",
+      "evidence": "Original contact sheet 1, tile 75",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-e5e67c60e4a2",
+      "sha256": "415fb087131a336aa3af3facbebc7a2972407905f7c210a247c50a725bbbce0c",
+      "evidence": "Original contact sheet 1, tile 76",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-6e5425d6585f",
+      "sha256": "8bdc507cbe27cffe6c322ed25f3e4740ba33e0676030fce52f234bcda0613004",
+      "evidence": "Original contact sheet 1, tile 77",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-7ed04b12b2ee",
+      "sha256": "654427ae698b49d6502376d3421bb09979373eb745839a42c7fe5b432fad66e6",
+      "evidence": "Original contact sheet 1, tile 79",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-90d5d082c346",
+      "sha256": "41d8a8ba02e443631854ea30692934bbd8286f3fd5c750f5c2aa4037201109db",
+      "evidence": "Original contact sheet 1, tile 80",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-270262068770",
+      "sha256": "223f9be84707f2548f6f42e7b0455988b3de09825f93a9a68b02c6a10bf7495b",
+      "evidence": "Original contact sheet 2, tile 2",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-7b96cfe49aea",
+      "sha256": "a8a8c9b664b6815bac076a6288e00b023c0691eab3abe3efcdb2e4a2ac869966",
+      "evidence": "Original contact sheet 2, tile 3",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c109123123f7",
+      "sha256": "3a5d10f1add5e342cf3d55c6bbf95963bb97402979a43912e5d1e9e18bd13e69",
+      "evidence": "Original contact sheet 2, tile 4",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-341b79dc90c2",
+      "sha256": "25df271f02df61eb25bd02d845f6b78f5f37ceea8cdcb93e45fe75ffa2cb9567",
+      "evidence": "Original contact sheet 2, tile 6",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-143ceea19dfc",
+      "sha256": "1c304e55dd5363df3e5a43a921981dcf7c3d4a6a5a8e81d7f9c7995bad6c584e",
+      "evidence": "Original contact sheet 2, tile 8",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-dcf2f30040d8",
+      "sha256": "7f5e6b33e2c085536e9550e1831c12fefdf1dfb90d44c94b1b3b5ed3ba585e38",
+      "evidence": "Original contact sheet 2, tile 9",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-879cc324aa97",
+      "sha256": "2187032622beb39781c46f4c0240f4f2fe743ccafcd4d612f5f2323ef6131297",
+      "evidence": "Original contact sheet 2, tile 10",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c1c5be1ca29e",
+      "sha256": "7167e60046c307d48114305bb6cdca78438fd95319a4ee6e944d43e3e295621c",
+      "evidence": "Original contact sheet 2, tile 11",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-9ea920b5d863",
+      "sha256": "b01ed49833d359250dc3f7c5df6b8881733489c1b1bed77ec41b1f7dcca0f3e9",
+      "evidence": "Original contact sheet 2, tile 12",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-46fd807af8a5",
+      "sha256": "92ffba2271b4ba01ba87851d07b3e9b54dec6b12b3f56136f38e5bae368b24c3",
+      "evidence": "Original contact sheet 2, tile 14",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-cc8d7db6ccb3",
+      "sha256": "cb80a935e3899d2eedc5693536e8ba678feafdeddf1e2fe9f63a5214afe56dbe",
+      "evidence": "Original contact sheet 2, tile 15",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c01e9e98bd51",
+      "sha256": "8ffa56da89788977adb2a31417d88893a42c8de7382267e1baf5c41d588a583c",
+      "evidence": "Original contact sheet 2, tile 16",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-1f70d9b09472",
+      "sha256": "8a1dee2c8652223595a9e4e313a97d2b860055d5e45f3439eeb1f76e444d140d",
+      "evidence": "Original contact sheet 2, tile 17",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-cc725df2dfac",
+      "sha256": "26975e93f93ab6e9ad378550e0f4df30c989e171ba327e3d656d891c4983c311",
+      "evidence": "Original contact sheet 2, tile 18",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-3112eeb4e3d8",
+      "sha256": "2e8773d585b70da3f59441836026987e7fc8d64e7f4660fda159be1b2e1876e6",
+      "evidence": "Original contact sheet 2, tile 19",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b11324f6a310",
+      "sha256": "368a84060e10524ce1b3281984c719524184c6ed618df2417e8a34bbd266b1e2",
+      "evidence": "Original contact sheet 2, tile 20",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-41c5f03d6156",
+      "sha256": "415ec08c9c58f0bcd793b5e9998216b7d3da72cbdbb573b4551e7859175af267",
+      "evidence": "Original contact sheet 2, tile 21",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-93183c171ad2",
+      "sha256": "294a246cd3e5ba0158a7fbe9f7d350d1e623f2b62bde57f1c72ca62cd0d2a096",
+      "evidence": "Original contact sheet 2, tile 22",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-2c7ea882f51b",
+      "sha256": "5af1e35578b3c6e9a4a95840f49e15b54474ffc67d5809a79094bd8e34983691",
+      "evidence": "Original contact sheet 2, tile 23",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-f398069543d6",
+      "sha256": "da35bd65080570a8be3e247533cd87c430295633743a725c54d594015a2ca9b8",
+      "evidence": "Original contact sheet 2, tile 24",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-f2ab50537e94",
+      "sha256": "b2ca6cc45218733f3f6bbeaf3a4a35bf7063ed21b908631b74280effb2b1ccbf",
+      "evidence": "Original contact sheet 2, tile 25",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-fa52d3fc380e",
+      "sha256": "46d7621d08da26214c5528355410c147032742d2bf201019de6d620ad7f1405b",
+      "evidence": "Original contact sheet 2, tile 26",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-108a0107e167",
+      "sha256": "0ddbce292c01d70d2af19cbf83b9442007a3e75234d55272596e291a07634c6d",
+      "evidence": "Original contact sheet 2, tile 27",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-2b59aab93d5f",
+      "sha256": "94f240ec246a63781d4ea6b39098b34a81c8ccc734fa4b12f87dc23a7b910d28",
+      "evidence": "Original contact sheet 2, tile 29",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-2527ac513126",
+      "sha256": "a8b7f86ed3d01241c517f401a865e5c49fa83659c6741f445802efd48fd54d72",
+      "evidence": "Original contact sheet 2, tile 30",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-efdfdf80323e",
+      "sha256": "935736794b027e95b6a060d22caaf38eb7d79712704f16c5416a9fb3d8fba30b",
+      "evidence": "Original contact sheet 2, tile 31",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-6b588858e020",
+      "sha256": "e5ee3780614cdf7fe667b7a56ede021c2e43f120fbb9ed02df7fe1e0cfbcffed",
+      "evidence": "Original contact sheet 2, tile 32",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-162d7b7221ff",
+      "sha256": "c6629d1e7e0033496f2b552047d6c8f862e079409ec37059e0f5bf186b258df8",
+      "evidence": "Original contact sheet 2, tile 33",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-eaa4679e7df2",
+      "sha256": "72d4b1efe9dd9754dfb54ed4bc19a5bedbff73f9f36722c9836179f24af4e2df",
+      "evidence": "Original contact sheet 2, tile 34",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ad59bbe8127a",
+      "sha256": "a37d950d4bd7ba71c31570da53b7ea5e58cccb8a610f722f2a883e0f4702f7b9",
+      "evidence": "Original contact sheet 2, tile 35",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-391d6a410b0b",
+      "sha256": "93b41dc46c687d21e1c737995e2d8af6d46002a7439bdad0128730f689406ae6",
+      "evidence": "Original contact sheet 2, tile 37",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-2e6a8ed32cde",
+      "sha256": "355e939c1e011d49b1f54a32dcedee9777aa22734cd2ec1ab8ad2e305990aad2",
+      "evidence": "Original contact sheet 2, tile 38",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-6a13935bfd49",
+      "sha256": "ddd3157d2d997352afe436eaef8c9fe406f85bc1ec9e3864295fae69431c90bc",
+      "evidence": "Original contact sheet 2, tile 39",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-bf0fec3ad8b4",
+      "sha256": "da485d8426a5d3c2ebffea1ca558562a2fd421ef032796d4995730ae25e31b82",
+      "evidence": "Original contact sheet 2, tile 40",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-db20180fa877",
+      "sha256": "e8f2bff5545a1e5c06bc5545ff2115c7c2f10ea5d3439033ae197aec32b4ba85",
+      "evidence": "Original contact sheet 2, tile 41",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-1ec3f2c2b6d4",
+      "sha256": "ba40d85e1426d66eea1de9e83a9d7aad153f02100379b45d30aa5394ca5928f5",
+      "evidence": "Original contact sheet 2, tile 42",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-952155b4d5c9",
+      "sha256": "946a7a82c740ef9f4cc2444fe7de28e638011342420215757e1196bdae4ef44d",
+      "evidence": "Original contact sheet 2, tile 43",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-859f811b7e28",
+      "sha256": "16ff63dd276b1c5efa3709cc559e6e234af832559b92216bd5003090bdb5c322",
+      "evidence": "Original contact sheet 2, tile 44",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-0eb235f316c0",
+      "sha256": "19014f8537ce46bbea5782ddc79fa47b7eabd8d3b1cf6b9d7eea3a002b3f7a0a",
+      "evidence": "Original contact sheet 2, tile 45",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-123e7d640aec",
+      "sha256": "e898757d57aad3bda34ac5d15ee054e50074a097ed57c9d3c15e12242d19c130",
+      "evidence": "Original contact sheet 2, tile 48",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-6b32f25ca1ef",
+      "sha256": "016d3c1c986791bb146dee6568848b6b4a0ed353cabc180d102b6bfbf90b3cec",
+      "evidence": "Original contact sheet 2, tile 49",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-260b8a30530b",
+      "sha256": "9212adbc9fada42609eb50232e4ad28c0bf01add7b3f1eb0473c3ba8c6315004",
+      "evidence": "Original contact sheet 2, tile 52",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-17fb49951cb2",
+      "sha256": "20a99608fca67eb406fc639e0386595fbbaca4b282515cee0e189191b8105e93",
+      "evidence": "Original contact sheet 2, tile 53",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-01165f4bd450",
+      "sha256": "8fbb7b8ec1b3c40ab524fdcb63d6702f27734ab8931ebb84dc42aff09fc24ac0",
+      "evidence": "Original contact sheet 2, tile 55",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-fa0f2bf575b5",
+      "sha256": "d6dbb3fd28c2ff6cf92de709e3c2eafd99fdb85990e3370eb283ce4e95dd17de",
+      "evidence": "Original contact sheet 2, tile 57",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-71b4fe221242",
+      "sha256": "e30980a839c0073009e87c0282bdc27f5716378e4abcaebb03301ae7a8362907",
+      "evidence": "Original contact sheet 2, tile 59",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-946ea7d6663d",
+      "sha256": "adb9596ff83a2bb19a2f02e707a10ab97ad41d3ff2f549d668c908d39db2cb80",
+      "evidence": "Original contact sheet 2, tile 60",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-62a391d3d74f",
+      "sha256": "ccd8b4e488da3dbeeffeaec580e376dee6895c32f470f4718bb9d4e63abe2766",
+      "evidence": "Original contact sheet 2, tile 61",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-0dc75a4e586e",
+      "sha256": "532c83497ae2aba7fa457c63e72b0cdaa3f90491a95e6c6ff46939e05fcdeed0",
+      "evidence": "Original contact sheet 2, tile 63",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-5f869b52326d",
+      "sha256": "1605b7e0586e05bbfa7fa407e6a02b66596ad42a2b080a83ef539441782691f4",
+      "evidence": "Original contact sheet 2, tile 64",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-66e65485ae9f",
+      "sha256": "6ee5f9c79e9db246f19d553a67ca5a84d4183e26bc09bfda6576a787ef35f56f",
+      "evidence": "Original contact sheet 2, tile 66",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-a2eb37bbed8a",
+      "sha256": "efc2c4ff4ae795e8a125ecdb8864b86c3e6a6992c46dabd4dd6f2e9f323f658a",
+      "evidence": "Original contact sheet 2, tile 67",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-a1c7c883bea3",
+      "sha256": "9721a4436dc59b17b45b841ae7adc8695cfab4776e52434e43c5a13c6f3d2492",
+      "evidence": "Original contact sheet 2, tile 68",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b6ced1370e69",
+      "sha256": "4e76995901be00705726db74472292fceee13d1f3c456591b83d5c94d301fa4f",
+      "evidence": "Original contact sheet 2, tile 70",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-67392f528f7a",
+      "sha256": "a94c8bd5ea8300024360bf98cf47ffb85371b65c3fa014d430af20191cee4135",
+      "evidence": "Original contact sheet 2, tile 71",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-8af7484da2b3",
+      "sha256": "668bd017512712a6f3ca562b5617cd48e4a059b06aae219500774a62baf937c9",
+      "evidence": "Original contact sheet 2, tile 72",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c84b7c7b963e",
+      "sha256": "11b71015c7dd5e9ac4e1925f758ed65098e5f0c0a61ed37d34756798fd065d75",
+      "evidence": "Original contact sheet 2, tile 73",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-e81e5a1eb904",
+      "sha256": "bda320e631271e398fb8ccf2dc50b536c135a73c738313dfdbfb38f980727ff1",
+      "evidence": "Original contact sheet 2, tile 74",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-7bcdcf62a092",
+      "sha256": "a2c03d33238e0a247cc52335087555494f93ff534deac91387f9e26a0a0702f7",
+      "evidence": "Original contact sheet 2, tile 75",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-f86bbbc56a80",
+      "sha256": "fe0bcc0c845c9f974113b98ff92fff92b95a3a37370a923aed5299883e223fc0",
+      "evidence": "Original contact sheet 2, tile 76",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-8b71125b835b",
+      "sha256": "dd02dcdc443adb59c5aa3a0b69100802584a74bc62337038d470e80040f2afcd",
+      "evidence": "Original contact sheet 2, tile 77",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-14e04f4e57c3",
+      "sha256": "0a242a9bfdd8bc80f4f5b17fb4d696ca64f48d0e6a690fbd0decde42eaf6bcbe",
+      "evidence": "Original contact sheet 2, tile 78",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-0454ab57732f",
+      "sha256": "cc668f081602ac36d80c77629f17eb7de5ca25c14e5c435955672355afafb4bf",
+      "evidence": "Original contact sheet 2, tile 79",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-127fa86fc935",
+      "sha256": "361f3fa41a38b31d8cd3102de4e8fdab4e4f625405d76af2c93bdd6d35bc8efd",
+      "evidence": "Original contact sheet 3, tile 1",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-f644b30dc35f",
+      "sha256": "b8731dcc0a93f5d668213389480d0c10e4cf168773e0461935133e1c7cf04821",
+      "evidence": "Original contact sheet 3, tile 2",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-76e0844d342c",
+      "sha256": "eb2a8148b478a534a0c56dda401e017fd1f8174874a79e094053820266652d62",
+      "evidence": "Original contact sheet 3, tile 4",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-4c521beedd7e",
+      "sha256": "d3d0f57c03e57e85e13e2fa841e7c8e7503d3105607807527d44f456d7eab1b6",
+      "evidence": "Original contact sheet 3, tile 5",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-dfacee4392c4",
+      "sha256": "db7fd55b1f05879208be5d656baa4c0ef23245ab99a93b22ce1d9edb36b32ad5",
+      "evidence": "Original contact sheet 3, tile 6",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-e4afd7d8a8ff",
+      "sha256": "5888a611d78ba8f7929e61d97d0db01e0eafb964053c46374af4a0d120ef0153",
+      "evidence": "Original contact sheet 3, tile 8",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-bf04787a565f",
+      "sha256": "2023f6ddf28596148660faffa0b8037cf1db341c8a7ff8981bcbf081667e1450",
+      "evidence": "Original contact sheet 3, tile 9",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-9717571530fa",
+      "sha256": "081731eb2dd647dba42a2fb727777b9b7686c5590b72e08aa877f982e3e12142",
+      "evidence": "Original contact sheet 3, tile 10",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-58bdd856dbb1",
+      "sha256": "82fb479f96fe17c51250022036010c1730d1e0239c974b8f99925ead57af9ab5",
+      "evidence": "Original contact sheet 3, tile 11",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ff503838a903",
+      "sha256": "e68cf40c40565f5f2ccbc7d45f7d9e31f15ed17e87ee7785b5b65e4fafdeeabc",
+      "evidence": "Original contact sheet 3, tile 13",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-2f7e6343580d",
+      "sha256": "7d6d864a96aacd8444cb28b344fed5f5c0d39809f1b707e24b3bb7e5a3b8760d",
+      "evidence": "Original contact sheet 3, tile 14",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-14d95a5690b0",
+      "sha256": "1b0b5ca999f72c7cfdf16af3c510e86edd652dd4caf64fb2cdf7c2c946f96f01",
+      "evidence": "Original contact sheet 3, tile 16",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-20e526fddceb",
+      "sha256": "598150be3d8bd70f881788325d079e2ab22d49b2db5fcd0a161a5f9b2f69826b",
+      "evidence": "Original contact sheet 3, tile 18",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-d7f603000db6",
+      "sha256": "b3a04aa92438712ca4a1629f55f0dc1aec9e4ecb466a2c478db19610d75ff7c8",
+      "evidence": "Original contact sheet 3, tile 19",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-a6b6342639dc",
+      "sha256": "db07889e3a999f077e85a0ad0b499ffdbd35af4ba19c170c3621f516ccdc7f7d",
+      "evidence": "Original contact sheet 3, tile 20",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ac0bf3701e35",
+      "sha256": "2bd34a6635cf06ed3dd5f5f72bcb32da17faac001469e01ab77e2c5d65821966",
+      "evidence": "Original contact sheet 3, tile 21",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-2067524049df",
+      "sha256": "54ba923ec2173efe45818caa1096ba0b1b910c5374caeed1be2da41fcc04ca38",
+      "evidence": "Original contact sheet 3, tile 22",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b92bad86d019",
+      "sha256": "62a5341c24219f36c2ecf0424b2b22b645d22d55e290d93a4791ec74b26fb644",
+      "evidence": "Original contact sheet 3, tile 23",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-5f41e4d5814c",
+      "sha256": "dbfa88d3b6d48ae9780b3ed36d9c21ce808d8aad80a4055174e2f4f29968b78f",
+      "evidence": "Original contact sheet 3, tile 24",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-8046a306ef85",
+      "sha256": "b6a1dfc4d65de1fb815585a19d46c07c2fed9f097f282b0f465e92f1ae4ad451",
+      "evidence": "Original contact sheet 3, tile 25",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-23772376fa29",
+      "sha256": "91d86ce1e95fd5c54bde47d379ebac4ed9ecb9c4d8dbffa1af56f72ecc51c1e3",
+      "evidence": "Original contact sheet 3, tile 26",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-50b71c89c45e",
+      "sha256": "35a11dffeef2dd9d41e640a5c8b5e5bc57c321eb47eb8ffdcaa080c99c39f864",
+      "evidence": "Original contact sheet 3, tile 27",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-d6ffb280fbb9",
+      "sha256": "bdb88e684f750d3c8a4c3c4a541368bf2e25ef90ec748d53e5b452d9e885ce3e",
+      "evidence": "Original contact sheet 3, tile 28",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-77816a2446b5",
+      "sha256": "4fbdd666efb939a004b7aefd2cd92ebed6ba2450c942561b569c5841371d5392",
+      "evidence": "Original contact sheet 3, tile 29",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-110b124b4293",
+      "sha256": "19d2832ad918fcc70f1e29c78501190b183c4d10562e3b1f9974965f0ae0c12f",
+      "evidence": "Original contact sheet 3, tile 30",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ed806f4ed1a6",
+      "sha256": "87acd3e560300619fe0dd21fa2f684081eccf0dbff5d061becc7e60a3b79ae8d",
+      "evidence": "Original contact sheet 3, tile 32",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-a4d61f416c99",
+      "sha256": "122e26103325309d485c28b91eb891575285dded23f6a0231b622aff0f11a8b4",
+      "evidence": "Original contact sheet 3, tile 33",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-21e43a6fee4c",
+      "sha256": "4b3b5168b7feb30e3b3c02ffda01e1e5d8520212a6fa16e02c4d60c271cf1129",
+      "evidence": "Original contact sheet 3, tile 34",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b3342b25ee5c",
+      "sha256": "d7ab9cf7bd489aca7293122972369d2f71a220febaec275ca489c1378d52ba68",
+      "evidence": "Original contact sheet 3, tile 37",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-478e36519ee8",
+      "sha256": "398b903f29ab17844f4bb0ae9ada00eeb56dbd0a7c03e416de40f657e2cfd822",
+      "evidence": "Original contact sheet 3, tile 38",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-0a4314667b46",
+      "sha256": "2ca081b447b7bfb6dc025847d8b10832cc05126f69c953bc2c1abd1b048a5024",
+      "evidence": "Original contact sheet 3, tile 40",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-d662aa12adcc",
+      "sha256": "00b19687be9fb233b6d8ca1cbf39e77aedd868cafb235cb7ecf6d1a9e115397d",
+      "evidence": "Original contact sheet 3, tile 41",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b7d3f9e794c8",
+      "sha256": "faf41422b7147063bcb8351fa0bc572f5909df8db1bf3283cdcad3ab88af9b6c",
+      "evidence": "Original contact sheet 3, tile 43",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-e94b21b8900b",
+      "sha256": "ba1c4b38771b67b8ad1cbe7ca32202f9f8f1b95de6bca1eddf2703e6c9080d46",
+      "evidence": "Original contact sheet 3, tile 45",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-845e35ceaa23",
+      "sha256": "5b97f96adbd91b95cb31732e752d34950f13ca045db27a0b5827a815b0f58fbd",
+      "evidence": "Original contact sheet 3, tile 46",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c8a88c7a8a3e",
+      "sha256": "451a43c211f15d256d35471d56eaf29c75d75755b868208427c45b9a5efb097b",
+      "evidence": "Original contact sheet 3, tile 48",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-7d399b2d68fe",
+      "sha256": "f4a560fd34f5a49b56cb9bf656a276bc7edbfd1284815191207b4cb794dfa26e",
+      "evidence": "Original contact sheet 3, tile 50",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-645cb91337fd",
+      "sha256": "a19b1fd4157d9152008604a6a386eccf2af12ffb27e5dfb8a617e2aa001a5aac",
+      "evidence": "Original contact sheet 3, tile 51",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-f1963d22d9ad",
+      "sha256": "28518b99fe5ccacf140121cd606dc28d34be4141e7e7dd5a45e9cf2f576a978c",
+      "evidence": "Original contact sheet 3, tile 52",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ff5bd8c97f94",
+      "sha256": "c26550147dfcb642cd4eb067b80b1357be89675ab3d48b884d8ee5dc8defb916",
+      "evidence": "Original contact sheet 3, tile 53",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-74d777c5d07f",
+      "sha256": "e3f269085bdd6d0969b2d347d4fb56f891fa8383553af16708b447d4f153d90f",
+      "evidence": "Original contact sheet 3, tile 54",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-8a17913f0cc3",
+      "sha256": "3a8e378e6279dfac470e9dfc70b8e26860c0ffba31a50001e76a0e850c00fa1f",
+      "evidence": "Original contact sheet 3, tile 55",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b2a8dcac3e83",
+      "sha256": "1bebab276b19ab3253df063d9121649e280f0ac742e224add89abaf8ea1a31ea",
+      "evidence": "Original contact sheet 3, tile 56",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-12a064272882",
+      "sha256": "b6f49ba88f4e23a0a6b9983c4bc01b332c9d44f1d917911b83dc1185fe90d09f",
+      "evidence": "Original contact sheet 3, tile 57",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-8c26d8905ef8",
+      "sha256": "64153b548286ede8536b7e00ee37cd73b6030e74835f84d6cdb8b58ea9d5358f",
+      "evidence": "Original contact sheet 3, tile 58",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-a5029c1db8f5",
+      "sha256": "3ab20183af3e0c57679ef67a50f45ec7cac11e71ac025e5a0f2bb118bc9d9084",
+      "evidence": "Original contact sheet 3, tile 60",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-135757e5a577",
+      "sha256": "6b7ee5ae89dfb7f3f98a5e7d17d8a931542cb61d64b391e138dd5e6cd2d2ee9a",
+      "evidence": "Original contact sheet 3, tile 61",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-dad5f8af1935",
+      "sha256": "ed9ba7d544390fb77444f5ede1148816fe4d454a80c499c534c8d8fca2780b1d",
+      "evidence": "Original contact sheet 3, tile 62",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-a22c19844944",
+      "sha256": "da5803a5cc3c2e1f62810d73394e22d777980284efdf1110b0424c8b1877070d",
+      "evidence": "Original contact sheet 3, tile 63",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-667e6f86b576",
+      "sha256": "e0002fc004bdd3bc6ec5b921116e635082ae5ba7958646ad7cdf8e2c01e09332",
+      "evidence": "Original contact sheet 3, tile 65",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-000f89af96fc",
+      "sha256": "1c43b59a94d75614b3dfa6ee861af277b824103e14b9568622be2c7fa7c1a998",
+      "evidence": "Original contact sheet 3, tile 66",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-9b8919ca5127",
+      "sha256": "02123abc4d1f503058cf64489bbf2017d972715f99e3463d7f55fd1c780faf08",
+      "evidence": "Original contact sheet 3, tile 67",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-5fb3c561b354",
+      "sha256": "52ef6f751985d179282a1aa17b2cf57a580fb612f91a756a40afaeff9f8f4ffc",
+      "evidence": "Original contact sheet 3, tile 69",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-d4c90e9c49a0",
+      "sha256": "4beec7ee9635b3e5d98d8531082ffd91d40b685e28739613ceb88862e1bd86fe",
+      "evidence": "Original contact sheet 3, tile 70",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ebbcaa8fbb01",
+      "sha256": "e1e0c0a5aee182957b4b15e53a05ea2d6b3c03fea3700337fb603ddc38d7ad4d",
+      "evidence": "Original contact sheet 3, tile 71",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-3dee49a689a7",
+      "sha256": "339b9a3542ff88577f359f4631801204b922f17ba8fc66109011ca4530b98c1a",
+      "evidence": "Original contact sheet 3, tile 72",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-228ea8fa20f0",
+      "sha256": "5110199b19085ab685d3c34526ab3961685235f6a1af7bd3a023fbce213909e6",
+      "evidence": "Original contact sheet 3, tile 73",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-9ea417894f75",
+      "sha256": "f12d2bd3f7e6f0fb0473fb8c49d584c49efce38b469bc95beec501662eba387e",
+      "evidence": "Original contact sheet 3, tile 74",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-e64011dd9fcd",
+      "sha256": "d7857b64581df5ee4b0fed22788066be84486fe23c7dbbf779abf1d1b82c7004",
+      "evidence": "Original contact sheet 3, tile 76",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-70a6b901b966",
+      "sha256": "79fee15c3ace9fedc6b3d2b773137fe1e789f48c5bf67add8c77b7e732acf658",
+      "evidence": "Original contact sheet 3, tile 78",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-cb33c1871958",
+      "sha256": "9842c0ba8cd8de424aa0a9873f9d41223bb3bf2f4c4274af3630a1e1c920bec6",
+      "evidence": "Original contact sheet 3, tile 80",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ac7955c7dfc9",
+      "sha256": "a7aef67530cb0e39cd4a419bfc9d331eeea9f6520e1a78f4fce3dfb6ca403319",
+      "evidence": "Original contact sheet 4, tile 1",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-9237460d7936",
+      "sha256": "958a24004446571ab5ed532f535e26cd41761ddf381d73058c5041ccb16492f7",
+      "evidence": "Original contact sheet 4, tile 3",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-6180e1e64b38",
+      "sha256": "69ec3410731a7aea7ed0283feb22fdfc9b12c0ec056622c1077f27aca6ad7113",
+      "evidence": "Original contact sheet 4, tile 4",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b40f05527aee",
+      "sha256": "2440082028374cd78ea11ae32c533c2c62f343415f9eae7d2a30c9a11553ce27",
+      "evidence": "Original contact sheet 4, tile 5",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-12b5c95f1eb5",
+      "sha256": "4be720e527caf2720439a3a34dd29241ad9a1c8ac6fcdd57c10fdf5d80bfa21a",
+      "evidence": "Original contact sheet 4, tile 6",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-cc4eaaf893cd",
+      "sha256": "d05cb50348dfc4e331b6e2d62ff5eccaed482dcddd22ec6fac6b1208d0dcdedb",
+      "evidence": "Original contact sheet 4, tile 7",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b7013bae597b",
+      "sha256": "d1f11e9bd639d98161076f8e7bc427443f213e8fad8fc61d24ffb3e044e2a52f",
+      "evidence": "Original contact sheet 4, tile 9",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-2e360a3af85e",
+      "sha256": "839b761a6fa60fc1b05458153ff1320c702efcca3fa79ab2dabe7191d866e72e",
+      "evidence": "Original contact sheet 4, tile 10",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-f805199e07ff",
+      "sha256": "dfe60d2d6e91640e94b318f25a48d8f93a025617bbd1dd4e1cdc4be091e9d79f",
+      "evidence": "Original contact sheet 4, tile 11",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-7d48043ed777",
+      "sha256": "c2b1fd3f3022a03d92fbc66903fd68d03c32a549fc5d7c86cdd2e4b692f217e7",
+      "evidence": "Original contact sheet 4, tile 12",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-0c679ab4a113",
+      "sha256": "94a5f5e44209f69963a177225b6378d63ffca34774f5490b3dc218a762b45e69",
+      "evidence": "Original contact sheet 4, tile 13",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-fbe4774dfafd",
+      "sha256": "4ae9b067907b6d14c3875ab5dc0971d19425445dbe1676e7333e4bd069b5f8db",
+      "evidence": "Original contact sheet 4, tile 14",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-3d5569006763",
+      "sha256": "6b425596131bab9653748a27e40fe2bbf6a3a02752848ae2493f60b7664e62e2",
+      "evidence": "Original contact sheet 4, tile 15",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-e8c037308b07",
+      "sha256": "c56074b38777edee6797b1b278203b8352bf9c976db3e618cd327fe3d2387776",
+      "evidence": "Original contact sheet 4, tile 16",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-1b616bd658fb",
+      "sha256": "dd4a0ace4d8e421387306c7226bd86b1c6f97352f8378292bdcfb30b42c21f76",
+      "evidence": "Original contact sheet 4, tile 17",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-32370bfe40fa",
+      "sha256": "3fcf2f4e77b4a22341ed065b53d845514f05cbfc1ca43ab00736087ac8421b98",
+      "evidence": "Original contact sheet 4, tile 19",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-65a1eb276955",
+      "sha256": "0f05e2a83332454fccdd8df96660bbe58c46450d7bc29b9fbb53e4521e6a78b7",
+      "evidence": "Original contact sheet 4, tile 21",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-8be7a008970d",
+      "sha256": "e4bf1b36291eaa23c130afe8a9ee5807c3094c0b4eaaeb2e16c28a027388b4e4",
+      "evidence": "Original contact sheet 4, tile 22",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-90cffc2d6e3d",
+      "sha256": "4b9c3db54f14d65159cb284c0960472542490d341c9cfeb2c933cf372a275524",
+      "evidence": "Original contact sheet 4, tile 25",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-a2b13acf38b4",
+      "sha256": "7eeec8dbe5b928538cb134a9e2a17b9593de4dd9e11349d182dfd750d1578743",
+      "evidence": "Original contact sheet 4, tile 26",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-01632343973c",
+      "sha256": "d9ae696da8d6a76b069de802f564502e739cd62f17808ca80178a11d9aeb41a8",
+      "evidence": "Original contact sheet 4, tile 27",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-d02be4ede1bd",
+      "sha256": "583b0c5ab330afc07f3bb1310f751cad190bbcaa8f6493461292bff84d30f496",
+      "evidence": "Original contact sheet 4, tile 28",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c0a4f53c1465",
+      "sha256": "e24eb7287e2e40103f60f58b5c55005d3c9472bb27f187370b357a4076f0531d",
+      "evidence": "Original contact sheet 4, tile 29",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-3854b20866f0",
+      "sha256": "eedb07820d45cbd12d959ed0da47dc758a9e6ec8aa283043236cb6e42ecc54f3",
+      "evidence": "Original contact sheet 4, tile 30",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-88cdf0ef3da5",
+      "sha256": "b98b424fa68a2177f6efec3b1cd93a71b8c8d63f4d5f228f537b9eca59d8d315",
+      "evidence": "Original contact sheet 4, tile 32",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-3a8c697d7f3c",
+      "sha256": "cfce513703244c40ae7d997b4d1f7cddee3dfe41ebd4398df99106093ba916ff",
+      "evidence": "Original contact sheet 4, tile 33",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-89126406d245",
+      "sha256": "983f42b633381fcc9cfde8b3211463c528824dc30b587cad4d853d8d2cb2a293",
+      "evidence": "Original contact sheet 4, tile 34",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-388edee30e03",
+      "sha256": "dd1fff4e3c2270b87be7315aee6fccb1c1dd48004b283a0177966549387fe606",
+      "evidence": "Original contact sheet 4, tile 35",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-0a23b8198bfb",
+      "sha256": "89460f18444fe3c157570deed094818473b2fb54edb45e8652f234edc50e391f",
+      "evidence": "Original contact sheet 4, tile 36",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-db2582ea763c",
+      "sha256": "95a37e63b627322ee450ede31d64a86120dc047fe96efb2ad239acad484de765",
+      "evidence": "Original contact sheet 4, tile 38",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-be800a127e79",
+      "sha256": "1b81823f3b93d20ce53f9e0f007a9a0e0ee5155a6dbdbf8d6741a8cced04e507",
+      "evidence": "Original contact sheet 4, tile 39",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-00b50f38e840",
+      "sha256": "9086c4b6602931176ea7ac6c8b8acb6402aee35ae7787e3572da8b5fc16f6475",
+      "evidence": "Original contact sheet 4, tile 41",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-0c59f340bb16",
+      "sha256": "7f9acd00dc0e97505ac273ff7af9caac6304e0bec551adf92dba4b93bdf0eaad",
+      "evidence": "Original contact sheet 4, tile 42",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-cf095722eb37",
+      "sha256": "73ce37966da2fdd963fcc338299ef32691d3f218cda0400c894d2e640a9c3dc2",
+      "evidence": "Original contact sheet 4, tile 43",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-a35c95d69b56",
+      "sha256": "1478d8dfab24e91704264b35e1605d3e3eeafdb4174fc94a58fb17e2e30b45ed",
+      "evidence": "Original contact sheet 4, tile 44",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-97e4fadc0fe2",
+      "sha256": "424996502bf26777b0a22e908fa988101e0e7950ec40dbab5cbdc94301eeac20",
+      "evidence": "Original contact sheet 4, tile 45",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ae6692c5b662",
+      "sha256": "0488b7604791086436f4f75e0dc82dcb3eaccb7e1a662631a28fa670faa0d703",
+      "evidence": "Original contact sheet 4, tile 46",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-8aec54c678de",
+      "sha256": "0cd76490ced5bb2e1382f4c90dd9dede040c5879442a656232b7d5164e392672",
+      "evidence": "Original contact sheet 4, tile 47",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-def7b4b0cd9d",
+      "sha256": "9c525a25297c065c0b47f6529c093ebb582b13b3838ab3bdc53ddb208c8865f5",
+      "evidence": "Original contact sheet 4, tile 48",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-e2bd4394006c",
+      "sha256": "31f88541ef8acab07ed16aed331810e5d6aebe0c3e70a715aa63525c09d7a8b0",
+      "evidence": "Original contact sheet 4, tile 49",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b0262322bd5f",
+      "sha256": "75838a51dcbda8b569c0e26909d98b90ee81509a75fd89aacd416c816815b9cc",
+      "evidence": "Original contact sheet 4, tile 50",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-1a633ed98249",
+      "sha256": "8171454388816752b002561da86253f37e945fd73da7f35756c52702c0da288c",
+      "evidence": "Original contact sheet 4, tile 51",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-5e411cbb9ce2",
+      "sha256": "77d37a484a0eafc05aa11fc5dd02d1d6026a9c906486e1ebd94dcc18db834b8e",
+      "evidence": "Original contact sheet 4, tile 52",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-2c4fcc959fd7",
+      "sha256": "fa2382eaf8609720dc8145a22f67743a4c373146b576c2fca65e6ea0a5372265",
+      "evidence": "Original contact sheet 4, tile 53",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ec38ce8a302c",
+      "sha256": "1b268810761f2952aa392585abad2064ac25130bb581a4f51b00fb6a3951a4b7",
+      "evidence": "Original contact sheet 4, tile 54",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-96a0639408db",
+      "sha256": "aaf460dca9a77a2ab5450a5ea6f3dbf47c14ba17b998da041306febdcaf86ba4",
+      "evidence": "Original contact sheet 4, tile 55",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-9110cc0b4433",
+      "sha256": "8911b4eaa66f8679f1e6525fc4beda2e6f452dfd612ffa1867b7f05f5a89ec65",
+      "evidence": "Original contact sheet 4, tile 56",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-d270a3933c30",
+      "sha256": "b766ee1e3cc11e82bdcf30ab3d856eb2e69ac0bbfefdcdf7ea1feb9c1dd79b22",
+      "evidence": "Original contact sheet 4, tile 57",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-bda74ba5c151",
+      "sha256": "bfb0366cf297ea3d8e20a1e5b380a921d65055816476bb507a17912f5cc85b5a",
+      "evidence": "Original contact sheet 4, tile 58",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-56e7621d3460",
+      "sha256": "ba8cfebf076dd5d304bc704ba1eb49c115eef7e55c2d8ef3e82f3f9e9cead8d4",
+      "evidence": "Original contact sheet 4, tile 59",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-f58df7f46587",
+      "sha256": "222a5bb50c38381b09a6ce242052f570b3439acb73868c2438685f4415b2628b",
+      "evidence": "Original contact sheet 4, tile 60",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-a6e802f92579",
+      "sha256": "058b45d26abb8afcc18469edc37a07daa7f319118fb899747d7be4bd033b12c1",
+      "evidence": "Original contact sheet 4, tile 61",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c83df9eab9fc",
+      "sha256": "0df6b5f0b2cdfc9bfebf28870aea697390800fd0852767a7901ac07f93e666f7",
+      "evidence": "Original contact sheet 4, tile 62",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-3a6a7e62bdf4",
+      "sha256": "fc8b3b2234f356d371aa77348772eddcf755310066f069ec758260841dcb2462",
+      "evidence": "Original contact sheet 4, tile 63",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-2f5a0362b551",
+      "sha256": "a7d17fd1ca438675ec74e740fa779e2ceb1ad2f5d5e74759ffcca57bc4094907",
+      "evidence": "Original contact sheet 4, tile 64",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-162cad6c6ae4",
+      "sha256": "28757ff4db321b5362429d32e890904065bdd3388fbbeaec60df6f723cac316b",
+      "evidence": "Original contact sheet 4, tile 65",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-0c7ec20f378a",
+      "sha256": "7e1cb1f10e56fc92bd50aaffa7914cbf109e55355957ec2d2f897d1f29c756ed",
+      "evidence": "Original contact sheet 4, tile 66",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-8178c7c2705e",
+      "sha256": "18e3c9093591df674389ba7341f7532f37f500c60ae2925e51c33e4fea77e42c",
+      "evidence": "Original contact sheet 4, tile 67",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-20001aab00b8",
+      "sha256": "ebc2f7e105698beb76e65a4127a682dfb48371aaea4b7f1b62f1a63a55ee4e83",
+      "evidence": "Original contact sheet 4, tile 68",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-4606340d5949",
+      "sha256": "1cec3f69040ce0d83d399bf7cb110cbb117ee82f92777696fa118d00c782aa40",
+      "evidence": "Original contact sheet 4, tile 69",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-01aa21a84112",
+      "sha256": "cb76095aed2cf2b8845471e6f5dc33ea1d03eb577de91b3c4486c7b3827d28b1",
+      "evidence": "Original contact sheet 4, tile 71",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-3801216a312d",
+      "sha256": "b8f1831dcb651591bd26bc8c997aaa1cc1d6f94c5693ed143e69f87d40521382",
+      "evidence": "Original contact sheet 4, tile 72",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-cec3c0830c46",
+      "sha256": "ec25e9d2f2fb5e7651c2914c1cf523975f69efae5150ded2d60406fba15e5e85",
+      "evidence": "Original contact sheet 4, tile 73",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-5eb833a337d1",
+      "sha256": "b4c183d25fdd3d6da648eaafe970e085f59bdaf4418b3a8f693a9bc861aca2d0",
+      "evidence": "Original contact sheet 4, tile 74",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-af022cc40747",
+      "sha256": "47f107657ed613c4a70fcbae99b542f87be50d469fcadb23c18d94b7a58de9fe",
+      "evidence": "Original contact sheet 4, tile 75",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-2b18dbb46029",
+      "sha256": "ef18a4683f54006f4f8962fcc849b2baf07434e2d6c59b881428925267902968",
+      "evidence": "Original contact sheet 4, tile 76",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-bff92b570f8d",
+      "sha256": "89edc07aac22db2f8fc5f61c609cb2e669a3db07d547021dabc54993a266e2f9",
+      "evidence": "Original contact sheet 4, tile 77",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-64050907e96c",
+      "sha256": "0eab1300ca4e57f10882f6bc6d1cf357490fe941a1d796066ed0bb67a113a819",
+      "evidence": "Original contact sheet 4, tile 78",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-13b61a1fefff",
+      "sha256": "5f526f435fd3455fdc989a68a4ba13f19ca3fbf40ada621163e3d8fbeb758985",
+      "evidence": "Original contact sheet 4, tile 79",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-9f0b7642617c",
+      "sha256": "01b4847227e12639ff000a6943f1ebe24e1de3bdd5e37625463dfd6ab72fd03f",
+      "evidence": "Original contact sheet 4, tile 80",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-36829c123ccd",
+      "sha256": "ea3a5326aa68494fd7a25b21f24869e2285a30b9f7e5634f8e52af7221116e5f",
+      "evidence": "Original contact sheet 5, tile 1",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-898a92d1faa5",
+      "sha256": "4cc7904dba31c5ad889af20efb2f06cec18524ff30f0b46ece8849deb9efadf9",
+      "evidence": "Original contact sheet 5, tile 2",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-d642b37974e1",
+      "sha256": "9a2147ceaa3eaaa8ca267de20df0798a93da60b438369330141920edfa2a0eee",
+      "evidence": "Original contact sheet 5, tile 3",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c699175dd880",
+      "sha256": "b389aff2feab3ff59b39babd6cddf54c8540a0d29c83dc8d0fd774eb003b3453",
+      "evidence": "Original contact sheet 5, tile 4",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-0a23a7bf2431",
+      "sha256": "78056b4d2455e1fe11d34e1351f579c8f1d7c9bd69785945275935d8931de133",
+      "evidence": "Original contact sheet 5, tile 5",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c18309c81b6f",
+      "sha256": "4d978bfecad4cce8f0850b2b6331a39ae90dae7f5c845c392643e6106d78a97a",
+      "evidence": "Original contact sheet 5, tile 6",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-a560cb039d16",
+      "sha256": "2f6a75567d8b4fe712fd85a67880775f545941ea8652ae8aa81d7ab664257f0f",
+      "evidence": "Original contact sheet 5, tile 7",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-31beee4716ca",
+      "sha256": "4a280f53ef26fb2740c23e933568f2cf4abff031ee0f76c8ae167f5d22c545c9",
+      "evidence": "Original contact sheet 5, tile 8",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c781b69af648",
+      "sha256": "65ec5a1c27ea520747b693bc49f0249c3800a3d68095eb766a2b39cd30704a47",
+      "evidence": "Original contact sheet 5, tile 11",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-4872e955549a",
+      "sha256": "2623e87912cb349fe812ebf9f879ac29c0bff0366e2004cd31b64e75c1868fc9",
+      "evidence": "Original contact sheet 5, tile 12",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b795d3074c43",
+      "sha256": "87c2f154d1a323368d629baa875bedd940514aca48ea861b4bf3884ef2496c55",
+      "evidence": "Original contact sheet 5, tile 13",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-3ec16133a252",
+      "sha256": "af103113244a127a6954e6c0c88f99ff43d8ee472f105ce74b6b270d21584338",
+      "evidence": "Original contact sheet 5, tile 14",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-79a613f9ab72",
+      "sha256": "fff5c68665bb1e824e89a3fb88bef4ac8ad8f62bae69d3916f0c0eb05920df07",
+      "evidence": "Original contact sheet 5, tile 16",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b8b41395d750",
+      "sha256": "2896734608f04606ef5eea7c4a0f285d1f9d7f860e1fdd770d7c0ff4b5a7a8f7",
+      "evidence": "Original contact sheet 5, tile 17",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-792bf179964a",
+      "sha256": "5a5e86ff5a21c599743af3de40b487716768fc6e7f283b4c39554477b501ab44",
+      "evidence": "Original contact sheet 5, tile 18",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-42f02dc36e06",
+      "sha256": "8978fac372ccb652dbccad59c87d38980ad3c8e38f9e6e61cd8e74b3def85f07",
+      "evidence": "Original contact sheet 5, tile 20",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-6a38a96f042d",
+      "sha256": "a0bc00d83bc4cce32ecd3c91bab248f38b3f787b2359a47fe91bfca9de5fe8bb",
+      "evidence": "Original contact sheet 5, tile 22",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-58b4ef4615c4",
+      "sha256": "b0e4b3beb137a10114d5debfa65c4c23a3af7f585e739c03c616c9f52827f989",
+      "evidence": "Original contact sheet 5, tile 23",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-5150715547f7",
+      "sha256": "2c8d8028ce9a3cfcd7166117ad1f07c4e12640d4ff386801390fa2d987fe0213",
+      "evidence": "Original contact sheet 5, tile 26",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-5580d2b32598",
+      "sha256": "e444ad177ee8c849a1a77757af51b9db4e8cea73393dadf9b9391fb703f0a845",
+      "evidence": "Original contact sheet 5, tile 27",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-740fa5e9d95d",
+      "sha256": "32bf5500cdcc3fd66f08a7b2444b2fc9c70c891ad1953c47f8d0a97411eb6403",
+      "evidence": "Original contact sheet 5, tile 28",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-96d9155c342a",
+      "sha256": "f2b8b907bac00894122652ed613b4e6e288fb723271e33ff80fc8a890a4f2ca1",
+      "evidence": "Original contact sheet 5, tile 29",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-e4c1f0585007",
+      "sha256": "02efa3a0a27904d6e43f398e1aaa2eb22f2d36ed201cb61faefcfc8fec0ef02d",
+      "evidence": "Original contact sheet 5, tile 30",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-26f4dfc23674",
+      "sha256": "7b0fddaa81e562b5dece5eb9dde3436ef9e5753e9e241a6ebe0bc0646828bfb2",
+      "evidence": "Original contact sheet 5, tile 31",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-a95767d2b34a",
+      "sha256": "bc196778e0fc950d06c49cab41686993f9bb4b2e93daf3fec3695dc397a39760",
+      "evidence": "Original contact sheet 5, tile 32",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-1ad4bae4179d",
+      "sha256": "57dc0d9178a112ebf8402e70a638dca93586460a16b68200626752fbdcdb8fcd",
+      "evidence": "Original contact sheet 5, tile 33",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-41f1390a125a",
+      "sha256": "9336403dd555d06eb74c75e606cb25665579c9f02cf2c5901b28232ea0280561",
+      "evidence": "Original contact sheet 5, tile 34",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-819009f2cdc7",
+      "sha256": "15ff80d39f339f0193c8a4f24149ff59fc104087d310d35271efc5efbb47b37e",
+      "evidence": "Original contact sheet 5, tile 35",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-4a1f3f5eb2e2",
+      "sha256": "b14ac7eee7cccf0380155f259419a2433599a2c926001838e94fc5753d09d92c",
+      "evidence": "Original contact sheet 5, tile 36",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-f94cab33c2c1",
+      "sha256": "77fcb27706222f975be903276388abe137cc9a609e8526c9f65ab9c14db79d81",
+      "evidence": "Original contact sheet 5, tile 37",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-94bda1a4dfee",
+      "sha256": "eab14c3c2730e6759df5ff2aa6c02ab196edd4ba5aaf323814a537d3e2fb2929",
+      "evidence": "Original contact sheet 5, tile 38",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ea9f1f03047f",
+      "sha256": "5e5b5ff82830dd0ba0a23f614f9ce1217e6857e750b20f16f759b26bdb8b30d3",
+      "evidence": "Original contact sheet 5, tile 39",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-72f2a9a86b47",
+      "sha256": "21d7e053010baf908fa6b143f2c2d92e15ddc213462dce71935109081122487d",
+      "evidence": "Original contact sheet 5, tile 40",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-7b379bcc291f",
+      "sha256": "43386c59322b7930e3cc3cbebee3b30567a6056cbacfc6a6c8982f027e3c5543",
+      "evidence": "Original contact sheet 5, tile 41",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b6f61b748904",
+      "sha256": "125938bcdb0f371dd5da45666cc0ca341d0a4cc7f052bb9d4155feeb9afda69b",
+      "evidence": "Original contact sheet 5, tile 42",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-50b2db4af74b",
+      "sha256": "dad5761d770f59fe08b904d198ea35bbd56e498b4a314b51d18bfd2d1ce3ed52",
+      "evidence": "Original contact sheet 5, tile 44",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-4c7654bed601",
+      "sha256": "bf7dffe0883b5f0bb4a259c485e7592d16212318277e6458d368b626a906bb02",
+      "evidence": "Original contact sheet 5, tile 45",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-fdc417036962",
+      "sha256": "e8a8e2b1bda9cc934b17c0323f4986da952b60e3f5a587ed8f60888256c9e653",
+      "evidence": "Original contact sheet 5, tile 46",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-d5e3180cc02e",
+      "sha256": "c9c373a8230bbf32ff90dbb2403a5d3fc02dd74dcef26f6dce13c4ab95a99289",
+      "evidence": "Original contact sheet 5, tile 47",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-3c11856cdb13",
+      "sha256": "ed21abf1fd1213d36d8dbb13b9c6725dc93552bcc5a77b78374715b4ba3a6fa1",
+      "evidence": "Original contact sheet 5, tile 48",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-650251d1ede3",
+      "sha256": "2814690a47156c0beec7d11a60d3850f01ac5a4191d02a98691d00c9123ff30d",
+      "evidence": "Original contact sheet 5, tile 49",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-784d251a2fdc",
+      "sha256": "211d52c69428d559a5e8326a695ef2e28f2501eafd0fd53582695fe514dc162a",
+      "evidence": "Original contact sheet 5, tile 50",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-6cf629429aa0",
+      "sha256": "3fb190503abdb6972aa741c57bb3d3a185e8957fc8f1e122edcb5fd0b876727f",
+      "evidence": "Original contact sheet 5, tile 51",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-62539cd73ebc",
+      "sha256": "c26cb5b3cf5b9806ee6d71769bcf24e23d9304d474be12ec5c572141b9677f10",
+      "evidence": "Original contact sheet 5, tile 52",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c463502748b5",
+      "sha256": "5f13c39baf7405f071b1f7b919b8d1c3c52bc9a5c7b60ba431252a174b846145",
+      "evidence": "Original contact sheet 5, tile 54",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-2f8429eb21b7",
+      "sha256": "deb788f36885514409147523f96f36d9c1b7515489872b15426d6b0297fa41f1",
+      "evidence": "Original contact sheet 5, tile 55",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-1fb140c429f1",
+      "sha256": "cab4fa27472bb4047a8763710aca159a275e1dda1355c0e905919b31e0b5a066",
+      "evidence": "Original contact sheet 5, tile 56",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-a0d8ffb1a4a8",
+      "sha256": "770202f12b270d2bb86439dfad61ef6f636b96c333da9a587de0a186be959951",
+      "evidence": "Original contact sheet 5, tile 57",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-7b5510576216",
+      "sha256": "b12be9c7bdbe728166dc699da26272f7c8d5b9eb4f91f37a7ce066a68816a8ba",
+      "evidence": "Original contact sheet 5, tile 58",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-9406265b56e6",
+      "sha256": "5123a35a1ccdbdc1a77bf52eba88fedafba4c763d8779c8a213e476ae199f75e",
+      "evidence": "Original contact sheet 5, tile 61",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-99b15217774f",
+      "sha256": "3e6e826cf98ae26028a7c4a6bb0a5e36b2c5847109aa070727cde7373ab29fce",
+      "evidence": "Original contact sheet 5, tile 63",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-3c98d16ad79c",
+      "sha256": "bc65db6137f5ec9eae6964212ee3bde42434f2ee6de58e64357fd092ed8406fa",
+      "evidence": "Original contact sheet 5, tile 64",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-6ef74d20ccc9",
+      "sha256": "c1470d2c129fdbccf8b1f77db1b3b2f6c7397f705d3839a31a12b38f159da820",
+      "evidence": "Original contact sheet 5, tile 65",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-2e929ab63cee",
+      "sha256": "05e604247efdbad8c0ecf9794e4e497f07eb4578a7b6ad7c3797d554bebd15e4",
+      "evidence": "Original contact sheet 5, tile 66",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-bde229d63269",
+      "sha256": "462f918e1e59f66776671ccf0c3b11883af4303bd06b34c258b7c574da0bdb65",
+      "evidence": "Original contact sheet 5, tile 67",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-8b9907f6aceb",
+      "sha256": "136b1f49a0e2c1e01ffc5a5b0b71a65b97055404a90daa0b1efc45ebae9a7cd0",
+      "evidence": "Original contact sheet 5, tile 68",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-1526e12a6040",
+      "sha256": "61b7dde487ac7801be2bf09325cb69045503cb0b0877274b5a9fca21f8e6f1ac",
+      "evidence": "Original contact sheet 5, tile 70",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-6dccfae488f5",
+      "sha256": "fcdc1aca53b5cc615f3f795e3d9f182b4791f60705bd5afef7ca8723bf4add9b",
+      "evidence": "Original contact sheet 5, tile 72",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-3d82314fd256",
+      "sha256": "2142948c4bfdc6f65d9958eefc8d1bb062abd51d8c54e6b57ebe4acf4dc3a8a8",
+      "evidence": "Original contact sheet 5, tile 73",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b982bd12eee2",
+      "sha256": "09a7b028f7ae1cb72e17f74e22bc064c709d4f97498c143e383950c81e2cd380",
+      "evidence": "Original contact sheet 5, tile 74",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-9f2e5c25e736",
+      "sha256": "ffb118f4c6b214c47d6077693464bdf5b7a910f5d4ea437ae87c4e11ac5f7c28",
+      "evidence": "Original contact sheet 5, tile 75",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-6ff3292f357b",
+      "sha256": "e6280ece4f3cb24bf0e9f38600b136ffd09ca9b7837e9dba846f5fc787ab9c17",
+      "evidence": "Original contact sheet 5, tile 76",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-eab6b0036840",
+      "sha256": "b09cd5d17368e66e665f148d13d28e157b6f69dfa00c148ab4bc2a9b4be3e7d6",
+      "evidence": "Original contact sheet 5, tile 77",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-440f33ab55b1",
+      "sha256": "0c515ec1afe58387d10648c6fc1470abc1a22df27faef2c8e5ccf0da372bb516",
+      "evidence": "Original contact sheet 5, tile 78",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-5bbe06a35e73",
+      "sha256": "1b2e813424cbea4f92528193b07afbf5738519600e060b3db7eb5feb8d6e2220",
+      "evidence": "Original contact sheet 5, tile 79",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-0d0be7b05f51",
+      "sha256": "b6e8f6224948f200edc3e2285dfce2c1ffadaa4f9bb76770c38317b0cbc12222",
+      "evidence": "Original contact sheet 5, tile 80",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b768fbad8558",
+      "sha256": "2755e06681bdc8eae0db106a423bce7288f208d9585c737cc33220d13620cdce",
+      "evidence": "Original contact sheet 6, tile 1",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-0c8bbfa6dc59",
+      "sha256": "c38b665fe3eea67a52c9e9f90bbe8dc4a2fea1765733ee62fbe57614aab6ccfc",
+      "evidence": "Original contact sheet 6, tile 3",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-5d727bc55765",
+      "sha256": "7f467320ed66a0900c8cb33e44b9178539b5cec20b6e0239920dcb7d9c6d913d",
+      "evidence": "Original contact sheet 6, tile 4",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-d7af54f71d7d",
+      "sha256": "1446fb593c8bc396ec11293029f4bc7def52b2e4228544afb33b873710e39528",
+      "evidence": "Original contact sheet 6, tile 5",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-cc38c11f4c3a",
+      "sha256": "e523e63f9d5b4d17e6f0656685ff6a37b6682788804da3fb2515c46f42065c13",
+      "evidence": "Original contact sheet 6, tile 6",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-3b2e2298450a",
+      "sha256": "4cd1501cb9dcd1efefb4ab63751d84340fdfbf37cfa27034933d22029b844737",
+      "evidence": "Original contact sheet 6, tile 7",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-539579e054ac",
+      "sha256": "4aeba29afb76176cae3002e8a67526b7048b79f07fb9dce3d3fecdee7f5b986c",
+      "evidence": "Original contact sheet 6, tile 8",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-f273ad356a9b",
+      "sha256": "8c92de0b2ef8c802b1e088f0100216c9aa50bc4e22e3c934996f7f3e93e335c8",
+      "evidence": "Original contact sheet 6, tile 9",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ee24cfb0d732",
+      "sha256": "8467534afa5d536f4ea7ec3e4aee8d224404c2fc4ee9d00cc4b91ce3cc5b1fe6",
+      "evidence": "Original contact sheet 6, tile 10",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-67330742a5bb",
+      "sha256": "b5c98becb0d31c37fdf4f436446c302c6678ca350d340b057513a7a8f553e59b",
+      "evidence": "Original contact sheet 6, tile 11",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-d84ab795f258",
+      "sha256": "d0e4dca1752d2e6fdfdd0585e20919c4b4aa6c8918f9bced325b33a60b8a020b",
+      "evidence": "Original contact sheet 6, tile 12",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-29461dc6da24",
+      "sha256": "0af0064b4baf30d63de4c067e5d2fd72e88be07f152f6a684aa1f09efc6a1500",
+      "evidence": "Original contact sheet 6, tile 13",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-67b525a6fff5",
+      "sha256": "af0d8464df41d0528f9242d8ee5d648bf764474dce0fe4b2d3e7df78c8bffdb6",
+      "evidence": "Original contact sheet 6, tile 14",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-02e4c1fa312f",
+      "sha256": "cfb8b1ddf707d22fee496be64404673f0c4c6e0d0afff63edba253d44986a638",
+      "evidence": "Original contact sheet 6, tile 15",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-fe227c09cf13",
+      "sha256": "f8349f3a914e686b0d97a96af614ccbc11f3afde12aa9ea02d984a41fa2015f0",
+      "evidence": "Original contact sheet 6, tile 16",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-7740804597c8",
+      "sha256": "f1f84843c6268b27dbfc104d5207e755a3f4eac94f35065a8b35f21d60392be9",
+      "evidence": "Original contact sheet 6, tile 17",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-a0d5ddac9d8c",
+      "sha256": "38a6a8ccd3ada774f3c201d03b404eb2416e413b16a7b5d382d2f8bc9a2df03e",
+      "evidence": "Original contact sheet 6, tile 18",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-70701b164d11",
+      "sha256": "6529c0621d865c9d12ff6d980357c2316784a4187abaafd1293d6ea0a95467f0",
+      "evidence": "Original contact sheet 6, tile 19",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-a9a71ea0ccf2",
+      "sha256": "249b53e7fb49b38af3f1ea337158bfd18d926cbccea68950a6acdee50cf43f5e",
+      "evidence": "Original contact sheet 6, tile 20",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-e35f523fe196",
+      "sha256": "2f65e35c3bda4d48359317a922c3abe72791c95281f1d6dc41c0e731826a4acd",
+      "evidence": "Original contact sheet 6, tile 21",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-a2884bdf5378",
+      "sha256": "8a26fc5990d8b98ec83fad4d20e1d926a68cd2f5a792a40876d3372b312ae050",
+      "evidence": "Original contact sheet 6, tile 22",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-61e1645848ab",
+      "sha256": "8f0e4f1109791cb97700691d942c616c628b1a12d30e7a60635fb2b70d1c2664",
+      "evidence": "Original contact sheet 6, tile 23",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-9f2ab534f415",
+      "sha256": "fd823d4b9f6cdede2061be3265b9bd3298083e8ae520ba62273417c2aa88d0a0",
+      "evidence": "Original contact sheet 6, tile 24",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-85aa349bd230",
+      "sha256": "4d866719f57085a40f67d5ec435cc887596f12ce4eed425f765a03daa5aa6a35",
+      "evidence": "Original contact sheet 6, tile 25",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-9714f6e83084",
+      "sha256": "b84aa2db5e80d818a73696ef9adc03c3590ba443e5bbaba057a21e28ff5ec450",
+      "evidence": "Original contact sheet 6, tile 26",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-cfe83a049811",
+      "sha256": "91ffab0ae58fe65070aef43436901b0282395338c2fc5b622a9fae3e0a1f4727",
+      "evidence": "Original contact sheet 6, tile 27",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c1c9b9b01ef2",
+      "sha256": "09c0284e78dc34dc97439d8a90bf243ee1b3b34155cb9d49d3f714af9a1fcce2",
+      "evidence": "Original contact sheet 6, tile 28",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-799c3a32f939",
+      "sha256": "377acbfbe3c7695672ccc0412adb694f0e190226c843a04f574cd9bb18d016d0",
+      "evidence": "Original contact sheet 6, tile 29",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-d4f210f340c9",
+      "sha256": "34038f90e74ebdfc4ec5219d78b420c572b593f46ae3781b3b64f871358edaa3",
+      "evidence": "Original contact sheet 6, tile 30",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-cf4b70837d3a",
+      "sha256": "d8ab078cb3368a9d8a51a1f3d5699a543821d9b9d469908ae456818e4fbb0e37",
+      "evidence": "Original contact sheet 6, tile 31",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-094d62795ff7",
+      "sha256": "925fd9684bf54e4e32263fa9c948c9013ba2a34cb028fbd71a9453fd1ad91072",
+      "evidence": "Original contact sheet 6, tile 32",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-007343eb27a1",
+      "sha256": "d9054e8cb75ea823009b79966ffc737b183f55e254af13720921d101c20e6b45",
+      "evidence": "Original contact sheet 6, tile 34",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-65b23b4e4f92",
+      "sha256": "8b842911bcf0e35c5d3e28740a3d3134ab150ef69af85ba0909e848c3f7299b3",
+      "evidence": "Original contact sheet 6, tile 36",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-67552f0af760",
+      "sha256": "e107876cf9db75fbeb7d1a81bf63ff91de54dc3e947787bc44e3a23efb7c4bee",
+      "evidence": "Original contact sheet 6, tile 39",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-9ae43cdaa3a0",
+      "sha256": "ccbfa0bacc3eab17181c26d67d5f4c6c8ccf0d52eea5b6f923fe6d884aa4fd73",
+      "evidence": "Original contact sheet 6, tile 40",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-df2302e2e764",
+      "sha256": "69e8f3e8c6b905a13d0f7369cf9bf06b81734b66593e7baa4d13d8c731c50731",
+      "evidence": "Original contact sheet 6, tile 41",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-9edbaf0e3391",
+      "sha256": "49dc0095cbf4330012a93f989af475680b87dd82346f047c7a2e32a925e5f1b5",
+      "evidence": "Original contact sheet 6, tile 42",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-3d2ea4d7e933",
+      "sha256": "c1fc2d7b0205752c892a45820fa81d69a666cba6f4b5d0351fbb4e4d51583b21",
+      "evidence": "Original contact sheet 6, tile 43",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-e8c3458843a4",
+      "sha256": "cead578c11148478666135142c114777ac2d30455320662e8c6adde84ca7ee31",
+      "evidence": "Original contact sheet 6, tile 44",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c913e7f4d0c7",
+      "sha256": "22b74bf564de218ee560bdf631a112944d95497111ec040f282fca57a37e4146",
+      "evidence": "Original contact sheet 6, tile 45",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-f087669d69cb",
+      "sha256": "f85f70e7199d37f183f6dde160cac9b85a5ed2b30dfe59322d3ff3b50f3de833",
+      "evidence": "Original contact sheet 6, tile 46",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-1750b6dd3c77",
+      "sha256": "fceff9f68557df796e629187bf7cf696156488ad7b15e9f76812a0382851a267",
+      "evidence": "Original contact sheet 6, tile 47",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-7c656723abc0",
+      "sha256": "b0d48a10e3863f2e20881787c01a7d41ef71b6585e9303cf52765fe81662eca1",
+      "evidence": "Original contact sheet 6, tile 48",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-9e9172111447",
+      "sha256": "648378269986fd082d55b3230787b895b9a8e0712a5d563e2aa8063ec6f52589",
+      "evidence": "Original contact sheet 6, tile 49",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c81efe214eab",
+      "sha256": "6717d4835449c5b9f6b5cb4945d0472d31fca0ccfdd4fa2982422536f436867f",
+      "evidence": "Original contact sheet 6, tile 51",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-7e983c40c84e",
+      "sha256": "bc17d62091acd70f9e1fc375e4f2270ab58bbf921d707f0db91ae0d2c08bf72b",
+      "evidence": "Original contact sheet 6, tile 52",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-6a918d9ebb9a",
+      "sha256": "51d612eff32089f02f377b1066c42007e5c3f5764e23fa7fcf706cf260d3afae",
+      "evidence": "Original contact sheet 6, tile 53",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-d68fa664e8fc",
+      "sha256": "4abfbd2887207515845e3268dd5c18c1cf438ac3c8a3b7f6a9aa9e1dee8f3b99",
+      "evidence": "Original contact sheet 6, tile 54",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-d2b2590b8962",
+      "sha256": "1a885c19826b1eb6c313abdbb97bc14bf9c2d8db95e3b108c0242d2c62a8aaf7",
+      "evidence": "Original contact sheet 6, tile 55",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-bc3abec56237",
+      "sha256": "8216ad230097de230eedcca2e113c1bfbfc273513e0e6d0b084e83fa0af799cd",
+      "evidence": "Original contact sheet 6, tile 56",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-44c140e705d1",
+      "sha256": "47e09bab7739ec02ddd7a015c2be9bead633bcdb770f5bb17fb7ac07659ac971",
+      "evidence": "Original contact sheet 6, tile 57",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-15fb25e69af1",
+      "sha256": "d41f2308cd8bc8f31af54c688dd004bc82fce7bc02debd7a96f89821a2452eff",
+      "evidence": "Original contact sheet 6, tile 58",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ecca6c9fa226",
+      "sha256": "3a090577f811c9907d1e084c14d32cf11fabefe6b5a4bf71e0d2c19c24e8f59d",
+      "evidence": "Original contact sheet 6, tile 59",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-12052e1ab13c",
+      "sha256": "64609757d0173f370edb3f06c41a036ce6b697f297da5ac89be9f41ce408534e",
+      "evidence": "Original contact sheet 6, tile 60",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-7e7dd74f98a0",
+      "sha256": "66ff7bb84b07ff8e1ee7b702de264415bbf99e1baa8c739dd32a2cb37ee0e6da",
+      "evidence": "Original contact sheet 6, tile 61",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-d719ca02b91d",
+      "sha256": "4b6479a848555f0c5ea968d68e87a4354563d8be6aa55aaabbb00abedb9589c3",
+      "evidence": "Original contact sheet 6, tile 63",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-1ea1a2abbe84",
+      "sha256": "e4013c16370c3f6abb024224b01cae6068c95c005239ed879eed4b27e929f971",
+      "evidence": "Original contact sheet 6, tile 64",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c3d22fe94535",
+      "sha256": "5b5c3149e21788011bebca4a5422fad8c2eafc4594cbcccbb85e2896caa580bd",
+      "evidence": "Original contact sheet 6, tile 65",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-7acd618f19cb",
+      "sha256": "358aa2baacf9f2ed1f7b2c2717e96756dcc84bf2200636c6e2ca5e5498376fb2",
+      "evidence": "Original contact sheet 6, tile 67",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-eb519d86d33b",
+      "sha256": "92a37ea1cc78f50b1c1c77b4359ca14d3d15b6f9bdf0bf8111c3d63fe2eed743",
+      "evidence": "Original contact sheet 6, tile 70",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-0cf35395e2dd",
+      "sha256": "890070879f49ff44fd5dff45f74960850e54996c2852442c9f5cf525397746a8",
+      "evidence": "Original contact sheet 6, tile 71",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-e88a0af3060d",
+      "sha256": "7c39b6b33df66fbfdb6452a601696a24ceda64b3d6f36a603e89d59ce33b43de",
+      "evidence": "Original contact sheet 6, tile 72",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-95525e0df0d6",
+      "sha256": "9fe7b599e15af128c34d3d236498059ee7e7826d60117ee36923762462c5a2f8",
+      "evidence": "Original contact sheet 6, tile 73",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-bdd27a9c4678",
+      "sha256": "b270bd509c555a4a070ea14b24630ca349b29e0366aded0a06c2f1b57d392fe4",
+      "evidence": "Original contact sheet 6, tile 74",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-f7970e8b976f",
+      "sha256": "b607ba58b79589c068d90647da39f9c81e9c759183f3c2c5971c647b1373e7bc",
+      "evidence": "Original contact sheet 6, tile 75",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c34487f6ffc9",
+      "sha256": "9bc8f867e4fdf783fd76af7968e7ecba5717ac2cd89c0b0e44e4fcbd43937258",
+      "evidence": "Original contact sheet 6, tile 76",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-d12c214fd731",
+      "sha256": "bc8cdd7e0433c101ff63f797e1a97a49351fdffe78f56784ca01090ce6098a87",
+      "evidence": "Original contact sheet 6, tile 77",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-352b11c597f0",
+      "sha256": "797a34bea8fe380adbca8830ad0630b3e41fea8763569c416e0b9ecdacf632e0",
+      "evidence": "Original contact sheet 6, tile 78",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b6cf76bd9a5e",
+      "sha256": "1bc2596ee598cf430051f5bf9c0e6eb87ea972145d719cf832aac831f0809f8d",
+      "evidence": "Original contact sheet 6, tile 79",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-efaa294ed45d",
+      "sha256": "d59e84967c3dc25671a3a062807ec4e207f5443cb9efbee95b03842637c0185d",
+      "evidence": "Original contact sheet 6, tile 80",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-39c39f47af9e",
+      "sha256": "a55e0a0052f32f3515010aaa86ec7d99939c0d7d62e0271ce2b7251bbe7658e1",
+      "evidence": "Original contact sheet 7, tile 2",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-e260b7223d38",
+      "sha256": "ab65d281b5571123d3ef756dc5ec4cfb49d636c903de173d94b482014b3407c4",
+      "evidence": "Original contact sheet 7, tile 3",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c91d48dda605",
+      "sha256": "4ccacd01db8e1c832e65ca1fcf381dc727bfc5f41b3bd314aa5a7712f4c98863",
+      "evidence": "Original contact sheet 7, tile 4",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-501700c524e0",
+      "sha256": "6b4dc135a8d42a48a2c4479d7af9e93ae1cc25c46b97738c0b37106ae61a187b",
+      "evidence": "Original contact sheet 7, tile 5",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-83c6285931fa",
+      "sha256": "b2274ba52a550754698bf8dd40a761d364f4c6ce7d577e8e1a527d689ec56c48",
+      "evidence": "Original contact sheet 7, tile 6",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-e801f5722093",
+      "sha256": "56b7d5ff33feaba3b80b28ac84b91630530d6337deeb5e59d855b3bbbe8002fa",
+      "evidence": "Original contact sheet 7, tile 7",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b1578fa27afb",
+      "sha256": "ac26c5deda523e13b65e4a049b14e2a1a0fcb2506d8d21d26c9bec306a35d098",
+      "evidence": "Original contact sheet 7, tile 8",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-6a42e7e6e65b",
+      "sha256": "c0bfe9908f240962ec88251862c9cdd1cedb0c0e8cb678977dbcbb4378aac858",
+      "evidence": "Original contact sheet 7, tile 9",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-200759497396",
+      "sha256": "41fb2a1953c1818c54437e1d9cf02a80bb337e1cabd3e771d2e760f3b797145d",
+      "evidence": "Original contact sheet 7, tile 10",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-bbd6c8b80c0c",
+      "sha256": "2a844d94af17012816500464fe10838bed6953de622f8338da116e89b8af5e4b",
+      "evidence": "Original contact sheet 7, tile 11",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c3af44c58768",
+      "sha256": "a707606a020d7f0d20679050633bfb87c2c7d0d2e83460f6747dadc05f9406f2",
+      "evidence": "Original contact sheet 7, tile 12",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-dda283868ca8",
+      "sha256": "766c580619e101b986f1e26be95a1de2a1fe613df7f1e3ad984b90f4d5fcb365",
+      "evidence": "Original contact sheet 7, tile 13",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-439ea8fd952c",
+      "sha256": "a0c1de7ccef9e2bb9273b2790a6fbe67690ace7d4a45158bd5ff9cebd482c6aa",
+      "evidence": "Original contact sheet 7, tile 14",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-f3c3c7d77316",
+      "sha256": "695a177223571abd7dcc151786e64b14e31687711164a22f08ef329bef4f4c9e",
+      "evidence": "Original contact sheet 7, tile 15",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-be56dff794ee",
+      "sha256": "67011921d197e6875ad2a5461bdfe6e12913900fbd587a47a115252548084940",
+      "evidence": "Original contact sheet 7, tile 16",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-7699775925f2",
+      "sha256": "a54e671f7645978c5446cbec00bb214e442bd8084d3dc57bca7fb3599d2804b1",
+      "evidence": "Original contact sheet 7, tile 17",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-dd23361757d7",
+      "sha256": "a0e6c6b5764278b6ffd372b1d7b59d3805b64279c143dfa88681a4c06d3098da",
+      "evidence": "Original contact sheet 7, tile 18",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b21a4bd8a992",
+      "sha256": "875ced8fde773f539536bbf35db57726d63b624a74c073986cdfb9e8db9ef21f",
+      "evidence": "Original contact sheet 7, tile 19",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-74f367986573",
+      "sha256": "a3f69a896937047d7babb28152714f1069fcfa1bc4712320d68c444df649ba66",
+      "evidence": "Original contact sheet 7, tile 20",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-46f4033618ad",
+      "sha256": "cc9a0fffa89a1052822ec5825c18669183585a389e6f77e52ffbc7ab1095de44",
+      "evidence": "Original contact sheet 7, tile 21",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-8d5d268fd80d",
+      "sha256": "0abe24e20ceef25c75ca6e96980e9310663c30dc539c63c01821b0afaf6851f9",
+      "evidence": "Original contact sheet 7, tile 22",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-14af7eb9ee88",
+      "sha256": "7854f8e5968cae152c99de7f96697ce51e707591bc43c449145ed5614399d857",
+      "evidence": "Original contact sheet 7, tile 23",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-856cc6a61289",
+      "sha256": "814f62cf442e422dfab94b9b468ca7f92fcee0ff8986d41c1a9379359e25bfd6",
+      "evidence": "Original contact sheet 7, tile 24",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-8f5fdb974975",
+      "sha256": "565e07defabbdc768c3a54284db72b63b773d83f61e86c1fb72d66eeb98cd4c4",
+      "evidence": "Original contact sheet 7, tile 25",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b094851e11e1",
+      "sha256": "f310574cd4e985485c46a448b1b8a41777a218f746842699c1fc01ab343c9b39",
+      "evidence": "Original contact sheet 7, tile 26",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b3f234f08b91",
+      "sha256": "97a448883bbcdfb1b4f09c9f129bb91e4c2e8db140fcdd70e50ad74ba6f41531",
+      "evidence": "Original contact sheet 7, tile 27",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-7a269bad3779",
+      "sha256": "58df568766edd81845d9ab5fcd9cb058e3f36bdde04891ba3134688b74d27222",
+      "evidence": "Original contact sheet 7, tile 28",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-88ae1b63698a",
+      "sha256": "b4c09adf5ea0a8a48f543e7a5329fcc516b24e92df076fcc80024b9c7b168cc2",
+      "evidence": "Original contact sheet 7, tile 29",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-58b1dbc95a8d",
+      "sha256": "bdde7899b152fdc0c59aa13f6dd81caa87cdf08733312da8ace8ec12f1e4fb96",
+      "evidence": "Original contact sheet 7, tile 30",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-48f86aeb23a7",
+      "sha256": "48bf48ad4be5c3461d8b10457de70756b75a53f5918ef72fdc11905fc6ffeec0",
+      "evidence": "Original contact sheet 7, tile 31",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-1b7dd5582b24",
+      "sha256": "b3469c44e8076ae09f7f7510f46f3bbc789d017dc9149770d92f4654e5850e71",
+      "evidence": "Original contact sheet 7, tile 32",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-369f171dbcb2",
+      "sha256": "cb7344affb2628700ff15e3de8b970c0e99b4d8ecd8a6bc66099b0b73c9a8b49",
+      "evidence": "Original contact sheet 7, tile 33",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-dce97e880557",
+      "sha256": "a3d15d4a15b5f293e463060150068cf4f03d77aea91d64643e08626292644346",
+      "evidence": "Original contact sheet 7, tile 34",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-8af15af65e0b",
+      "sha256": "1ace577711787f5bb1a6e57bae7e44bb67dee63abba50bc97cbfdee0f9a711e7",
+      "evidence": "Original contact sheet 7, tile 35",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-98f3adffcfd5",
+      "sha256": "9ff4b0a27f34679182e4fcfec429d7ceae746170ca0d38712bf2fd2b6cfa5d51",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-451a46b1cd1b",
+      "sha256": "499ed57c93610baba7187a2679f94bd3ee22e546b1fe9bbd44fce82af88696c7",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b9f0144e2861",
+      "sha256": "50937cd6a9d5594d361122e696174c7a2580d39bfdc1da03d8538c249cf47e6e",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-e43e42131fb3",
+      "sha256": "7a792c265ade74caf50dc1ae7a19d1dbe95f1a807f90be7896f505760abbd861",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-1073b373b119",
+      "sha256": "ddd58f8c0d019b34cd13bd150104ec20736c94b3ae2149bb8af7e9ac49bdc039",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-53f378841b5b",
+      "sha256": "883876bf5dfb62f4d45a52b0887079ae667f01314a3d10c3a8bab815b51474b2",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b88ddbdbf557",
+      "sha256": "87a3c326920d54f294fad46a0852e797a18a83b2889fa612f7002127c211a479",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-a154bd1e0af7",
+      "sha256": "76c2a087baaedd7719a554576b6702c2fb6654b94b35750ccaa3096335eda139",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-0a9790a1ada1",
+      "sha256": "93452bd8bb9893e3c3c881c41d4bb9019609f7d5fac1bc9d789615652ad3bc15",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-7b1a11ece1b6",
+      "sha256": "e954789be908b4b468e9fa3740ceeec4cee10284f1d7d43097d742a24eec4ce8",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-1216783164aa",
+      "sha256": "1b99db79dac8ebc076e9ab4b90718138d07bf4ceb1f555c8892d7d65cfca7fd1",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-0f0e8194ec45",
+      "sha256": "19db396334834ecc21cd7990eb85325713d34e1dc332ac1075ddeac804e8e5b5",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-e5c0bf56e080",
+      "sha256": "0e783839c24804a057dd6e9239cac37cea773e7ce32c046d7a91e8019c254ae0",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-1d954e8688c7",
+      "sha256": "6601d8aaf2daf2161640895d8e3421dde511faa84f347a725d5debf9bc6601e1",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-04ecadfed6a0",
+      "sha256": "c24e76e89342799f76ff66545f9f93ff8005038e55ad33223c19c9fd879a6209",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-d622c39673a4",
+      "sha256": "bcfeb6164856d51e51fadbfbcff8b07cd2a92bbdc96a9616b014c9c25200e35c",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-d2133ba7db07",
+      "sha256": "d7d044f6ef28b7141492b15a06d6548fee71a53ad6034262092fa3615cc1e4d6",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-fff17da8e5ac",
+      "sha256": "fdbed159e8793fa4625cccb387b433c2c4fd25a6ffa1dd0fe274bd6f0e9900b0",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-7ddf78424214",
+      "sha256": "329976840c99bfc434325f5f548371dcda755fb6f2890d5abc7ae61d077e09e0",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-687393fb525a",
+      "sha256": "7584d0f42ed4afbcb19b9d49d1dfa6dd8a3cec08f5c722dcd147653cf1eb1b5b",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-df0f88873583",
+      "sha256": "a46edb5002480462d3ab78c50cc8f0640ac4feb591e5772d3b5dc86d0633860d",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-efd1991f0084",
+      "sha256": "f81badd22ffdc57f9c458417fd269f5bc3ad3fb431828e80b03461153ceabaa1",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-f3afb14ad787",
+      "sha256": "b93de5655e26ce53c063289db6c350f8ca40af2f1f2833535d319887c88b7d98",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-9a3155bd71aa",
+      "sha256": "5eacedaf2c182cc33dd48423cf21fe8f883e921795e07caf2bb23b24ca59c804",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-65fdb3cdf656",
+      "sha256": "154262cacf05f1321e4428c3221faa3e13a570c9fc19754f102260cc3f3b8f59",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-f4769b325e7e",
+      "sha256": "879ab06c6c232debe42e6883ebaf7c40b6d5e403eacc5bfb11fa4126fbbfe841",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ba93c6bbf5b7",
+      "sha256": "f1ff79f51a706387864557e95c9bd087c8801e55709145751c80325de66ddeee",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-887889622d9a",
+      "sha256": "3570e9700c1e77d015f743de83c4a8b70928c9888968a385ff81ef009bd5346b",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-80aedf854254",
+      "sha256": "b4050935d8d65497087194e144e294716eef566b70d18709ded17f880a668b7e",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-060b618ca2ce",
+      "sha256": "78c8db108bdc3e6f1ecc806bc6ac778af8e0076532a0f8a6dabe63ece6f3f5bd",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-dedd3d62c5b6",
+      "sha256": "20584e66dc645d7919322fe0f089d39229e229038fe31f462ccf08944cb1ef4a",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-307473b73423",
+      "sha256": "ecbec1f8949afec28b2b67dfe72e9bbc73796e96f480125b10b8fe4714c19e57",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-694bc09722fe",
+      "sha256": "68aad0f725a4d385626226f2079e2409d60395f4a2c93677168757ba30ebf1b5",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-886359b78eeb",
+      "sha256": "d3a2d3413170a6f600aa1dc82ab0ae299e3c6738687c7b0957fdafc8b71c3cc3",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-067864d004a5",
+      "sha256": "f407afbc6976e1bbd48db83feec9f39e1d9b787b83785e68cf39d12b2dc95256",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-3e0fc6da7f5c",
+      "sha256": "5343136587f40b6a16eabdbdc496bbf8cbb44774930cdd127eb4dbf317edf9f4",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b1f5c418b906",
+      "sha256": "5f1ebc7d512983deb525b7369c920d8151e45d502b78b15acf1690ad397d7978",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-fd26ff99367c",
+      "sha256": "4c18fe99b844c32992921beddcf23bfe2540f626c8871a45adc7123dc9827db5",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-9f729543455a",
+      "sha256": "793d72310e61318c7aee6f35e8102526878c95e3f40d4878fd93eb1fcbf02561",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-f3d376d1a74f",
+      "sha256": "21ef9456e45014762c3be7ff6231a1199ba2def73bd32b45b9385a55a05ab063",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-f544f570c470",
+      "sha256": "92a407e3c38b7e10d0a708f349129effa6edf000c0b4b461506dad6b3821de1e",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-282b1f76ead5",
+      "sha256": "980e929ff46530efbf73821b44d76f0e04603b8815d6c0168aa549b3421a1752",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-2d295aea8e50",
+      "sha256": "452b267cf32ec8b73e5ebcade05a90ba9e9dc552dbcd60db782e8fc7f61159ab",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-1b3847b30f6f",
+      "sha256": "ad91b18ccdd8842a849d98c6d55e84066eb801b69298b59726704ca763c41634",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-2096e894f02e",
+      "sha256": "f5f7edc559b31b4bae71078e5eb7389c583fb2a65c77a79fcf1bff9749a402bb",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-b61368625f37",
+      "sha256": "c7202562545ef9704409273f980b3ca815030dc942b3c0a6ba8f86128b9d74c7",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-f0dfdbae8a0f",
+      "sha256": "33dc0a1b1cb603cec8a4383c1946e1940e7b3a2fb24f295f306a892a5dbdac44",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-cba78291518b",
+      "sha256": "3c0914a973426c2b23952e0a296d1d635aafefa13d6f12ff84adc23917241656",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-5d7b57f813d0",
+      "sha256": "2f9e8de39f18def3e6503969d72f1769c2f985e7b81ddf03332332d069975ea4",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-3096e2a148ce",
+      "sha256": "9d8893cb35ccb2d2c85e9bbacc398eecef74470f308ad320264e1a815be97532",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-624b0e3a08a5",
+      "sha256": "2e757681d49237a9c2947a372d02387ea6cb4ebc53eaf499da4ba0e980736345",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-6b2558add2e1",
+      "sha256": "36ef21d378aa88d2883bb412556f8f47dd2ceed742bf1479140dbc6e7a6038d8",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-bc97a6c39667",
+      "sha256": "9c0d4eb34f8f7285f1fee31b19547f236b39910d483c41f945850237c7291b1a",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-98abe0afecf4",
+      "sha256": "3786b94589f18f8c247191a4c51ea778e2e316b3da8d71e235b9f8b0fd7b0a24",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-6c72656d120f",
+      "sha256": "e0b006e0684cb7087964399d08dd11965badca72f950ddd63e0df00df9ae9ceb",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ad29d44c33cf",
+      "sha256": "b039bf4088817cabe9c17ba50bd11663bd98024c5862e931766be6b9f3f1a602",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-9945d590bec1",
+      "sha256": "33320e8682fc16b048e8e2c5e8ac7661f279276bf1aaed9081c9290a0b2649b9",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-34b955363562",
+      "sha256": "03e4acd67ebc23e0db3972e50bfd832a2cd6404c6c23a27733f96fddc4d860f0",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-70e9212519dc",
+      "sha256": "3428376c20fba224812bf82683fa8888619e15841760ba9b83291fd523d731e5",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-5ada7ab70f39",
+      "sha256": "329832c58f5f915b281d3b49d7d52afb32bfde248408d4490e63d5616899e687",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-7c6f0ce24e87",
+      "sha256": "8dce59d36572af4a56f44c0f15684dabebce89d0d4aeb445485b0c7d29cc8f5d",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-595a3654042e",
+      "sha256": "320f49116919c6d41f761be5c950607ac0892d77e236025d8429f2356d42d223",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-ec8ced2ab974",
+      "sha256": "f7d1734c18fa682392803e0c6c19bd8e6c0cd172e821b3458b8380a8affb5623",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-3b7b4bd4e60b",
+      "sha256": "6f692ec3a310ba8c2860d5a62688b80f9b747f82246fd4de1e2c37ccadb9bb2f",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-125aee48a9b2",
+      "sha256": "4f0432581f322e3080cebd0335293249e780cba7fbabab194bfa6337d5fa57b2",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-190d54f442e7",
+      "sha256": "93d05e3634a2cd549652726b151e6625b94cd9d8191bea05f2bdc4e7dbef33a1",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-2026ba424626",
+      "sha256": "0ff87eb6064b73195e9201a9b8dd4fce7b7cbad45d88a6b4796b56b996b94d43",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-d8966940ac99",
+      "sha256": "c0ff2ecdd0aa7835a6fba27dd4f08eab20d43ced60bcdae5f25e769d97aa7a3f",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-4d324eb9775b",
+      "sha256": "23e347f0cc143c53138a31be5baca2d382b2926f22f6726314fed9be6dfcb8ab",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-8642b1e669e9",
+      "sha256": "0cb8e4bfd7a5d18ae934d8968426c8915141f0c540f199b420e8225b5289bb02",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-bf961e5678fe",
+      "sha256": "0b43274c4543a85b4e75765ee40d9bb5007cd6b56dd89dddbb45b8bff417ac61",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-9e8b3a0a018d",
+      "sha256": "17e0fff8ea48c7797e290353c87ecd28b04e1c7220d32de3a221cfc89a9fd7a9",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-c59665801ccf",
+      "sha256": "05d0de28a24d100542a5bb8641202bc8b0a5a839742ae47582fe85415f9f05d9",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-e509d37d78ad",
+      "sha256": "b21b5a7267956f59451adaa9c71a8f778f4330082c9ff5545b385330f4eaf1d8",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-233f5ea8205b",
+      "sha256": "a72b46c55ef4995df146f18506cf23ee5e797bcda3534f0d6f8101e04237b236",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    },
+    {
+      "id": "pano-cd228c240b66",
+      "sha256": "77a46795a8ee8231814bf8dbab15f28a5086207643f20dd75a3136bc9fa55eda",
+      "evidence": "Replacement contact sheets and full-size inspection of questionable views",
+      "decision": "outdoor"
+    }
+  ]
+}

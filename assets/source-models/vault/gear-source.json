@@ -1,0 +1,10 @@
+{
+  "title": "Collectible Gear",
+  "author": "Quaternius",
+  "source": "https://poly.pizza/m/1tgrqxAQia",
+  "download": "https://static.poly.pizza/35b7626f-c4ff-4532-8720-679ccd105861.glb",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "verified": "2026-10-18",
+  "changes": "Original mesh, normals, topology, material palette and binary retained. A new root aligns the dominant gear face to +Z, allowing an axial Z rotation. Uniform size and roughness normalized by the shared loader."
+}
